@@ -36,7 +36,7 @@ class ModifyAvatar:
     #编辑并保存图片
     def draw_save(self):
         toDraw = ImageDraw.Draw(self.Img)
-        toDraw.text(self.Locate, self.Text, self.Color, self.Font)
+        toDraw.text(self.Locate, self.Text, self.Color, self.Font)  #核心语句
         self.Img.save('%s.jpg' % self.Text)
         print "Done!"
 
