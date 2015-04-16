@@ -6,4 +6,5 @@ def han(n,a,b,m):
         print a,'->',b
         han(n-1,m,b,a)
 
-han(10,'A','B','M')
+if __name__ =='__main__':
+    han(10,'A','B','M')
