@@ -1,4 +1,12 @@
+ab[ ab ab ab## abaa' a a&& a*
+
+'''
+sdfsd哈哈hah
+'''
+#sdfsdf
+
 This a a a a a reference manual describes the Python programming language.
+
 time — or invent a cloning machine :-).
 use (although alternate implementations exist),
 you’ll b bb bb b bfind short “implementation notes” sprinkled throughout the text.
