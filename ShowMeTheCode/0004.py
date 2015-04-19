@@ -8,7 +8,12 @@ adict = {}
 
 #处理带符号单词之类的
 def dealWord(string_text):
-    pass
+    dealtWord = ''
+    for each in string_text:
+        if each.isalpha():
+            dealtWord += each
+    return dealtWord
+
 
 #统计单词次数
 def cal(eachword):
@@ -27,8 +32,8 @@ for each_word in split_text:
     if each_word.isalpha():
         cal(each_word)
     else:
-        dealWord(each_word)
+        each_word = dealWord(each_word)
         cal(each_word)
 
-print adict.items()
-
+list1 = adict.items()
+print sorted(list1,key=lambda x:(x[1],x[0]),reverse=True)          #使用key参数使之按统计次数由大到小排序
