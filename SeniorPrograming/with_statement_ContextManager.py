@@ -5,23 +5,10 @@ with后面的语句被求值后，返回对象的__enter__()被调用，__enter_
 当with后面的代码块全部被执行完之后，将调用前面返回对象的__exit__()方法;
 如果有异常出现，就传入__exit__()参数
 
-一个确保代码执行前加锁，执行后释放锁的模板：
-@contextmanager
-def locked(lock):
-    lock.acquire()
-    try:
-        yield
-    finally:
-        lock.release()
-
-
-with locked(myLock):
-    pass
-    # Code here executes with myLock held.  The lock is
-    # guaranteed to be released when the block is left (even
-    # if via return or by an uncaught exception).
 '''
 
+
+#通过类方法管理上下文
 class Sample:
     def __init__(self):
         print 'haha'
@@ -48,6 +35,26 @@ def getSample():
 
 
 with Sample() as sample:
+    print 'value(of sample) received from __enter__:', sample
     sample.exc()
     #sample.exc2()          #_exit__()只捕获了第一个异常？
-    print 'value received from __enter__:', sample
+
+
+
+#另外还有通过装饰器的方法
+'''
+一个确保代码执行前加锁，执行后释放锁的模板：
+@contextmanager
+def locked(lock):
+    lock.acquire()
+    try:
+        yield
+    finally:
+        lock.release()
+
+with locked(myLock):
+    pass
+    # Code here executes with myLock held.  The lock is
+    # guaranteed to be released when the block is left (even
+    # if via return or by an uncaught exception).
+'''
