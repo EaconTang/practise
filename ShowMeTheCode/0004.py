@@ -2,10 +2,14 @@
 
 '''
 任一个英文的纯文本文件，统计其中的单词出现的个数。
+用split获取单词列表太愚蠢，直接用正则r'\w+'找可以不用考虑太多细节
+使用Counter数据结构快多了
 '''
 
 import re
+from collections import Counter
 
+'''
 adict = {}
 
 #处理带符号单词之类的
@@ -38,6 +42,9 @@ with open('test.txt') as file:
 
 split_text = text.split()        #将所有单词组成一个列表
 
+#使用collections模块的数据结构Counter
+import collections
+print collections.Counter(split_text)
 
 for each_word in split_text:
         each_word = reg(each_word)
@@ -46,3 +53,10 @@ for each_word in split_text:
 
 list1 = adict.items()
 print sorted(list1,key=lambda x:(x[1],x[0]),reverse=True)          #使用key参数使之按统计次数由大到小排序
+'''
+
+
+with open("test.txt") as f:
+    text = f.read()
+    text_list = re.findall(r'\w+',text)
+    print Counter(text_list)
