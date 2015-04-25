@@ -9,6 +9,13 @@
 import re
 from collections import Counter
 
+
+with open("test.txt") as f:
+    text = f.read()
+    text_list = re.findall(r'\w+',text)
+    print Counter(text_list)
+
+
 '''
 adict = {}
 
@@ -54,9 +61,3 @@ for each_word in split_text:
 list1 = adict.items()
 print sorted(list1,key=lambda x:(x[1],x[0]),reverse=True)          #使用key参数使之按统计次数由大到小排序
 '''
-
-
-with open("test.txt") as f:
-    text = f.read()
-    text_list = re.findall(r'\w+',text)
-    print Counter(text_list)
