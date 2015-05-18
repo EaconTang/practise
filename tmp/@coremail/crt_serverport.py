@@ -4,11 +4,11 @@
 def Main():
 
 	show = '''
-	md(1),ms(2),ud(3),da(4),pop3(5),imap(6),mta(7),session(8)\n
-	admin(9),search(10),mscache(11),webproxy(12),scequery(13),arch(14)
+(1)md (2)ms (3)ud (4)da (5)pop3 (6)imap (7)session\n
+(8)admin (9)webproxy (10)scequery (11)mta (12)search (13)arch (14)mscache
 	'''
 
-	svr = crt.Dialog.Prompt(show,"Select a server(or type the number)")
+	svr = crt.Dialog.Prompt(show,"Input a server name(or type the number)")
 
 	if svr in ('1','md'):
 		svr_port = '6120'
