@@ -7,9 +7,12 @@
 '''
 import json
 
-json_text = '[1,{"d":2,"c":[4,5,6]},7,8,9]'
+json_text = '{"d": "$mbox($inp(1))","c":[4,5,6]}'
 
 text = json.loads(json_text)
 
-print json.dumps(text,sort_keys=True)
+filetext = json.dumps(text,sort_keys=True)
 
+f = open("test.txt","w")
+f.write(filetext)
+f.close()

@@ -3,13 +3,12 @@
 shallow copy (copy())操作创建一个新的容器，其包含的引用指向原对象中的对象。
 deep copy (deepcopy())创建的对象包含的引用指向复制出来的新对象。
 """
-
 import copy
 
 a = [1,2,3]
-b = a
 
 #normal
+b = a
 print id(a) == id(b)        #true
 print id(a[0]) == id(b[0])  #true
 
