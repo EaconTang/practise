@@ -12,7 +12,7 @@ print "values:",list1_Counter.values()
 
 print list1_Counter.most_common(2)
 
-with open("test.txt") as f:
+with open("Scripts4Test.txt") as f:
     text = f.read()
     text_list = re.findall(r'\w+',text)
     print Counter(text_list)

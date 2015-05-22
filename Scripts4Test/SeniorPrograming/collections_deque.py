@@ -54,7 +54,7 @@ for container in [list,deque]:          #compare these two container's time
 
 print sorted(list_to_sort,key=lambda x:x[2])
 
-#test rotate()
+#Scripts4Test rotate()
 print list_to_sort
 list_to_sort.rotate(2)
 print list_to_sort

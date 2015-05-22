@@ -13,6 +13,6 @@ text = json.loads(json_text)
 
 filetext = json.dumps(text,sort_keys=True)
 
-f = open("test.txt","w")
+f = open("Scripts4Test.txt","w")
 f.write(filetext)
 f.close()

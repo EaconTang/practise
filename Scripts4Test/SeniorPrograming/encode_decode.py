@@ -1,6 +1,6 @@
 #-*- coding:UTF-8 -*-
 
-f = open('test.rtf')
+f = open('Scripts4Test.rtf')
 s = f.read()
 f.close()
 print type(s)   #输出既有文件内容的类型：str（字节串）

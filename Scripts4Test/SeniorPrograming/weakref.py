@@ -1,10 +1,9 @@
-import weakref
 import gc
 
 
 class Foo(object):
     """
-    test strong reference
+    Scripts4Test strong reference
     """
     def __init__(self):
         self.obj = None
@@ -26,14 +25,14 @@ print 'hahha'
 del b # destroyed
 
 
-#test wearkref.ref
+#Scripts4Test wearkref.ref
 a = Foo()
 b = weakref.ref(a)
 del a
 print 'haha'
 del b
 
-#test weakref.proxy
+#Scripts4Test weakref.proxy
 a = Foo()
 b = weakref.proxy(a)
 del a
