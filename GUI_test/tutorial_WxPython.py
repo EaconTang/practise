@@ -136,7 +136,7 @@ class ExamplePanel(wx.Panel):
 
         #a button
         self.button = wx.Button(self,label="Save",pos=(200,325))
-        self.Bind(wx.EVT_BUTTON,self.OnClick,self,button)
+        self.Bind(wx.EVT_BUTTON,self.OnClick,self.button)
 
         #the edit control
         self.lblname = wx.StaticText(self,label="Your name:",pos=(20,60))
@@ -175,11 +175,25 @@ class ExamplePanel(wx.Panel):
         self.logger.AppendText("EvtCheckBox: %d\n"%event.Checked())
 
 
-
 def main():
     app = wx.App()
     frame = wx.Frame(None)
     panel = ExamplePanel(frame)
+    frame.Show()
+    app.MainLoop()
+
+
+def TestNotebook():
+    """test wxNoteBook"""
+    app = wx.App(False)
+    frame = wx.Frame(None,title="Demo with Notebook")
+
+    nb = wx.Notebook(frame)
+    #note that ExamplePanel's parent is Notebook
+    nb.AddPage(ExamplePanel(nb),"Absolute Postioning")
+    nb.AddPage(ExamplePanel(nb),"Page Two")
+    nb.AddPage(ExamplePanel(nb),"Page Three")
+
     frame.Show()
     app.MainLoop()
 
@@ -194,6 +208,6 @@ def aTest():
 
 #------------------------
 if __name__ == "__main__":
-    main()
-
+    #main()
+    TestNotebook()
 
