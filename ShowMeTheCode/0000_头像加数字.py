@@ -43,7 +43,7 @@ class ModifyAvatar:
 
 if __name__ == '__main__':
     m1 = ModifyAvatar()
-    m1.open('test.jpg')
+    m1.open('Scripts4Test.jpg')
     m1.setLocate(10, 10)
     m1.setText()
     m1.setColor(255, 0, 0)

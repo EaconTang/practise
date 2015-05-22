@@ -5,7 +5,7 @@ MySQL API的使用步骤：connect(host,user,pwd,dbname)->cursor()->cursor.execu
 '''
 
 import MySQLdb
-from JiHuoMa import generateRandomCode      #导入生成激活码的方法
+from Scripts4Test.ShowMeTheCode.JiHuoMa import generateRandomCode      #导入生成激活码的方法
 
 sql1 = 'Create Database DB4CODE'    #创建数据库DB4CODE
 sql2 = 'use DB4CODE'

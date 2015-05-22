@@ -1,5 +1,7 @@
 from collections import defaultdict
-from heapq import heapify, heappop, heappush
+
+from Scripts4Test.SeniorPrograming.heapq import heapify, heappop, heappush
+
 
 def prim( nodes, edges ):
     conn = defaultdict( list )
@@ -23,7 +25,7 @@ def prim( nodes, edges ):
                     heappush( usable_edges, e )
     return mst
 
-#test
+#Scripts4Test
 nodes = list("ABCDEFG")
 edges = [ ("A", "B", 7), ("A", "D", 5),
           ("B", "C", 8), ("B", "D", 9), ("B", "E", 7),

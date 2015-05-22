@@ -10,7 +10,7 @@ import re
 from collections import Counter
 
 
-with open("test.txt") as f:
+with open("Scripts4Test.txt") as f:
     text = f.read()
     text_list = re.findall(r'\w+',text)
     print Counter(text_list)
@@ -44,7 +44,7 @@ def reg(word):
     else:
         return '0'          #未匹配到一个合法单词返回0
 
-with open('test.txt') as file:
+with open('Scripts4Test.txt') as file:
     text =  file.read()
 
 split_text = text.split()        #将所有单词组成一个列表

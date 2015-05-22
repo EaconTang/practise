@@ -1,6 +1,6 @@
 #coding=utf-8
 """
-test wxPython, buil a JSON Editor
+Scripts4Test wxPython, buil a JSON Editor
 """
 import os
 import wx
@@ -185,7 +185,7 @@ def main():
 
 
 def aTest():
-    """test"""
+    """Scripts4Test"""
     app = wx.App()
     wxFrame = wx.Frame(None,wx.ID_ANY,"JSON Editor")
     wxFrame.Show()
