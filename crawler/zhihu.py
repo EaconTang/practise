@@ -34,7 +34,6 @@ def title_name(url,num):
                 return num
 
 
-
 print '%d个网页即将下载...'%len(xdurl_list)
 
 
