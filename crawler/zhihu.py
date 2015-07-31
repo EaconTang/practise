@@ -39,18 +39,29 @@ print '%d个网页即将下载...'%len(xdurl_list)
 
 n=1     #找不到title时，用数字命名文件
 
+
 for i in xdurl_list:    #下载每个链接的网页
 
-        #补全为完整链接
-        jdurl = 'http://zhihu.com' + i
+        try:
+                #补全为完整链接
+                jdurl = 'http://zhihu.com' + i
+                fname = title_name(jdurl,n)
+                urllib.urlretrieve(jdurl,'zhihu/%s.html'%fname)
+                print '第%d个网页:%s 下载完成!'%(n,fname)
 
-        fname = title_name(jdurl,n)
-
-        urllib.urlretrieve(jdurl,'zhihu/%s.html'%fname)
-
-        print '第%d个网页:%s 下载完成!'%(n,fname)
-
-        n += 1
-
+        except IOError,eio:
+                print eio
+                print "第%d个网页下载失败！"%i
+        finally:
+                n += 1
 
 print '完成！'
+
+
+try:
+        cmd1 = 'sz zhihu/*.html'
+        os.system(cmd1)
+        cmd2 = 'rm zhihu/*.html'
+        os.system(cmd2)
+except BaseException,e:
+        print e
