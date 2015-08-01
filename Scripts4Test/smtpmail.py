@@ -1,18 +1,20 @@
 # coding=utf-8
 import smtplib
 
-send_address = 'send@tyk.cn'
-recv_address = 'recv@tyk.cn'
-mes = '''From: From Person <send@tyk.cn>
-To: To Person <recv@tyk.cn>
-Subject: Test
+
+HOST = 'localhost'
+SENDER = 'send@test.cn'
+RECEIVER = 'admin@eacon.me'
+MES = '''From: From Person <send@tyk.cn>
+To: To Person <admin@eacon.me>
+Subject: 测试发送1000次邮件
 
 Body Text.
 '''
-subject = 'Subject'
-smtp_host = 'localhost'
 
-mail1 = smtplib.SMTP(smtp_host)
-mail1.sendmail(send_address,recv_address,mes)
+mailTest = smtplib.SMTP(HOST)
+mailTest.connect('smtp.eacon.me',25)
+mailTest.login('admin@eacon.me','123')
+mailTest.sendmail(SENDER,RECEIVER,MES)
 print 'Finish!'
 

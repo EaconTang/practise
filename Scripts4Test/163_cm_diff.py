@@ -1,26 +1,25 @@
 # coding=utf-8
 import smtplib
+import time
+import sys
 
-send_address = 'tyingk@163.com'
-recv_address = 'yktang@coremail.cn'
-mes = '''
-Subject: subject
-Body Text.'''
-subject = 'Subject'
-smtp_host = 'localhost'
+COUNT = int(sys.argv[1])	#投递邮件次数，在python命令执行时作为参数传入
 
-mail1 = smtplib.SMTP('localhost')
-#mail1.sendmail(send_address,recv_address,mes)
-print 'Finish mail1'
+SHARE = 'admin@eaocn.me'
 
-mail2 = smtplib.SMTP()
-mail2.connect('smtp.163.com',25)
-mail2.login('tyingk@163.com','')
-#mail2.sendmail(send_address,recv_address,mes)    #coremail会判断出163的域名与ip不符，因而拒收
-print 'Finish mail2'
+HOST = 'localhost'
+SENDER = SHARE
+RECEIVER = SHARE
+MES = '''From: From Person <admin@eaocn.me>
+To: To Person <admin@eaocn.me>
+Subject: No.%d
 
-mail3 = smtplib.SMTP()
-mail3.connect('smtp.coremail.cn',25)
-mail3.login('yktang@coremail.cn','')
-mail3.sendmail('yktang@coremail.cn','',mes)   #163则没有判断
-print 'Finish mail3'
+测试一下
+'''
+for i in range(COUNT):
+        mailTest = smtplib.SMTP(HOST)
+        mailTest.sendmail(SENDER,RECEIVER,MES%i)
+        print 'Mail No.%d sent!'%i
+        #time.sleep(1)
+
+print 'Finish!'
