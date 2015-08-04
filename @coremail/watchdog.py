@@ -1,8 +1,14 @@
+#coding=utf-8
+'''
+利用watchdog库写的监视脚本，可以检测指定路径下的文件更改
+'''
 import sys
 import time
 import logging
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
+
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO,
