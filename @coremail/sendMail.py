@@ -1,30 +1,18 @@
-# coding=utf-8
-import smtplib
-import time
-import sys
-from SendMailMIME import Mail
+#coding=utf-8
+from SendMailMIME import SendQuick,Mail
+
+local_MAIL = 'athena@greece.eu'
+cm_MAIL = 'forqa4@coremail.cn'
+qq_MAIL = 'mtqatest@qq.com'
+outlook_MAIL = 'mtqatest@outlook.com'
+
+s1 = SendQuick(qq_MAIL,'cdwysbl')
+#s1.sendDefault('mtqatest@163.com',10,10)
+s1.sendSpecific(cm_MAIL,'诸葛村夫','sanguo',10,0.1)
 
 
-COUNT = 2   #int(sys.argv[1])	#投递邮件次数
-#SUBJECT = 'Test'  #sys.argv[2]		#邮件主题
-#SHARE = 'test@eacon.cn'		#发送人接收人共用的邮件用户
-HOST = 'localhost'
-SENDER = 'qctest@dm109.icoremail.net'
-RECEIVER = 'mtqatest@163.com'
-MES = '''From: qctest <qctest@dm109.icoremail.net>
-To: mtqatest <mtqatest@163.com>
-Subject: TEST'''
+# s2 = Mail('smtp.126.com',25,'mtqatest@126.com','mailtech')
+# s2.setSender('mtqatest@126.com')
+# s2.setReceiver('mtqatest@163.com')
+# s2.sendMultipart()
 
-mailObj = smtplib.SMTP(HOST)
-mailObj.login('qctest@dm109.icoremail.net','123')
-
-time.
-
-for i in range(COUNT):
-    #SUBJECT = 'Test' + str(i)
-    mailObj.sendmail(SENDER,RECEIVER,MES+str(i))	
-    print 'Mail No.%d sent!'%i
-        #time.sleep(1)
-
-
-print 'Finish!'

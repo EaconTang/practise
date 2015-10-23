@@ -7,14 +7,13 @@ from email.Utils import formatdate
 import sys
 
 
-class SendSMTP:
+class SendQuick:
     '''快速发送邮件'''
-
     def __init__(self, user, psw, host='localhost', port=25):
         self.user = user
         self.psw = psw
         mp = MailParser(user)
-        (self.host, self.port) = mp.getServer()
+        self.host, self.port = mp.getServer()
 
     def sendDefault(self, receiver, count=2, interval=10):
         '''发送默认邮件，只需要指定接收邮箱'''
@@ -39,48 +38,27 @@ class SendSMTP:
 
 class MailParser:
     '''统一处理各个邮件域名的smtp服务器地址等信息'''
-
     def __init__(self, username):
         self.username = username
 
     def getServer(self):
-        try:
-            splited = str(self.username).split('@')
-            suffix = splited[1]
-            if suffix == 'qq.com':
-                return ('smtp.qq.com', 25)
-            elif suffix == '163.com':
-                return ('smtp.163.com', 25)
-            elif suffix == '126.com':
-                return ('smtp.126.com', 25)
-            elif suffix == 'sina.com':
-                return ('smtp.sina.com', 25)
-            elif suffix == '139.com':
-                return ('smtp.139.com', 25)
-            elif suffix == 'yahoo.com':
-                return ('smtp.mail.yahoo.com', 25)
-            elif suffix == 'outlook.com':
-                return ('smtp-mail.outlook.com', 25)
-            elif suffix == 'hotmail.com':
-                return ('smtp.live.com', 25)
-            elif suffix == 'coremail.cn':
-                return ('smtp.coremail.cn', 25)
-            # else:
-            #     raise UnsupportMail('UnsupportMail:' + self.username)
-#         except UnsupportMail, e:
-#             print e.args
-#         except BaseException, e:
-#             print e
-#
-#
-# class UnsupportMail(RuntimeError):
-#     def __init__(self, args):
-#         self.args = ''.join(args)
+        splited = str(self.username).split('@')
+        suffix = splited[1]
+        common_list = ['qq.com','163.com','126.com','sina.com','139.com','coremail.cn']
+        outlook_list = ['outlook.com','hotmail.com','live.com','live.cn']
+        if suffix in common_list:
+            return ('smtp.'+suffix, 25)
+        elif suffix in outlook_list:
+            return ('smtp-mail.outlook.com', 25)
+        elif suffix == 'yahoo.com':
+            return ('smtp.mail.yahoo.com', 25)
+        else:
+            return ('localhost',25)
+
 
 
 class Mail:
     '''封装邮件发送常用操作的自定义API'''
-
     def __init__(self, host, port, username, password):
         self.setServer(host, port)
         self.username = username
@@ -145,16 +123,23 @@ class Mail:
 
             print '**********To Send:**********'
             print self.msg.as_string()
-            # s = smtplib.SMTP(self.server)
-            s = smtplib.SMTP()
-            s.connect(self.host, self.port)
-            s.login(self.username, self.password)
-            s.sendmail(self.sender, self.receiver, self.msg.as_string())
-            s.quit()
-            print '**********Mail ' + str(i) + ' Finish!**********'
 
-            print 'sleeping...'
-            time.sleep(self.interval)
+            try:
+                s = smtplib.SMTP()
+                s.connect(self.host, self.port)
+                s.login(self.username, self.password)
+                s.sendmail(self.sender, self.receiver, self.msg.as_string())
+            except Exception,e:
+                print "Send failed!",
+                print e
+            finally:
+                s.quit()
+
+            print '**********Mail ' + str(i) + ' Finish!**********'
+            if i != count-1:
+                print 'sleeping...'
+                time.sleep(self.interval)
+
 
     def sendMultipart(self):
         # todo

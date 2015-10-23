@@ -1,24 +1,28 @@
+'''for CM-17375'''
 #coding=utf-8
 import os,sys,time
 
-def scanFile(rootDir):
-    #递归遍历指定目录下的所有文件名，并将其添加到LIST的文件名大列表中
+def scanFile(rootDir,LIST):
+    '''
+    traverse filenames under the specific directory, add all to LIST
+    if the file is still a directory, then recursively traverse it
+    '''
     for eachFile in os.listdir(rootDir):
         #print eachFile
         LIST.append(eachFile)
         #print LIST
-        if os.path.isdir(eachFile):
-            path = os.path.join(rootDir,eachFile)
-            scanFile(path)
+        path = os.path.join(rootDir,eachFile)
+        if os.path.isdir(path):
+            scanFile(path,LIST)
+
 
 while True:
     LIST = []
-    dir = sys.argv[1]	
-    scanFile(dir)
+    dir = sys.argv[1]	#the directory to be scanned
+    scanFile(dir,LIST)
     #print LIST
-
     for eachFileName in LIST:
-    #查找该文件名列表中是否含有.mtactx后缀的文件名
+    #find if the LIST contains a file named with suffixal ".mtactx"
         suffix = '.mtactx'
         if suffix in eachFileName:
             RET = '有mtactx文件！'
@@ -26,6 +30,8 @@ while True:
         else:
             RET = '没有mtactx文件！'
             continue
-    print RET
 
-    time.sleep(1)
+    print RET
+    if RET == '有mtactx文件！':
+        break
+    time.sleep(0.5)
