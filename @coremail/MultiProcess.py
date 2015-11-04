@@ -38,7 +38,7 @@ p = Pool(THREAD)
 for i in range(THREAD):
     p.apply_async(getDeviceId, args=(COUNT,))
 print '并发所有子进程中...'
-p.close()
+#p.close()
 p.join()
 print '并发完成！'
 

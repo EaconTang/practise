@@ -40,5 +40,4 @@ thread4.start()
 thread3.join()
 thread4.join()
 
-print thread3.
 
