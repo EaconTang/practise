@@ -8,28 +8,32 @@ from optparse import OptionParser
 import os
 import datetime
 from ConfigParser import ConfigParser
-from functions import grep_wc,option_parser
+from functions import grep_wc,option_parser,color_wrap
 import json
 
 
 #dfault setting
-CONFIG_DEFAULT = '/home/coremail/logs/LogMiner/Exceptions_Main.cfg'
+CONFIG_DEFAULT = os.path.join(os.getcwd(),'Exceptions_Main.cf')
 LOG_DEFAULT = '/home/coremail/logs/rmi_api.log'                                 #rmi_api.log.2015-11-11
 RESULT_PREFIX = 'rmi_exception_result.'
 RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 
 
-# step 1: load option args parser
+# step 1: load option args parser and default config
 parser = option_parser(LOG_DEFAULT,CONFIG_DEFAULT,RESULT_PREFIX,RESULT_FOLDER)
 #(options,args) = parser.parse_args()
-test_args = ['-l','rmi_api.log.2015-11-11','-c','Exceptions_Main.cfg','-r','test.today']
+test_args = ['-l','rmi_api.log.2015-11-11','-r','test.today']
 (options,args) = parser.parse_args(test_args)
-
+if options.CONFIG_FILE:
+    cf = options.CONFIG_FILE
+else:
+    cf = CONFIG_DEFAULT
 
 
 # step 2: load config file
+
 config = ConfigParser()
-config.read(options.CONFIG_FILE)
+config.read(cf)
 section_list = config.sections()
 
 
@@ -45,10 +49,9 @@ with open(options.LOG_FILE) as f_obj:
         res_dict[name] = count
 
 
-
 # step 4: print and generate the report file
-res_json = json.dumps(res_dict,indent=2)
-print res_json
+for k,v in res_dict.items():
+    print color_wrap(k,'red'), ' : ', color_wrap(v,'green')
 
 if options.RESULT_FILE:
     res_file = str(options.RESULT_FILE)
@@ -57,13 +60,13 @@ elif str(options.LOG_FILE).endswith('log'):
 else:
     res_file = RESULT_PREFIX + str(options.LOG_FILE).split('log.')[1]
 
+res_json = json.dumps(res_dict,indent=2)
 with open(os.path.join(RESULT_FOLDER,res_file),'a+') as f:
     f.write('###########################################\n')
     f.write(res_json)
     f.write('\n')
 
 
-print 'Done!'
 
 
 

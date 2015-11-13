@@ -1,0 +1,45 @@
+{
+	"Exception":{
+		"pattern": ["Exception","fail"],
+		"child": {
+			"fail on Exception": {
+                "pattern": "Fail on",
+				"child": {
+					"getMessageByUID Exception":{
+						"pattern": "Fail on getMessageByUID"
+					},
+					"getReceivedDate Exception":{
+						"pattern": "Fail on getReceivedDate"
+					},
+					"list folder Exception":{
+						"pattern": "Fail on list folder"
+					},
+					"open folder Exception":{
+						"pattern": "Fail on open folder"
+					}
+				}
+			},
+			"msg Exception":{
+				"pattern": "MessagingException",
+				"child": {}
+			},
+			"rfof Exception": {
+				"pattern": "Reconnect fail on folder Exception",
+				"child": {}
+			},
+			"server fail Exception":{
+				"pattern": "Server Fail Exception",
+				"child": {}
+			},
+			"skip msg Exception":{
+				"pattern": "Skip one message Exception(E)",
+				"child": {}
+			},
+			"sync Exception":{
+				"pattern": "Sync mails failed Exception",
+				"child":{}
+			}
+
+		}
+	}
+}	

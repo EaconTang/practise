@@ -1,5 +1,10 @@
+[Exception]
+name = All Exception
+pattern = Exception
+
 [Exception/fail on]
 name = Fail on Exception
+parent = Exception
 pattern = Fail on
 
 [Exception/msg e]
