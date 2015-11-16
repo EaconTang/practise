@@ -1,3 +1,5 @@
+;main exceptions
+
 [Exception]
 name = All Exception
 pattern = Exception

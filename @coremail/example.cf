@@ -1,0 +1,41 @@
+
+[/Exception]
+fail on = "Fail on"
+msg e= "MessagingException"
+rfof = "Reconnect fail on folder"
+server fail = ["Server Fail","test"]
+skip msg = "Skip one message Exception(E)"
+sync = "Sync mails failed"
+
+[/Exception/fail on]
+getMessageByUID = Fail on getMessageByUID
+getReceivedDate = Fail on getReceivedDate
+list folder = Fail on list folder
+open folder = Fail on open folder
+
+[/Exception/msg e]
+FolderClosedException = "javax.mail.FolderClosedException"
+MessagingException = ["javax.'mail'.MessagingException", "test", 123]
+StoredClosedException = "javax.mail.StoreClosedException"
+
+[/Exception/rfof]
+MessagingException = "javax.mail.MessagingException"
+
+[/Exception/server fail]
+qq = Server fail= imap.qq.com
+163 = Server fail= imap.163.com
+sina = Server fail= imap.sina.com
+outlook = Server fail= imap-mail.outlook.com
+
+[/Exception/skip msg]
+FolderClosedException = javax.mail.FolderClosedException
+IndexOutOfBoundsException = java.lang.IndexOutOfBoundsException
+NullPointerException = java.lang.NullPointerException
+Cannot load header = javax.mail.MessagingException= Cannot load header
+
+[/Exception/sync]
+hotmail = @hotmail.com
+qq = @qq.com
+163 = @163.com
+outlook = @outlook.com
+sina = @sina.com

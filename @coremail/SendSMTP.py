@@ -5,19 +5,12 @@ import sys
 from SendMailMIME import Mail
 
 COUNT = 10   #int(sys.argv[1])
-SUBJECT = 'CheckmailTest'  #sys.argv[2]
+SUBJECT = 'CM23032'  #sys.argv[2]
 HOST = 'smtp.coremail.cn'
-SENDER = 'forqa3@coremail.cn'
+SENDER = 'forqa4@coremail.cn'
 SENDER_PASSWD = 'forqa2015'
-RECEIVER = ['ioswpstest123@163.com','autotest0123@163.com',
-             'ioswpstest123@126.com','autotest0123@126.com',
-             'wpstest123@yeah.net','wang_qian1111@163.com',
-             'mtqatest@sina.com','ceshizu123456@sina.com',
-             'ios8wpstest@sina.com','ios4wpstest@sina.com',
-             'bjwpstest123@hotmail.com','wpstest666@outlook.com',
-             'ioswpstest123@21cn.com','ioswpstest123@tom.com',
-              'wpstest1234@yahoo.com','ioswpstest123@foxmail.com',
-             '920330270@qq.com','1537453223@qq.com']
+RECEIVER = [ 'mtqatest@sina.com','mtqatest@outlook.com',
+             'mtqatest@qq.com','mtqatest2@live.com']
 
 
 mes_from = 'From: <%s>'%SENDER
@@ -42,7 +35,7 @@ def sendTime():
                 mailObj.sendmail(SENDER,RECEIVER[j],MES_list[j]+str(i))
                 time_list.append(time.time())
             print 'Mail No.%d sent!'%i
-            time.sleep(10)
+            time.sleep(1)
     except Exception,e:
         print e
         sys.exit()
