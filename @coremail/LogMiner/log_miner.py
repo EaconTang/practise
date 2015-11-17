@@ -22,7 +22,7 @@ RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 # step 1: load option args parser and default config
 parser = option_parser(LOG_DEFAULT,CONFIG_DEFAULT,RESULT_PREFIX,RESULT_FOLDER)
 #(options,args) = parser.parse_args()
-test_args = ['-l','rmi_api.log.2015-11-11','-r','test.today']
+test_args = ['-f','rmi_api.log.2015-11-11','-r','test.today']
 (options,args) = parser.parse_args(test_args)
 cf = options.CONFIG_FILE if options.CONFIG_FILE else CONFIG_DEFAULT
 log = options.LOG_FILE if options.LOG_FILE else LOG_DEFAULT
@@ -44,7 +44,7 @@ omit_lines_count = {}
 omit_lines_list = []        #no remove-duplicate operation, not equals to len(omit_lines)
 with open(log) as f_obj:
     file_lines_all = f_obj.readlines()
-    res_count['/All'] = len(file_lines_all)
+    res_count['/All'] = len(file_lines_all)     #[/All] is the root
     for each in file_lines_all:
         each.strip('\n')
     for each_section in section_list:
