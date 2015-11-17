@@ -1,44 +1,49 @@
-;all the exceptions
-;if multi grep needed,user format as:
+;rmi exceptions
+;if multi grep needed,use value in format as:
 ;                       ["grep1","gre2"]
 
-[/Exception]
+[/All]
+Exception = "WARNING"
+
+[/All/Exception]
 fail on = "Fail on"
 msg e= "MessagingException"
 rfof = "Reconnect fail on folder"
-server fail = "Server Fail"
+server fail = "Server fail"
 skip msg = "Skip one message Exception(E)"
 sync = "Sync mails failed"
 
-[/Exception/fail on]
+[/All/Exception/fail on]
 getMessageByUID = "Fail on getMessageByUID"
 getReceivedDate = "Fail on getReceivedDate"
 list folder = "Fail on list folder"
 open folder = "Fail on open folder"
 
-[/Exception/msg e]
+[/All/Exception/msg e]
 FolderClosedException = "javax.mail.FolderClosedException"
 MessagingException = "javax.mail.MessagingException"
-StoredClosedException = ["javax.mail.StoreClosedException","MessagingException"]
+StoredClosedException = "javax.mail.StoreClosedException"
 
-[/Exception/rfof]
-MessagingException = ["Reconnect fail on folder","javax.mail.MessagingException"]
+[/All/Exception/rfof]
+MessagingException = "javax.mail.MessagingException"
 
-[/Exception/server fail]
+[/All/Exception/server fail]
 qq = "Server fail: imap.qq.com"
 163 = "Server fail: imap.163.com"
 sina = "Server fail: imap.sina.com"
 outlook = "Server fail: imap-mail.outlook.com"
+yahoo = "Server fail: imap.mail.yahoo.com"
 
-[/Exception/skip msg]
+[/All/Exception/skip msg]
 FolderClosedException = "javax.mail.FolderClosedException"
 IndexOutOfBoundsException = "java.lang.IndexOutOfBoundsException"
 NullPointerException = "java.lang.NullPointerException"
 Cannot load header = "javax.mail.MessagingException: Cannot load header"
 
-[/Exception/sync]
+[/All/Exception/sync]
 hotmail = "@hotmail.com"
 qq = "@qq.com"
 163 = "@163.com"
 outlook = "@outlook.com"
 sina = "@sina.com"
+wpsmail = "@wpsmail.com"

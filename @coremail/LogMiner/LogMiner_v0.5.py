@@ -32,8 +32,8 @@ result_file = options.RESULT_FILE if options.RESULT_FILE else RESULT_PREFIX
 # step 2: load config file
 config = MyConfigParser()
 config.read(cf)
-section_list = config.sections()
-
+section_list = sorted(config.sections())
+print section_list
 
 
 # step 3: traverse section_lsit and options_lsit, find the exception lines that match pattern
@@ -41,14 +41,19 @@ print '正在处理log...'
 res_lines = {}
 res_count = {}
 with open(log) as f_obj:
-    file_lines = f_obj.readlines()
+    file_lines_all = f_obj.readlines()
     for each_section in section_list:
-        # count all the children
-        kv_lsit = config.items(each_section)
-        for k,v in kv_lsit:
+        # find if this section has parent, if yes, grep from parent file_lines
+        if res_lines.has_key(each_section):
+            file_lines = res_lines[each_section]
+        else:
+            file_lines = file_lines_all
+        kv_list = config.items(each_section)
+        for k,v in kv_list:
             match_lines = grep_lines(v,file_lines)
-            k_name = each_section + '/' + k
-            res_lines[k_name] = match_lines
+            key = each_section + '/' + k
+            res_lines[key] = match_lines
+
 
 #print res_lines
 # res_lines_sorted = sorted(res_lines.iteritems(),key=lambda x:x[0])
@@ -69,7 +74,7 @@ ptable = prettytable.PrettyTable(['Error Type','Count'])
 ptable.align['Error Type'] = "l"
 for each_res in res_count.iteritems():
     ptable.add_row([each_res[0],each_res[1]])
-ptable_str = ptable.get_string(sortby='Error Type',reversesort=True)
+ptable_str = ptable.get_string(sortby='Error Type')
 print '处理完毕，以下是error统计数目：'
 print ptable_str
 
