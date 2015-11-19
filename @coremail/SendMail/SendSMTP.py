@@ -5,11 +5,11 @@ import sys
 from SendMailMIME import Mail
 
 COUNT = 10   #int(sys.argv[1])
-SUBJECT = 'CM23032'  #sys.argv[2]
-HOST = 'smtp.coremail.cn'
-SENDER = 'forqa4@coremail.cn'
-SENDER_PASSWD = 'forqa2015'
-RECEIVER = [ 'mtqatest@sina.com','mtqatest@outlook.com',
+SUBJECT = 'CM23600'  #sys.argv[2]
+HOST = 'smtp.sina.com'
+SENDER = 'mtqatest@sina.com'
+SENDER_PASSWD = 'cdwysbl'
+RECEIVER = [ 'mtqatest@163.com','mtqatest@outlook.com',
              'mtqatest@qq.com','mtqatest2@live.com']
 
 
@@ -18,7 +18,7 @@ mes_to = 'To: <%s>'%str(RECEIVER)
 mes_sub = 'Subject: %s'%SUBJECT
 MES = mes_from + '\n' + mes_to + '\n' + mes_sub
 
-#multi receiver
+# multi receiver
 MES_list = []
 for i in range(len(RECEIVER)):
     mes = mes_from + '\n' + 'To: <%s>'%RECEIVER[i] + '\n' + mes_sub
@@ -30,7 +30,8 @@ def sendTime():
         for i in range(COUNT):
             mailObj = smtplib.SMTP(HOST,25)
             mailObj.login(SENDER,SENDER_PASSWD)     # comment this line to send without login
-            #mailObj.sendmail(SENDER,RECEIVER,MES+str(i))
+            # mailObj.sendmail(SENDER,RECEIVER,MES+str(i))
+            mailObj.connect()
             for j in range(len(RECEIVER)):
                 mailObj.sendmail(SENDER,RECEIVER[j],MES_list[j]+str(i))
                 time_list.append(time.time())

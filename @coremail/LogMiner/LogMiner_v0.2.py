@@ -20,7 +20,7 @@ RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 
 
 # step 1: load option args parser and default config
-parser = option_parser(LOG_DEFAULT,CONFIG_DEFAULT,RESULT_PREFIX,RESULT_FOLDER)
+parser = option_parser(LOG_DEFAULT, CONFIG_DEFAULT, RESULT_FOLDER)
 #(options,args) = parser.parse_args()
 test_args = ['-l','test.log','-r','test.today']
 (options,args) = parser.parse_args(test_args)

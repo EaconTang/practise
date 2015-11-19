@@ -23,9 +23,7 @@ TABULATE = os.path.join(RESULT_FOLDER,'rmi_api_error.tabulate')
 
 # load arg-parser
 parser = option_parser()
-# (options,args) = parser.parse_args()
-test_args = ['-f','rmi_api.log.2015-11-11','--omit','--tabulate']
-(options,args) = parser.parse_args(test_args)
+(options,args) = parser.parse_args()
 cf = options.CONFIG if options.CONFIG else CONFIG
 log = options.FILE if options.FILE else LOG
 omit_file = options.OMIT if options.OMIT else OMIT           # program would add file date as suffix
@@ -111,9 +109,9 @@ if options.OMIT_SAVE:
     omit_file += '.' + file_date
     omit_exceptions_json = json.dumps(omit_lines['/All/Exception/(OMIT)'],indent=2)
     with open(omit_file,'w') as f:
-        write_info = '###########################################\n'
-        write_info += str(ptable_sortByType) + '\n'
+        write_info = str(ptable_sortByType) + '\n'
         write_info += str(ptable_sortByCount) + '\n'
+        write_info += '###########################################\n'
         write_info += '未统计的错误信息如下：\n'
         write_info += omit_exceptions_json + '\n'
         f.write(write_info)
@@ -166,3 +164,5 @@ if options.TABULATE_SAVE:
         else:
             # just add it
             f.write(to_write)
+
+        print '本次统计已经写入汇总文件表：{0}'.format(tabulate_file)

@@ -11,14 +11,7 @@ netease_126 = 'mtqatest@126.com'
 sina_MAIL = 'ios4wpstest@sina.com'
 _21_MAIL = 'ioswpstest123@21cn.com'
 
+s1 = SendQuick('mtqatest@sina.com','cdwysbl')
+s1.sendSpecific('mtqatest@qq.com','23600','body',10,10)
 
-s1 = SendQuick(cm_MAIL,'forqa2015')
-#s1.sendDefault('mtqatest@163.com',10,10)
-s1.sendSpecific('ios4wpstest@sina.com','checkmail','body',2,10)
-
-
-# s2 = Mail('smtp.126.com',25,'mtqatest@126.com','mailtech')
-# s2.setSender('mtqatest@126.com')
-# s2.setReceiver('mtqatest@163.com')
-# s2.sendMultipart()
 

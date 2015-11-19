@@ -1,6 +1,5 @@
-;rmi exceptions
-;if multi grep needed,use value in format as:
-;                       ["grep1","gre2"]
+;rmi exceptions classfied
+;if multi grep needed,use value in format as example: option = ["grep1","gre2"]
 
 [/All]
 Exception = "WARNING"

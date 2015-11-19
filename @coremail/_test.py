@@ -1,4 +1,5 @@
 #coding=utf-8
-import prettytable
+import datetime
+import os
 
-ptable = prettytable.PrettyTable()
+print os.path.join('a','b','c')
