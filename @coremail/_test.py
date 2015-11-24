@@ -1,5 +1,18 @@
-#coding=utf-8
-import datetime
+# coding=utf-8
+import datetime,time
 import os
+import unittest
 
-print os.path.join('a','b','c')
+class A:
+    def __init__(self):
+        print 'A init...'
+
+class B(A):
+    def __init__(self):
+        super.__init__()
+        print 'B init...'
+
+    def test(self):
+        print 'B test()...'
+
+b = B()

@@ -15,23 +15,23 @@ def option_parser():
     give optional arguments while execute the program
     :return: a option parser
     '''
-    usage = "usage: python %prog [-f value] [-c value] [-t] [--tabulate-file value] [-o] [--omit-file value]"
+    usage = "usage: python %prog [-f value] [-c value] [-t] [-T value] [-o] [-O value]"
     parser = OptionParser(usage)
     parser.add_option('-f', '--file', dest='FILE',
                       help='specify a log file to be scan, defaults to yesterday\'s rmi_api.log')
     parser.add_option('-c', '--config', dest='CONFIG',
                       help='specify a config file to be load,defaults to ~/LogMiner/conf/rmi_exceptions.cf')
-    parser.add_option('-t',dest='TABULATE_SAVE',
+    parser.add_option('-t','--tabulate',dest='TABULATE_SAVE',
                       help='use this flag to save the results to the file,defaults to under "~/LogMiner/results"',
                       action='store_true',default=False)
-    parser.add_option('--tabulate-file', dest='TABULATE',
-                      help='specify a file to save the tabulate table')
-    parser.add_option('-o',dest='OMIT_SAVE',
+    parser.add_option('-T','--tabulate-file', dest='TABULATE',
+                      help='specify a file to save the tabulate table,defaults to "rmi_api_error.tabulate"')
+    parser.add_option('-o','--omit',dest='OMIT_SAVE',
                       help='use this flag to save the omit info that were not classified.' +\
                         'It would be saved under "~/LogMiner/results"',
                       action='store_true',default=False)
-    parser.add_option('--omit-file', dest='OMIT',
-                      help='specific a filename to save the omit info')
+    parser.add_option('-O','--omit-file', dest='OMIT',
+                      help='specific a filename to save the omit info,defaults to "rmi_api.omit.{Datetime}"')
     return parser
 
 
