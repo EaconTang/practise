@@ -1,0 +1,6 @@
+[/All]
+readMessage = "mbox:readMessage,"
+readMessageHTML = "mbox:readMessageHTML,"
+readMessageHTMLReply = "mbox:readMessageHTMLReply"
+syncMessages = "mbox:syncMessages"
+getAllFolders = "mbox:getAllFolders"

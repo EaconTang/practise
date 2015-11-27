@@ -6,8 +6,16 @@ Exception = "WARNING"
 
 [/All/Exception]
 fail on = "Fail on"
-msg e= "MessagingException"
-rfof = "Reconnect fail on folder"
+msg exception= "MessagingException"
+folderclose exception = ("javax.mail.FolderClosedException","Got FolderClosedException")
+reconnect fail = "Reconnect fail on folder"
+skip msg = "Skip one message"
 server fail = "Server fail"
-skip msg = "Skip one message Exception(E)"
-sync = "Sync mails failed"
+server disabled = "Server disabled for too many fails"
+sync fail= "Sync mails failed"
+api fail = ["[api:","failed"]
+arrayIndexOutOfBounds = "java.lang.ArrayIndexOutOfBoundsException"
+invalid attr = "INVALID_ATTR"
+event listener fail = "FAILED on listener"
+connect exception = ("NET_ERR_CONNECT","java.net.ConnectException")
+deleteMessage fail = "deleteMessages FAILED"

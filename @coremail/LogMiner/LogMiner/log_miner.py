@@ -1,9 +1,9 @@
 #coding=utf-8
-'''
+"""
 for
 CM-23630[系统支持--rmi错误分类统计]
 日志分析工具
-'''
+"""
 import os
 import datetime
 from functions import *
@@ -16,7 +16,8 @@ import prettytable
 # default setting
 CONFIG = os.path.join(os.getcwd(),'conf','rmi_exceptions.cf')
 YESTERDAY = (datetime.datetime.now() - datetime.timedelta(days=1)).date()
-LOG = '/home/coremail/logs/rmi_api.log.{0}'.format(YESTERDAY)
+# LOG = '/home/coremail/logs/rmi_api.log.{0}'.format(YESTERDAY)
+LOG = '/home/coremail/logs/rmi_api.log'
 RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 OMIT = os.path.join(RESULT_FOLDER,'rmi_api.omit')
 TABULATE = os.path.join(RESULT_FOLDER,'rmi_api_error.tabulate')
@@ -26,8 +27,9 @@ parser = option_parser()
 (options,args) = parser.parse_args()
 cf = options.CONFIG if options.CONFIG else CONFIG
 log = options.FILE if options.FILE else LOG
+log = ".".join([str(log),str(YESTERDAY)]) if options.YESTERDAY_LOG else log      # turn the log to yesterday's
 omit_file = options.OMIT if options.OMIT else OMIT           # program would add file date as suffix
-tabulate_file = options.TABULATE if options.TABULATE else TABULATE
+tabulate_file = os.path.join(RESULT_FOLDER,options.TABULATE) if options.TABULATE else TABULATE
 
 # load config
 config = MyConfigParser()
@@ -64,7 +66,11 @@ with open(log) as f_obj:
             key = each_section + '/' + k
             res_lines[key] = match_lines
 
-        # find those omit errors; those who has no omit part would not be count its '0'
+        # find those omit errors;
+        # those who has no omit part would not be count its '0'
+        # /All/(OMIT) would not be count
+        if each_section == '/All':
+            continue
         child_lines = []                                    # file_line == parent_lines
         for each_option in config.options(each_section):
             each_option = each_section + '/' + each_option
@@ -77,7 +83,7 @@ with open(log) as f_obj:
         if len(omit_part) != 0:
             omit_key = each_section + '/(OMIT)'
             omit_lines[omit_key] = omit_part
-            omit_lines_count[omit_key] = len(file_lines) - len(child_lines)
+            omit_lines_count[omit_key] = len(omit_part)
 
 # now count the lines
 for k,v in res_lines.iteritems():
@@ -105,9 +111,9 @@ else:
     file_date = str(datetime.date.today())
 
 # save all omit info if this flag is used
-if options.OMIT_SAVE:
+if options.OMIT_SAVE or options.OMIT:
     omit_file += '.' + file_date
-    omit_exceptions_json = json.dumps(omit_lines['/All/Exception/(OMIT)'],indent=2)
+    omit_exceptions_json = json.dumps(omit_lines,indent=2)
     with open(omit_file,'w') as f:
         write_info = str(ptable_sortByType) + '\n'
         write_info += str(ptable_sortByCount) + '\n'
@@ -123,7 +129,7 @@ if options.OMIT_SAVE:
 # excenptions' short name;
 # omit part uncontained;
 # automatically check the config
-if options.TABULATE_SAVE:
+if options.TABULATE_SAVE or options.TABULATE:
     # insert the title
     res_count_tabulate = {}
     for key in res_count.keys():

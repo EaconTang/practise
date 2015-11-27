@@ -1,0 +1,2877 @@
+API_SENT: 127.0.0.1/127.0.0.1:6195 {cmd=303, attrs=[provider_id, org_id, user_id, activity], filter=[]}
+API_RECV: OK [MAP:(size=2):...]:
+	retcode: [INT:0]
+	result: [MAP:(size=1):...]:
+		u: [ARY:(size=365):...]:
+			[0]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:126.com]
+				user_id: [WST:hz_hufei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[1]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:139.com]
+				user_id: [WST:ceshizhy2015]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[2]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:iaixmg]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[3]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:public]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[4]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:tinahe]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[5]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:conniezw]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[6]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:maishuaaa]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[7]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:163.com]
+				user_id: [WST:yangxiaofeng0115]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[8]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:a]
+				user_id: [WST:tyk1]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[9]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:a]
+				user_id: [WST:tyk2]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[10]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:a]
+				user_id: [WST:admin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[11]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:a]
+				user_id: [WST:testke]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[12]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:cgbchina.com.cn]
+				user_id: [WST:ds]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:15789]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[13]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:cgbchina.com.cn]
+				user_id: [WST:cac]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[14]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:cgbchina.com.cn]
+				user_id: [WST:admin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[15]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:cgbchina.com.cn]
+				user_id: [WST:creditcard]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:50000]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[16]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:colossusgroup.com]
+				user_id: [WST:lijingtao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[17]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:gj]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[18]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:aan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[19]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:mwu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[20]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:zzz]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[21]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:xmyu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[22]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:xxxia]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[23]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:lntang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[24]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:mzzhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[25]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:ndwang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[26]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:rcheng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:100000]
+			[27]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:junwang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:8552]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[28]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:taofeng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[29]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:andytest]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[30]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:coremail.cn]
+				user_id: [WST:zhengzhong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:49333]
+			[31]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:hbjyjt.com]
+				user_id: [WST:jijinhui]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[32]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:hbjyjt.com]
+				user_id: [WST:kangzengqing]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:22666]
+			[33]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:hkmtl.com]
+				user_id: [WST:arrowchen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[34]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:hkmtl.com]
+				user_id: [WST:liyouliang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[35]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wey]
+				activity: [NUL]
+			[36]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wjl]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[37]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yxx]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:8000]
+			[38]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cqlj]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[39]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kite]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[40]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:miyu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[41]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:nmth]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[42]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hq_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[43]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ivory]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[44]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kmhsg]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[45]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:leitr]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:28000]
+			[46]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lifan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[47]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:nbzjb]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[48]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szsxn]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[49]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szysy]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:12000]
+			[50]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szyxm]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[51]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xmyqq]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:42666]
+			[52]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bin_he]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[53]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dengqp]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[54]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:fei_yu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[55]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:george]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:3289]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[56]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:greelu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[57]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:haiyan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[58]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hua_ye]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[59]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jie_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[60]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kun_ji]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[61]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kun_lu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:3947]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[62]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kun_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[63]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qi_cui]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:21333]
+			[64]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qi_xie]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[65]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qi_yao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[66]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:robert]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[67]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wangzf]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[68]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhaiyc]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:8000]
+			[69]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bittian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[70]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bo_lan2]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:10666]
+			[71]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bob_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[72]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huachen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[73]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huangke]
+				activity: [NUL]
+			[74]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jia_yu1]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[75]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jimy_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[76]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jun_li1]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[77]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kdlu_ye]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[78]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ke_ning]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[79]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kmfwhzq]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[80]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kun_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[81]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lan_tao]
+				activity: [NUL]
+			[82]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:li_xiao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[83]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lili_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[84]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lisa_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[85]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:liyi_lu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[86]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:long_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[87]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:matt_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:3947]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[88]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:njyutao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[89]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:paladin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[90]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qingang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[91]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:sen_lin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[92]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shiweif]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[93]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:sisi_yu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[94]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szlljie]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[95]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xawgang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[96]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ye_tian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[97]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yun_wen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[98]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zouyuan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[99]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:agnes_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[100]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ben_weng]
+				activity: [NUL]
+			[101]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bjliuwei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[102]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cddengrj]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[103]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cheng_ma]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:5921]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[104]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cher_han]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[105]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cissy_he]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[106]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dawei_fu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[107]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dong_wei]
+				activity: [NUL]
+			[108]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:fei_duan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[109]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:fuyu_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[110]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hai_long]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[111]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hanni_yi]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[112]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hellfire]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[113]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hua_guan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[114]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:iandy_su]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:14666]
+			[115]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jam_zeng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[116]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jin_xiao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[117]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jing_luo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[118]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:li_qiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:7894]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[119]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lisa_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[120]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lucy_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:10666]
+			[121]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:man_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[122]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:peng_jia]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[123]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qiang_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[124]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:sam_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[125]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:sen_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:30666]
+			[126]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szlihang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:28289]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:60000]
+			[127]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wade_cao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[128]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xian_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[129]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xin_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[130]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xueyu_ma]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[131]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yang_li3]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[132]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yue_nian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[133]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhi_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[134]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:andy_zhao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:10526]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:18666]
+			[135]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bin_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[136]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:book_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:18666]
+			[137]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cathy_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[138]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:chen_xing]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[139]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:chris_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:21333]
+			[140]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:danni_mai]
+				activity: [NUL]
+			[141]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dashan_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:17333]
+			[142]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ding_ding]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[143]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:duo_zheng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:9210]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[144]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:feihu_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[145]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:gyy_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[146]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hiram_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[147]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huawu_cao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:21333]
+			[148]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huijun_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[149]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiake_shi]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[150]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jian_tang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[151]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kui_cheng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[152]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:liang_gao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1973]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:12000]
+			[153]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lichu_pan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[154]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lifang_ke]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[155]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:long_zeng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[156]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:manman_he]
+				activity: [NUL]
+			[157]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ningwu_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[158]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qing_zhao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[159]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qiong_yan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[160]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ruding_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[161]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szhao_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[162]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szli_peng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[163]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:weiwei_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[164]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:weixia_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[165]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wgyz_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[166]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:winnie_wu]
+				activity: [NUL]
+			[167]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xijie_sun]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[168]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yana_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[169]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yang_peng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[170]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yao_zhang]
+				activity: [NUL]
+			[171]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yi_zhang3]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[172]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yibo_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[173]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yong_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[174]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yu_y_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:3289]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[175]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zepeng_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:9868]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[176]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenyu_mo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[177]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ziwei_yan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[178]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:adams_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[179]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:beilei_jin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[180]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:blur_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[181]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:boyang_sun]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[182]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:cheng_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:25333]
+			[183]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:davy_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[184]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dlwanghong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[185]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:dlwangzhuo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:17763]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[186]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:feiru_zhao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[187]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:franky_tan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[188]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hanze_tian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[189]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:haoa_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[190]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hongjie_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[191]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiahui_bai]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[192]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiahui_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[193]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jialin_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[194]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiangyi_lv]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[195]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jigang_yan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[196]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jinwei_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[197]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junmiao_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[198]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junpo_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[199]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ling_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[200]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:manjun_tan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1973]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[201]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:muqin_deng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:13815]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[202]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:panfeng_yu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[203]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:peter_xiao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[204]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qinbo_peng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[205]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qinghua_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[206]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:rachel_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[207]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:ruixue_zuo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[208]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shuwang_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[209]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tailong_he]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:12500]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[210]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tomy_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[211]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:weiliu_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:11842]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[212]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:weiming_mo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[213]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wenke_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[214]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wenyuan_ge]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[215]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xianwen_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[216]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaobin_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:14666]
+			[217]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaoli_sun]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[218]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaotao_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[219]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xinglu_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[220]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xingmin_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[221]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiuju_ding]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1973]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[222]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xucai_tian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[223]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xueping_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[224]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:youwen_luo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[225]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yuna_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[226]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yuting_tan]
+				activity: [NUL]
+			[227]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhengfu_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[228]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zongru_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[229]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:angel_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[230]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bangli_deng]
+				activity: [NUL]
+			[231]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:chunxiao_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[232]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:daiting_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[233]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:david_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[234]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:fengzhenwei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[235]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:guiming_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:13333]
+			[236]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:guohua_feng]
+				activity: [NUL]
+			[237]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huajun_fang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[238]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jackson_yan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:12000]
+			[239]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jasony_yuan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[240]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiapeng_wei]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[241]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jinxiong_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[242]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:joyce_shang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[243]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junjie_deng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[244]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:kailun_rong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[245]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lijian_zhao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:3947]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[246]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:linjie_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[247]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:marlon_xiao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:11842]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:10666]
+			[248]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:minghua_lin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[249]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:mingwei_sun]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:9210]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[250]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:molly_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[251]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:pengtao_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[252]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qingyang_xu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[253]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qingying_wu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[254]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qinqing_sun]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[255]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shengnan_hu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[256]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:syzhangzhao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[257]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szdong_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[258]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tianran_chi]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[259]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xianwen_dou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[260]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaojie_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[261]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaojun_xie]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[262]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xinliang_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[263]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xueling_ren]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[264]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yachao_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[265]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yangjing_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[266]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yaqiong_luo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[267]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yinhe_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[268]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yu_yang_guo]
+				activity: [NUL]
+			[269]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yueming_chu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:10666]
+			[270]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenrong_he]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[271]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenshun_ji]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:9333]
+			[272]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenxing_du]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[273]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhuoying_tu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[274]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zongchao_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[275]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zonghai_cui]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1973]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[276]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:baoren_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[277]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:beichun_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[278]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:chengwei_han]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[279]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:eileen_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[280]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:guixiang_zhi]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[281]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:guobang_deng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[282]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:haixiao_tian]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[283]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:hua_lh_liang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[284]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huanhuan_rao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:7236]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[285]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiahong_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[286]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiasen_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:6666]
+			[287]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jiayuan_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[288]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jixian_zheng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:22666]
+			[289]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junbang_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[290]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junmin_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:2631]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[291]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:leiting_wang]
+				activity: [NUL]
+			[292]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:li_jun_xiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[293]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:liexiang_liu]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:65333]
+			[294]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lijiang_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[295]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:liling_zhong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[296]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:lydher_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[297]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:mingdong_guo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[298]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:mingyue_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[299]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shixiong_hao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[300]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tianxiang_ma]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[301]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tingting_yao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[302]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wenwen_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[303]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:william_duan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[304]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiannan_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[305]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaohui_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[306]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaoqiang_he]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:21333]
+			[307]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yanming_song]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[308]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yinling_dong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[309]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yuanxiong_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[310]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yuanyuan_xie]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[311]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yunfeng_zhou]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[312]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yuping_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[313]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhannan_deng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[314]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhengwu_fang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[315]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenqing_guo]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[316]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhenwei_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[317]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhichao_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:12000]
+			[318]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhiqiang_yin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[319]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhixin_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[320]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhuosheng_li]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[321]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:huanran_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[322]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jingyin_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[323]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:liaoyong_liao]
+				activity: [NUL]
+			[324]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:rainbow_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[325]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shaowei_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[326]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:shifking_ruan]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:5921]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[327]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:tingting_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[328]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wenqiang_dong]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[329]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:winters_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[330]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiangqian_cui]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[331]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiangyang_hao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[332]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaojuan_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:12000]
+			[333]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yingxing_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[334]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yongjian_liao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[335]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhanhong_deng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[336]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bingchang_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[337]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:bj_dongyu_yang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[338]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:changhui_jiang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:16000]
+			[339]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:chengbing_wang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[340]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:jieqiong_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[341]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:junxiong_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[342]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qingpeng_liang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[343]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:qingshang_meng]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:657]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:16000]
+			[344]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szwenfeng_xiao]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[345]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:wenchang_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:5333]
+			[346]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:xiaoming_huang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[347]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yongchao_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[348]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhangzhou_chen]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[349]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhongliang_ren]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:2666]
+			[350]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:szxiaoyan_zhang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[351]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:yongxiang_liang]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[352]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:kingdee.com]
+				user_id: [WST:zhangtianlong_fs]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[353]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:pb.coremail.cn]
+				user_id: [WST:admin]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[354]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:pb.coremail.cn]
+				user_id: [WST:public]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[355]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:137937074]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[356]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:317191702]
+				activity: [NUL]
+			[357]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:343766233]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:1315]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:1333]
+			[358]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:434351930]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[359]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:751677476]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[360]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:qq.com]
+				user_id: [WST:1753384192]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[361]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:renxiangtang.com]
+				user_id: [WST:zy]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[362]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:renxiangtang.com]
+				user_id: [WST:thq]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:4000]
+			[363]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:sina.com]
+				user_id: [WST:redstar0901]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]
+			[364]: [MAP:(size=4):...]:
+				provider_id: [WST:1]
+				org_id: [WST:yeah.net]
+				user_id: [WST:honxin100]
+				activity: [MAP:(size=2):...]:
+					history_rate: [INT:0]
+					rate: [MAP:(size=1):...]:
+						2015-11-27 01:00:02: [INT:0]

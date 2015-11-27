@@ -13,7 +13,7 @@ _21_MAIL = 'ioswpstest123@21cn.com'
 
 s1 = SendQuick(cm_MAIL,'forqa2015')
 
-s1.sendSpecific(cm_MAIL,'23600','body',103,0)
+s1.sendSpecific(cm_MAIL,'23600','body',60,0)
 
 
 
