@@ -9,7 +9,3 @@ import binascii
 import array
 import re
 
-
-a = [1]
-if a:
-    print 'haha'
