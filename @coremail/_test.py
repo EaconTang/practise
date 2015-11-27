@@ -10,6 +10,6 @@ import array
 import re
 
 
-a = [[1,2,3],[4,5,6]]
-for x,y,z in a:
-    print x,' ',y,' ',z
+a = [1]
+if a:
+    print 'haha'
