@@ -24,15 +24,15 @@ def get_cmd_res():
 
 
 def find_provider_id(output):
-    return re.findall(r'provider_id: \[WST:(\d+)\]', output)[0]
+    return re.compile(r'provider_id: \[WST:(\d+)\]').findall(output)[0]
 
 
 def find_org_id(output):
-    return re.findall(r'org_id: \[WST:(.+)\]', output)[0]
+    return re.compile(r'org_id: \[WST:(.+)\]').findall(output)[0]
 
 
 def find_user_id(output):
-    return re.findall(r'user_id: \[WST:(.+)\]', output)[0]
+    return re.compile(r'user_id: \[WST:(.+)\]').findall(output)[0]
 
 
 def find_history_rate(output):
@@ -66,12 +66,30 @@ def get_tdn(provider,org,user):
     return '/'.join([provider,org,user])
 
 
-###########################
-TOP = int(sys.argv[1])
+def get_userAtDomain(org,user):
+    # specially, default org 'a' for name: dm137.icoremail.net
+    if org == 'a':
+        org = 'dm137.icoremail.net'
+    return '@'.join([user,org])
 
+
+def compute_inactivity(final_rate_list):
+    return [each for each in final_rate_list if each ==0]
+
+
+######################
 output = get_cmd_res()
 map_list = split_map(output)
 wright_len = len(map_list)
+
+if len(sys.argv) == 1:
+    TOP = 10
+elif len(sys.argv) == 2:
+    TOP = int(sys.argv[1])
+    if not 0 < TOP <= wright_len:
+        sys.exit('Wrong args for top numnbers!')
+else:
+    sys.exit('Wrong arguments!')
 
 provider_id_list = map(find_provider_id,map_list)
 assert len(provider_id_list) == wright_len
@@ -82,23 +100,31 @@ assert len(org_id_list) == wright_len
 user_id_list = map(find_user_id,map_list)
 assert len(user_id_list) == wright_len
 
-tdn_list = map(get_tdn,provider_id_list,org_id_list,user_id_list)
-assert len(tdn_list) == wright_len
+# tdn_list = map(get_tdn,provider_id_list,org_id_list,user_id_list)
+# assert len(tdn_list) == wright_len
+
+userAtDomain_list = map(get_userAtDomain,org_id_list,user_id_list)
+assert len(userAtDomain_list) == wright_len
 
 history_rate_list = map(find_history_rate,map_list)
 rate_list = map(find_rate,map_list)
 assert len(history_rate_list) == len(rate_list) == wright_len
 final_rate_list = map(compute_final_rate,history_rate_list,rate_list)
 
-result_list = map(lambda x,y:(x,y),tdn_list,final_rate_list)
+# result_list = map(lambda x,y:(x,y),tdn_list,final_rate_list)
+# result_list = zip(tdn_list,final_rate_list)
+result_list = zip(userAtDomain_list,final_rate_list)
 
 sort_result_list = sorted(result_list,key=lambda x:x[1],reverse=True)
+inactivities = compute_inactivity(final_rate_list)
+activities_scale = format((wright_len - len(inactivities))/float(wright_len),'.2%')
 
 # display
-print '\n#############################\n'
-print 'Top ',TOP,' users:'
-for tdn,rate in sort_result_list[:TOP]:
-    print tdn.ljust(40),': ',rate
+print wright_len,'uers included!'
+print 'Totally',activities_scale,'activity users(those whose rate is nonzero)!'
+print 'Top',TOP,'users:'
+for userAtDomain,rate in sort_result_list[:TOP]:
+    print userAtDomain.rjust(40),' : ',rate
 
 
 

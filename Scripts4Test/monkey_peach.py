@@ -1,1 +1,0 @@
-import pdbn = 1for i in range(10,0,-1):		print n	n = (n+1)*2	pdb.set_trace()
