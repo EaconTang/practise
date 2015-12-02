@@ -8,5 +8,8 @@ import threading
 import binascii
 import array
 import re
+import sys
 
 
+sys.path.append(''D:\\Python27\\lib\\site-packages\\')
+print sys.path

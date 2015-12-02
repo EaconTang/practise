@@ -1,5 +1,6 @@
-from collections import Counter
 import re
+
+from SeniorTest.Collections import Counter
 
 list1 = [1,2,3,4,5,4,3,2,1,'a','a','b','a']
 

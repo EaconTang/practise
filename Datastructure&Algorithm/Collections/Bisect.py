@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 
 '''
 bisect模块能够提供保持list元素序列的支持。
@@ -8,14 +8,14 @@ bisect模块能够提供保持list元素序列的支持。
 
 import bisect
 
-alist = [1,2,13,14,15,41,45,46,50,250,1500]
+alist = [1, 2, 13, 14, 15, 41, 45, 46, 50, 250, 1500]
 
-bisect.insort_right(alist,10)
-bisect.insort_left(alist,11)
+bisect.insort_right(alist, 10)
+bisect.insort_left(alist, 11)
 
 print alist
 
 print len(alist)
 
-#返回应该插入的位置（但不插入）
-print bisect.bisect(alist,150)
+# 返回应该插入的位置（但不插入）
+print bisect.bisect(alist, 150)
