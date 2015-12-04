@@ -35,6 +35,11 @@ def option_parser():
     parser.add_option('-y','--yesterday-log', dest='YESTERDAY_LOG',
                       help='plus this flag to specify yesterday\'s log file, based on the file specify by \'-f\'',
                       action='store_true',default=False)
+    parser.add_option('-D',dest='DOMAIN_RATIO',
+                      help='use this flag to calculate domain success ratio',
+                      action='store_true',default=False)
+    parser.add_option('--datetime',dest='DATETIME',
+                      help='specify a time period as format "YYYYMMDD:YYYYMMDD"')
     return parser
 
 
@@ -106,6 +111,75 @@ def color_wrap(mes, color):
         return BLUE + mes + ENDC
     else:
         sys.exit('Error: unsupport color?')
+
+
+def memo(f):
+    cache = {}
+    pass
+
+
+def compute_domain_ratio(config,res_count):
+    """
+    compute ratio of each domain's connect success and accountProcess success
+    :return a result dict,key=domain,value=ratios
+    """
+    res = {}
+    domain_list = config.options('/All/Exception/server fail')
+
+    server_fail = {}
+    account_process = {}
+    account_process_OK = {}
+    for each in domain_list:
+        server_fail[each] = res_count['/'.join(['/All/Exception/server fail',each])]
+        account_process[each] = res_count['/'.join(['/All/Normal/AccountProcessed',each])]
+        account_process_OK[each] = res_count['/'.join(['/All/Normal/AccountProcessed/_OK',each])]
+
+    for each in domain_list:
+        try:
+            connect_success_ratio = format(account_process[each]/float(account_process[each] + server_fail[each]),'.2%')
+            account_process_OK_ratio = format(account_process_OK[each]/float(account_process[each]),'.2%')
+        except ZeroDivisionError,e:
+            connect_success_ratio = account_process_OK_ratio = None
+        # print '\n======',each,'======'
+        # print '服务器连接成功率：',connect_success_ratio,
+        #
+        # print '代收成功率：',account_process_OK_ratio
+
+        res[each] = str(connect_success_ratio).ljust(6) + ' ' + str(account_process_OK_ratio).rjust(6)
+
+    return res
+
+
+def write_target_file(from_tabulate,target_file):
+    """
+    write tabulate to target file;do check on table title's differ
+    :param from_tabulate: a tabulate,just one title row and one data row
+    :param target_file: a file maybe contain some tabulate data
+    """
+    with open(target_file, 'a+') as f:
+        # major row to insert: result of this time
+        to_write = from_tabulate.get_row_data(1) + '\n'
+
+        target_file_lines = open(target_file).readlines()
+        target_file_titles = grep_lines('LogDate', target_file_lines, False)
+        if target_file_lines == []:
+            # means a new file
+            to_write = from_tabulate.get_title_with_bar() + '\n' + to_write
+            f.write(to_write)
+        elif target_file_titles != [] and from_tabulate.get_row_data(0) != target_file_titles[-1]:
+            print target_file_titles
+            print from_tabulate.get_row_data(0)
+            print target_file_titles[-1]
+            # means config updated
+            to_write = '\n###############config file is updated##############\n\n' + \
+                       from_tabulate.get_title_with_bar() + '\n' + \
+                       to_write
+            f.write(to_write)
+        else:
+            # just add it
+            f.write(to_write)
+
+        print '本次统计已经写入汇总文件表：{0}'.format(target_file)
 
 
 class MyConfigParser(ConfigParser.ConfigParser):

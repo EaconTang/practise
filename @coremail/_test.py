@@ -9,7 +9,11 @@ import binascii
 import array
 import re
 import sys
+import functools
+import math
 
 
-sys.path.append(''D:\\Python27\\lib\\site-packages\\')
-print sys.path
+aa = [1,2]
+a = [3]
+
+print a + aa

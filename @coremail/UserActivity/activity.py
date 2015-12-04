@@ -14,7 +14,7 @@ import sys
 
 
 def get_cmd_res():
-    cmd = '/home/coremail/bin/sautil callapi "{cmd:303,attrs:[provider_id,org_id,user_id,activity],filter:[]}]}"'
+    cmd = '/home/coremail/bin/sautil callapi "{cmd:303,attrs:[provider_id,org_id,user_id,activity],filter:[],limit:-1}"'
     status, output = commands.getstatusoutput(cmd)
 
     if status != 0:
@@ -52,7 +52,7 @@ def find_rate(output):
 
 
 def compute_final_rate(history_rate,rate):
-    return (history_rate*0.8 + rate)/200000
+    return float(history_rate*0.8 + rate)/200000
 
 
 def split_map(output):
@@ -75,6 +75,12 @@ def get_userAtDomain(org,user):
 
 def compute_inactivity(final_rate_list):
     return [each for each in final_rate_list if each ==0]
+
+
+def get_all_users_cout():
+    cmd = '/home/coremail/bin/userutil --select-user|wc -l'
+    output = commands.getoutput(cmd)
+    return int(output)
 
 
 ######################
@@ -101,7 +107,6 @@ user_id_list = map(find_user_id,map_list)
 assert len(user_id_list) == wright_len
 
 # tdn_list = map(get_tdn,provider_id_list,org_id_list,user_id_list)
-# assert len(tdn_list) == wright_len
 
 userAtDomain_list = map(get_userAtDomain,org_id_list,user_id_list)
 assert len(userAtDomain_list) == wright_len
@@ -111,20 +116,24 @@ rate_list = map(find_rate,map_list)
 assert len(history_rate_list) == len(rate_list) == wright_len
 final_rate_list = map(compute_final_rate,history_rate_list,rate_list)
 
-# result_list = map(lambda x,y:(x,y),tdn_list,final_rate_list)
-# result_list = zip(tdn_list,final_rate_list)
-result_list = zip(userAtDomain_list,final_rate_list)
+# result_list = zip(userAtDomain_list,final_rate_list)
+# result_list = zip(userAtDomain_list,final_rate_list,history_rate_list,rate_list)
+# sort_result_list = sorted(result_list,key=lambda x:x[1],reverse=True)
+result_list = zip(final_rate_list,history_rate_list,rate_list,userAtDomain_list)
+result_list.sort(reverse=True)
 
-sort_result_list = sorted(result_list,key=lambda x:x[1],reverse=True)
 inactivities = compute_inactivity(final_rate_list)
 activities_scale = format((wright_len - len(inactivities))/float(wright_len),'.2%')
 
 # display
-print wright_len,'uers included!'
-print 'Totally',activities_scale,'activity users(those whose rate is nonzero)!'
-print 'Top',TOP,'users:'
-for userAtDomain,rate in sort_result_list[:TOP]:
-    print userAtDomain.rjust(40),' : ',rate
+if wright_len != get_all_users_cout():
+    print get_all_users_cout(),'system users exist!'
+print wright_len,'uers are involved!'
+print 'About',activities_scale,'activity users(those whose rate is nonzero)!'
+print 'For top',TOP,'users:'
+for final_rate,history_rate,rate,userAtDomain in result_list[:TOP]:
+    print userAtDomain.rjust(40),' : ',str(final_rate).ljust(10),
+    print '[ history_rate:',str(history_rate).rjust(6),',','rate:',str(rate).rjust(6),']'
 
 
 

@@ -1,0 +1,64 @@
+;rmi exceptions classfied
+;if multi grep(logic 'AND') needed,use value as example: option = ["grep1","gre2"]
+;if multi grep(logic 'OR') needed,use value as example: option = ("grep1","gre2")
+
+[/All]
+Exception = "WARNING"
+Normal = "INFO"
+
+[/All/Exception]
+server fail = "Server fail"
+server disabled = "Server disabled for too many fails"
+connect exception = ("NET_ERR_CONNECT","java.net.ConnectException")
+
+[/All/Exception/server fail]
+coremail = ("imap.coremail.cn","imap.icoreamail.net")
+qq = ("imap.qq.com","pop.qq.com")
+163 = ("imap.163.com","pop.163.com")
+126 = ("imap.126.com","pop.126.com")
+yeah.net = ("imap.yeah.net","pop.yeah.net")
+sina = ("imap.sina.com","pop.sina.com")
+outlook = ("imap-mail.outlook.com","pop-mail.outlook.com")
+yahoo = ("imap.mail.yahoo.com","pop.mail.yahoo.com")
+139 = ("imap.139.com","pop.139.com")
+kingdee = "kdmail.kingdee.com"
+
+[/All/Exception/server disabled]
+coremail = ("imap.coremail.cn","imap.icoreamail.net")
+qq = ("imap.qq.com","pop.qq.com")
+163 = ("imap.163.com","pop.163.com")
+126 = ("imap.126.com","pop.126.com")
+yeah.net = ("imap.yeah.net","pop.yeah.net")
+sina = ("imap.sina.com","pop.sina.com")
+outlook = ("imap-mail.outlook.com","pop-mail.outlook.com")
+yahoo = ("imap.mail.yahoo.com","pop.mail.yahoo.com")
+139 = ("imap.139.com","pop.139.com")
+kingdee = "kdmail.kingdee.com"
+
+[/All/Normal]
+AccountProcessed = ["AccountProcessed. uid=","result={code"]
+
+[/All/Normal/AccountProcessed]
+coremail = ("server=imap.coremail.cn","server=imap.icoreamail.net")
+qq = ("server=imap.qq.com","server=pop.qq.com")
+163 = ("server=imap.163.com","server=pop.163.com")
+126 = ("server=imap.126.com","server=pop.126.com")
+yeah.net = ("server=imap.yeah.net","server=pop.yeah.net")
+sina = ("server=imap.sina.com","server=pop.sina.com")
+outlook = ("server=imap-mail.outlook.com","server=pop-mail.outlook.com")
+yahoo = ("server=imap.mail.yahoo.com","server=pop.mail.yahoo.com")
+139 = ("server=imap.139.com","server=pop.139.com")
+kingdee = "server=kdmail.kingdee.com"
+_OK = "result={code=S_OK"
+
+[/All/Normal/AccountProcessed/_OK]
+coremail = ("server=imap.coremail.cn","server=imap.icoreamail.net")
+qq = ("server=imap.qq.com","server=pop.qq.com")
+163 = ("server=imap.163.com","server=pop.163.com")
+126 = ("server=imap.126.com","server=pop.126.com")
+yeah.net = ("server=imap.yeah.net","server=pop.yeah.net")
+sina = ("server=imap.sina.com","server=pop.sina.com")
+outlook = ("server=imap-mail.outlook.com","server=pop-mail.outlook.com")
+yahoo = ("server=imap.mail.yahoo.com","server=pop.mail.yahoo.com")
+139 = ("server=imap.139.com","server=pop.139.com")
+kingdee = "server=kdmail.kingdee.com"
