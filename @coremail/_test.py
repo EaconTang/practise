@@ -13,7 +13,5 @@ import functools
 import math
 
 
-aa = [1,2]
-a = [3]
-
-print a + aa
+print bin(17537)
+print bin(144)

@@ -39,19 +39,9 @@ def memoize(duration=10):
 def add(a, b):
     return a + b
 
-
-print add(1, 2)
-print add(2, 3)
-print add(1, 4)
-print add(4, 1)
-print add(1, 2)
-
-
-def trace():
-    def _trace(f):
-        def __trace(*args,**kwargs):
-            print "calling function {0} with args {1}, {2}".format(f.func_name,args,kwargs)
-            return f(*args,**kwargs)
-        return __trace
-    return _trace
-
+if __name__ == '__main__':
+    print add(1, 2)
+    print add(2, 3)
+    print add(1, 4)
+    print add(4, 1)
+    print add(1, 2)
