@@ -7,7 +7,7 @@ from sys import exit
 import datetime
 from math import fabs
 
-def convert_to_logfiles(time_period,logfile='rmi_api.log'):
+def convert_to_logfiles(time_period,logfile):
     if not match(r'\d{8}:\d{8}',time_period):
         exit('Wrong format for time period!')
 

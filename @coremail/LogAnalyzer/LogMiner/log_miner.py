@@ -57,9 +57,8 @@ if not datetime_period:
         file_lines_all = f_obj.readlines()
 else:
     # allow to read multiple log files
-    logfile_list = LogTime.convert_to_logfiles(datetime_period)
-    log_list = map(lambda x:'/home/coremail/logs/' + x, logfile_list)
-    for each in log_list:
+    logfile_list = LogTime.convert_to_logfiles(datetime_period,log)
+    for each in logfile_list:
         with open(each) as f_obj:
             file_lines_all += f_obj.readlines()
 
