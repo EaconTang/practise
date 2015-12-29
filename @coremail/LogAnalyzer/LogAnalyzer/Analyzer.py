@@ -2,10 +2,12 @@
 generate a specific analyzer
 using design pattern: Template Method Pattern and Factory Method Pattern
 """
-import Config
+from Input import Config
+from Util import *
+import setting
 
 
-class Analyzer(object):
+class BaseAnalyzer(object):
     """
     main process flow as logstash:
         1. Input
@@ -13,11 +15,8 @@ class Analyzer(object):
         3. Output
     """
 
-    def __init__(self, optargs):
-        """
-        :param optargs: args define by user in command mode
-        """
-        self.optargs = optargs
+    def __init__(self):
+        pass
 
     def get_input(self):
         raise NotImplementedError
@@ -32,8 +31,18 @@ class Analyzer(object):
         pass
 
 
-class
+class DefaultAnalyzer(BaseAnalyzer):
+    def get_input(self):
+        cf = Config()
+        var_dict = cf.parse_command_args()
+        cf.read_conf_file(var_dict['cf'])
 
+    def filter(self):
+
+        pass
 
 if __name__ == '__main__':
-    pass
+    analyzer = DefaultAnalyzer()
+    analyzer.get_input()
+    analyzer.filter()
+    analyzer.output()
