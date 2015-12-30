@@ -6,49 +6,63 @@ including:
     3. configuration from conf/*.conf
     4. log file streams
 """
+import os
 from optparse import OptionParser
 from Util import MyConfigParser
 import setting
 
 
-class BaseInput(object):
+class BaseInputs(object):
     def __init__(self):
-        self._default_vars = []
-        pass
+        # self.vars_dict = vars_dict
+        # self.file_lines = file_lines
 
-    def default_setting(self):
-        pass
+    def load_default(self):
+        raise NotImplementedError
 
     def parse_command_args(self):
-        pass
+        raise NotImplementedError
 
     def read_conf_file(self, cf):
-        pass
+        raise NotImplementedError
 
     def read_log_file(self, log):
-        pass
+        raise NotImplementedError
+
+    def returns(self):
+        raise NotImplementedError
 
 
-class DefaultSetting(BaseInput):
+class DefaultSetting(BaseInputs):
+    def __init__(self):
+        super(DefaultSetting, self).__init__()
+        self._default_vars = []
+
+    @staticmethod
     @property
-    def default_setting(self):
-        self._default_vars = dir(setting)
-        self._default_vars = filter(lambda x: x == x.upper(), self._default_vars)
-        return self._default_vars
+    def default_vars(self):
+        default_vars = dir(setting)
+        default_vars = filter(lambda x: x == x.upper(), default_vars)
+        return default_vars
+
+    def load_default(self):
+        self._default_vars = self.default_vars
 
 
-class CommandArgs(BaseInput):
+class CommandArgs(BaseInputs):
+    def __init__(self):
+        super(CommandArgs, self).__init__()
+
     @property
     def arg_parser(self):
         """
-        give optional arguments while execute the program
-        :return: a option parser
+        provide optional arguments when starting the program
+        :return: an option parser
         """
         usage = "usage: python %prog [-h] [-f value] [-c value] [-t] [-T value] [-o] [-O value] [-y]"
         usage += " [-D]"
         usage += " [--datetime value]"
         parser = OptionParser(usage)
-
         parser.add_option('-f', '--file', dest='FILE',
                           help='specify a log file to be scan, defaults to today\'s rmi_api.log')
         parser.add_option('-c', '--config', dest='CONFIG',
@@ -76,9 +90,10 @@ class CommandArgs(BaseInput):
 
     def parse_command_args(self):
         """
-        deal with command line args
+        according to command line args and default setting, conclude final vars
+        :return: vars <dict>, used by following steps
         """
-        parser = CommandArgs().arg_parser
+        parser = self.arg_parser
         (options, args) = parser.parse_args()
 
         cf = options.CONFIG if options.CONFIG else setting.CONFIG
@@ -89,37 +104,78 @@ class CommandArgs(BaseInput):
         tabulate_file = os.path.join(setting.RESULT_FOLDER, options.TABULATE) if options.TABULATE else setting.TABULATE
         datetime_period = options.DATETIME
 
-        # return [cf,log,omit_file,tabulate_file,datetime_period]
-        return {
+        _vars = {
             'cf': cf,
             'log': log,
             'omit_file': omit_file,
             'tabulate_file': tabulate_file,
             'datetime_period': datetime_period,
         }
+        return _vars
 
 
-class ConfFile(BaseInput):
-    def read_conf_file(self, cf):
+class ConfFile(BaseInputs):
+    def __init__(self):
+        super(ConfFile, self).__init__()
+
+    def read_conf_file(self, conf_file):
+        if conf_file.endswith('ini') or conf_file.endswith('conf') or conf_file.endswith('cf'):
+            return self.read_ini(conf_file)
+        elif conf_file.endswith('json'):
+            return self.read_json(conf_file)
+        elif conf_file.endswith('yaml'):
+            return self.read_yaml(conf_file)
+        else:
+            exit('[Error]Unsupported config file format?')
+
+    def read_ini(self, conf_file):
         config = MyConfigParser()
-        config.read(cf)
-        return config
+        config.read(conf_file)
+        return {
+            'sections': sorted(config.sections())
+        }
+
+    def read_json(self, conf_file):
+        raise NotImplementedError
+
+    def read_yaml(self, cong_file):
+        raise NotImplementedError
 
 
-class LogFile(BaseInput):
+class LogFile(BaseInputs):
+    def __init__(self):
+        super(LogFile, self).__init__()
+
     def read_log_file(self, log):
         pass
+        return {
+            'filelines': None
+        }
 
 
-class Input(BaseInput,CommandArgs,ConfFile,):
-    pass
+class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
+    def __init__(self):
+        super(Inputs,self).__init__()
+
+    @property
+    def returns(self):
+        return [self.vars, self]
 
 
 if __name__ == '__main__':
-    cf = Input()
-    # default_var_list = cf.default_setting
-    var_dict = cf.parse_command_args()
-    cf.read_conf_file(var_dict['cf'])
+    print vars(setting)
+    all_vars = {}
+    inputs = Inputs()
+
+    some_vars = inputs.parse_command_args()
+    all_vars.update(some_vars)
+
+    sections = inputs.read_conf_file(all_vars['cf'])
+    all_vars.update(sections)
+
+    filelines = inputs.read_log_file(all_vars['log'])
+    all_vars.update(filelines)
+
 
     # execfile('setting.py')
     # print dir()

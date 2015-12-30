@@ -2,7 +2,7 @@
 """
 custom functions and classes
 """
-import ConfigParser
+from ConfigParser import ConfigParser
 from ast import literal_eval
 import prettytable
 from re import match
@@ -104,8 +104,14 @@ def color_wrap(mes, color):
         exit('Error: unsupport color?')
 
 
-def memo():
-    pass
+def printinfo():
+    def _printinfo(f):
+        def __printinfo(*args, **kwargs):
+            try:
+                f(*args, **kwargs)
+                print 'OK! Finish doing {0}...'.format(f.func_name)
+        return __printinfo
+    return _printinfo
 
 
 def write_target_file(from_tabulate, target_file):
@@ -140,7 +146,7 @@ def write_target_file(from_tabulate, target_file):
         # print '本次统计已经写入汇总文件表：{0}'.format(target_file)
 
 
-class MyConfigParser(ConfigParser.ConfigParser):
+class MyConfigParser(ConfigParser):
     def optionxform(self, optionstr):
         """
         overrides method optionsxform(), make options case-sensitive
