@@ -30,5 +30,3 @@ OMIT = os.path.join(RESULT_FOLDER, 'rmi_api.omit')
 TABULATE = os.path.join(RESULT_FOLDER, 'rmi_api_error.tabulate')
 
 
-
-print dir()

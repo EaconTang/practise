@@ -105,11 +105,13 @@ def color_wrap(mes, color):
 
 
 def printinfo():
+    """
+    a decorator for printing program info
+    """
     def _printinfo(f):
         def __printinfo(*args, **kwargs):
-            try:
-                f(*args, **kwargs)
-                print 'OK! Finish doing {0}...'.format(f.func_name)
+            f(*args, **kwargs)
+            print 'OK! Finish doing {0}...'.format(f.func_name)
         return __printinfo
     return _printinfo
 

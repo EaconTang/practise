@@ -8,7 +8,7 @@ including:
 """
 import os
 from optparse import OptionParser
-from Util import MyConfigParser
+from Utils import MyConfigParser
 import setting
 
 
@@ -16,17 +16,18 @@ class BaseInputs(object):
     def __init__(self):
         # self.vars_dict = vars_dict
         # self.file_lines = file_lines
+        pass
 
-    def load_default(self):
+    def default_vars(self):
         raise NotImplementedError
 
     def parse_command_args(self):
         raise NotImplementedError
 
-    def read_conf_file(self, cf):
+    def read_conf_file(self):
         raise NotImplementedError
 
-    def read_log_file(self, log):
+    def read_log_file(self):
         raise NotImplementedError
 
     def returns(self):
@@ -36,17 +37,24 @@ class BaseInputs(object):
 class DefaultSetting(BaseInputs):
     def __init__(self):
         super(DefaultSetting, self).__init__()
-        self._default_vars = []
+        self._default_vars = {}
 
-    @staticmethod
+    @property
+    def default_var_list(self):
+        return filter(lambda x: x == x.upper(), dir(setting))
+
     @property
     def default_vars(self):
-        default_vars = dir(setting)
-        default_vars = filter(lambda x: x == x.upper(), default_vars)
-        return default_vars
+        var_list = self.default_var_list
+        var_vals = vars(setting)
+        for each in var_list:
+            self._default_vars[each] = var_vals.get(each)
+        return self._default_vars
 
-    def load_default(self):
-        self._default_vars = self.default_vars
+    @staticmethod
+    def get_var(var):
+        return vars(setting).__getitem__(var)
+
 
 
 class CommandArgs(BaseInputs):
@@ -159,22 +167,31 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
 
     @property
     def returns(self):
-        return [self.vars, self]
+        return
 
 
 if __name__ == '__main__':
-    print vars(setting)
-    all_vars = {}
+
     inputs = Inputs()
 
-    some_vars = inputs.parse_command_args()
-    all_vars.update(some_vars)
+    # default settings and vars
+    print inputs.default_var_list
+    print inputs.default_vars
+    print DefaultSetting.get_var('CONFIG')
 
-    sections = inputs.read_conf_file(all_vars['cf'])
-    all_vars.update(sections)
+    print inputs.arg_parser
 
-    filelines = inputs.read_log_file(all_vars['log'])
-    all_vars.update(filelines)
+    # all_vars = {}
+    # inputs = Inputs()
+    #
+    # some_vars = inputs.parse_command_args()
+    # all_vars.update(some_vars)
+    #
+    # sections = inputs.read_conf_file(all_vars['cf'])
+    # all_vars.update(sections)
+    #
+    # filelines = inputs.read_log_file(all_vars['log'])
+    # all_vars.update(filelines)
 
 
     # execfile('setting.py')

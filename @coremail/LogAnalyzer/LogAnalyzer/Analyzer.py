@@ -3,7 +3,7 @@ generate a specific analyzer
 using design pattern: Template Method Pattern and Factory Method Pattern
 """
 from Inputs import Config
-from Util import *
+from Utils import *
 import setting
 
 
