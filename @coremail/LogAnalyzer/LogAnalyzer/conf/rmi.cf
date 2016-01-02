@@ -1,0 +1,12 @@
+;rmi exceptions classfied
+;if multi grep(logic 'AND') needed,use value as example: option = ["grep1","gre2"]
+;if multi grep(logic 'OR') needed,use value as example: option = ("grep1","gre2")
+
+[/All]
+Exception = "WARNING"
+Info = "INFO"
+
+[/All/Exception]
+fail on = "Fail on"
+msg exception= "MessagingException"
+

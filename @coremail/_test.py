@@ -11,34 +11,42 @@ import re
 import sys
 import functools
 import math
+import ConfigParser
+from optparse import OptionParser
+from contextlib import nested
+import copy
 
-def do_dict(var):
-    assert isinstance(var, dict)
-    _var = {
-        '1': 1,
-        'a': 'a'
-    }
-    # var.update(_var)
-    _var.update(var)
-    print _var
+def f_gen(filename):
+    with open(filename) as f:
+        for line in f:
+            yield line
+#
+# def f_gens():
+#     open_files = "open('temp'), open('test')"
+#     with nested(eval(open_files)) as fs:
+#         for open_file in fs:
+#             for line in open_file:
+#                 yield line
 
-d = {'b':'b'}
-do_dict(d)
-print d
 
-print id(d)
-D = d
-print id(D)
 
-class T(object):
-    def __init__(self, d):
-        self.d = d
-        print id(self.d)
+def gs(filenames):
+    def _gens(filenames):
+        # return a generator that gens generator(f_gen)
+        for filename in filenames:
+            yield f_gen(filename)
 
-    def udict(self):
-        _d = {'a':'a'}
-        self.d.update(_d)
+    gs = _gens(filenames)
+    for g in gs:
+        for i in g:
+            yield i
 
-t = T(d)
-t.udict()
-print d
+a = {'a':1, 'b':2}
+A = (i for i in xrange(10))
+print id(A)
+print id(list(A))
+print id(len(list(A)))
+
+la = list(A)
+print id(la)
+

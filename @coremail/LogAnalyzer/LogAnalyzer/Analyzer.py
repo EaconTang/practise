@@ -1,30 +1,31 @@
 """
 generate a specific analyzer
-using design pattern: Template Method Pattern and Factory Method Pattern
+using design pattern: Template Method Pattern
 """
-from Inputs import Config
+from Inputs import Inputs
+from Filters import Filters
+from Outputs import Outputs
 from Utils import *
-import setting
+import settings
 
 
 class BaseAnalyzer(object):
     """
     main process flow as logstash:
         1. Inputs
-        2. filter
+        2. Filters
         3. Outputs
     """
-
     def __init__(self):
         pass
 
-    def get_input(self):
+    def do_input(self):
         raise NotImplementedError
 
-    def filter(self):
+    def do_filter(self):
         raise NotImplementedError
 
-    def show_output(self):
+    def do_output(self):
         raise NotImplementedError
 
     def assist(self):
@@ -32,21 +33,26 @@ class BaseAnalyzer(object):
 
 
 class DefaultAnalyzer(BaseAnalyzer):
-    def get_input(self):
-        cf = Config()
-        var_dict = cf.parse_command_args()
-        cf.read_conf_file(var_dict['cf'])
+    def do_input(self):
+        inputs = Inputs()
+        return inputs.process()
 
-    def filter(self):
+    def do_filter(self, inputs_res):
+        filters = Filters(inputs_res)
+        return filters.process()
 
-        pass
+    def do_output(self, filters_res):
+        outputs = Outputs(filters_res)
+        outputs.process()
 
-    def show_output(self):
-
-        pass
 
 if __name__ == '__main__':
     analyzer = DefaultAnalyzer()
-    analyzer.get_input()
-    analyzer.filter()
-    analyzer.show_output()
+
+    in_res = analyzer.do_input()
+    print in_res
+
+    filter_res = analyzer.do_filter(in_res)
+    print filter_res
+
+    # analyzer.do_output(filter_res)

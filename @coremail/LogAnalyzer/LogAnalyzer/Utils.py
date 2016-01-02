@@ -24,10 +24,9 @@ def convert_to_logfiles(time_period, logfile):
     end_date = datetime.datetime.strptime(end, '%Y%m%d').date()
 
     time_delta = int(fabs(int((end_date - start_date).days))) + 1
-    datetime_list = [start_date + datetime.timedelta(i) for i in range(time_delta)]
-
+    datetime_list = [start_date + datetime.timedelta(i) for i in xrange(time_delta)]
     datetime_list = map(lambda x: x.strftime('%Y-%m-%d'), datetime_list)
-    print datetime_list
+
     return map(lambda x: '.'.join([logfile, x]), datetime_list)
 
 
@@ -107,6 +106,7 @@ def color_wrap(mes, color):
 def printinfo():
     """
     a decorator for printing program info
+    as a log util
     """
     def _printinfo(f):
         def __printinfo(*args, **kwargs):
