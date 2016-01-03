@@ -9,9 +9,10 @@ from re import match
 from sys import exit
 import datetime
 from math import fabs
+import json
 
 
-def convert_to_logfiles(time_period, logfile):
+def convert_time_period(time_period, logfile):
     """
     deal with log time;
     allow more flexible time specified by user
@@ -27,7 +28,8 @@ def convert_to_logfiles(time_period, logfile):
     datetime_list = [start_date + datetime.timedelta(i) for i in xrange(time_delta)]
     datetime_list = map(lambda x: x.strftime('%Y-%m-%d'), datetime_list)
 
-    return map(lambda x: '.'.join([logfile, x]), datetime_list)
+    file_list = map(lambda x: '.'.join([logfile, x]), datetime_list)
+    return str(time_period), file_list
 
 
 def grep_lines(pattern, file_lines, do_eval=True):
@@ -91,13 +93,13 @@ def color_wrap(mes, color):
     ENDC = '\033[0m'
 
     mes = str(mes)
-    if color == 'red':
+    if color.lower() == 'red':
         return RED + mes + ENDC
-    elif color == 'yellow':
+    elif color.lower() == 'yellow':
         return YELLOW + mes + ENDC
-    elif color == 'green':
+    elif color.lower() == 'green':
         return GREEN + mes + ENDC
-    elif color == 'blue':
+    elif color.lower() == 'blue':
         return BLUE + mes + ENDC
     else:
         exit('Error: unsupport color?')
@@ -146,6 +148,22 @@ def write_target_file(from_tabulate, target_file):
             f.write(to_write)
 
         # print '本次统计已经写入汇总文件表：{0}'.format(target_file)
+
+
+def dict_to_json(res, indent=4, sort_by_key=True):
+    assert isinstance(res, dict)
+    try:
+        return json.dumps(res, indent=indent,sort_keys=sort_by_key)
+    except:
+        exit('[Error]')
+
+def list_to_json(res, indent=2):
+    assert isinstance(res, list)
+    try:
+        return json.dumps(res, indent=indent)
+    except:
+        exit('[Error]')
+
 
 
 class MyConfigParser(ConfigParser):

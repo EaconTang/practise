@@ -13,7 +13,7 @@ import datetime
 RMI_LOG = '/home/coremail/logs/rmi_api.log'
 WMS_LOG = '/home/coremail/logs/wmsvr.log'
 
-FILE = RMI_LOG   # default file is rmi_api.log
+FILE_PATH = RMI_LOG
 
 
 # config files folder
@@ -26,19 +26,24 @@ WMS_EXCEPT = 'wms_exceptions.cf'
 
 CONFIG = os.path.join(CONFIG_FOLDER, RMI_EXCEPT)    # default config is rmi_exceptions.cf
 
+# config sections' root name(common parent)
+ROOT_NAME = 'All'
+# key name for omit parts
+OMIT_NAME = '(OMIT)'
 
 # results file folder
 RESULT_FOLDER = os.path.join(os.getcwd(), 'results')
 
 
 # omit file
-SAVE_OMIT = False
+SAVE_OMIT = True
 OMIT_FILE = os.path.join(RESULT_FOLDER, 'exceptions.omit')
 
 
 # tabulate file
-SAVE_TABULATE = False
+SAVE_TABULATE = True
 TABULATE_FILE = os.path.join(RESULT_FOLDER, 'error.tabulate')
+TABULATE_SECTION = 'All/Exception'
 
 
 # domain connect info
@@ -53,3 +58,10 @@ USE_REGEX = False
 YESTERDAY = False
 TIME_PERIOD = None
 
+
+# output result to ...
+TO_CONSOLE = True
+TO_FILE = True
+
+# use prettytable outputs
+USE_PRETTYTABLE = True

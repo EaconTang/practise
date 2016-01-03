@@ -11,7 +11,7 @@
 23:35:00 INFO    [tid:17567] POPAgent autosync processed 266 (85%) users
 23:35:00 INFO    [tid:17644] 1 popweb accounts queued for user: 1000664@wpsmail.com, High/Normal/Low/Background QueueSizes: 0/0/1/21, Active/Current/Lagest/Limit Threads: 50/50/50/50, Registered Users: size=(22): 1000579@wpsmail.com,1000457@wpsmail.com,1000157@wpsmail.com,...
 23:35:00 INFO    [tid:17907] POPAgent autosync processed 297 (95%) users
-23:35:00 INFO    [tid:17636] POPAgent autosync processed 291 (93%) users
+23:35:00 WARNING [tid:17636] Fail on Bugs POPAgent autosync processed 291 (93%) users
 23:35:00 WARNING [tid:17909] Server disabled for too many fails: imap-mail.outlook.com (223.252.214.50:14306), timeToActive=23:45:00
 23:35:00 INFO    [tid:17577] 1 popweb accounts queued for user: 1000709@wpsmail.com, High/Normal/Low/Background QueueSizes: 0/0/1/3, Active/Current/Lagest/Limit Threads: 50/50/50/50, Registered Users: size=(26): 1000579@wpsmail.com,1000457@wpsmail.com,1000714@wpsmail.com,...
 23:35:00 WARNING [tid:17906] Server fail: imap.mail.yahoo.com (223.252.214.59:14308), errorCount=2/3, exception=javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake

@@ -14,7 +14,7 @@ import prettytable
 
 #dfault setting
 CONFIG_DEFAULT = os.path.join(os.getcwd(),'rmi_exceptions.cf')
-LOG_DEFAULT = '/home/coremail/logs/rmi_api.log'                                 #rmi_api.log.2015-11-11
+LOG_DEFAULT = '/home/coremail/logs/rmi_api.log'                                 #rmi_api.log
 RESULT_PREFIX = 'rmi_result.'
 RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 
@@ -22,7 +22,7 @@ RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 # step 1: load option args parser and default config
 parser = option_parser(LOG_DEFAULT, CONFIG_DEFAULT, RESULT_FOLDER)
 #(options,args) = parser.parse_args()
-test_args = ['-f','rmi_api.log.2015-11-11','-r','test.today','-s']
+test_args = ['-f','rmi_api.log','-r','test.today','-s']
 (options,args) = parser.parse_args(test_args)
 cf = options.CONFIG_FILE if options.CONFIG_FILE else CONFIG_DEFAULT
 log = options.LOG_FILE if options.LOG_FILE else LOG_DEFAULT

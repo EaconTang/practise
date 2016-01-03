@@ -14,7 +14,7 @@ import json,yaml
 
 #dfault setting
 CONFIG_DEFAULT = os.path.join(os.getcwd(),'Exceptions_all.cf')
-LOG_DEFAULT = '/home/coremail/logs/rmi_api.log'                                 #rmi_api.log.2015-11-11
+LOG_DEFAULT = '/home/coremail/logs/rmi_api.log'                                 #rmi_api.log
 RESULT_PREFIX = 'rmi_exception_result_detail.'
 RESULT_FOLDER = os.path.join(os.getcwd(),'results')
 

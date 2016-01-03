@@ -14,7 +14,7 @@ import prettytable
 # step 1: load option args parser and config
 
 # default setting
-CONFIG = os.path.join(os.getcwd(),'conf','rmi_exceptions.cf')
+CONFIG = os.path.join(os.getcwd(),'rmi.cf')
 YESTERDAY = (datetime.datetime.now() - datetime.timedelta(days=1)).date()
 LOG = '/home/coremail/logs/rmi_api.log.{0}'.format(YESTERDAY)
 RESULT_FOLDER = os.path.join(os.getcwd(),'results')
@@ -24,7 +24,7 @@ TABULATE = os.path.join(RESULT_FOLDER,'rmi_api_error.tabulate')
 # load arg-parser
 parser = option_parser()
 # (options,args) = parser.parse_args()
-test_args = ['-f','rmi_api.log.2015-11-11','--omit','--tabulate']
+test_args = ['-f','rmi_api.log']
 (options,args) = parser.parse_args(test_args)
 cf = options.CONFIG if options.CONFIG else CONFIG
 log = options.FILE if options.FILE else LOG

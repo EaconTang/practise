@@ -9,8 +9,9 @@ including:
 import os
 from optparse import OptionParser
 import datetime
-from Utils import MyConfigParser, convert_to_logfiles
+from Utils import MyConfigParser, convert_time_period
 import settings
+import re
 
 
 class BaseInputs(object):
@@ -73,7 +74,7 @@ class CommandArgs(BaseInputs):
         usage += " [-D]"
         usage += " [--datetime value]"
         parser = OptionParser(usage)
-        parser.add_option('-f', '--file', dest='FILE',
+        parser.add_option('-f', '--file', dest='FILE_PATH',
                           help='specify a log file to be scan, defaults to today\'s rmi_api.log')
         parser.add_option('-c', '--config', dest='CONFIG',
                           help='specify a config file to be load,defaults to ~/LogMiner/conf/rmi_exceptions.cf')
@@ -105,8 +106,8 @@ class CommandArgs(BaseInputs):
         parser = self.arg_parser
         # (options, args) = parser.parse_args()
         (options, args) = parser.parse_args(
-            ['-f', 'files/rmi_api.log.2015-11-11', '-c', 'conf/rmi.cf'])
-        options_list = [('FILE', options.FILE),
+            ['-f', 'files/rmi_api.log', '-c', 'conf/rmi.cf'])
+        options_list = [('FILE_PATH', options.FILE_PATH),
                         ('CONFIG', options.CONFIG),
                         ('OMIT_FILE', options.OMIT_FILE),
                         ('SAVE_OMIT', options.SAVE_OMIT),
@@ -154,19 +155,32 @@ class LogFile(BaseInputs):
         # read yesterday's logfile
         if yesterday:
             YESTERDAY = (datetime.datetime.now() - datetime.timedelta(days=1)).date()
+            filename = '.'.join([log_file, str(YESTERDAY)])
             return {
-                'FILE_GEN': self.file_gen(self.vars_dict['FILE']),
-                'FILE': '.'.join([log_file, str(YESTERDAY)]),
+                'FILE_DATE': str(YESTERDAY),
+                'FILE_PATH': filename,
+                'FILE_LINE': self.file_lines(filename),
+                'FILE_GEN': self.file_gen(filename),
             }
         # read log files specified by datetime
         if time_period:
-            files = convert_to_logfiles(time_period, log_file)
+            time_period, filenames = convert_time_period(time_period, log_file)
             return {
-                'FILE_GEN': self.files_gen(files),
-                'FILE': files
+                'FILE_DATE': time_period,
+                'FILE_PATH': filenames,
+                'FILE_LINE': self.files_lines(filenames),
+                'FILE_GEN': self.files_gen(filenames),
             }
-
-        return {'FILE_GEN': self.file_gen(log_file)}
+        m = re.match(r'.+(\d{4}-\d{2}-\d{2})', log_file)
+        if m:
+            file_date = m.group(1)
+        else:
+            file_date = str(datetime.date.today())
+        return {
+            'FILE_DATE': file_date,
+            'FILE_LINE': self.file_lines(log_file),
+            'FILE_GEN': self.file_gen(log_file),
+        }
 
     @staticmethod
     def file_gen(filename):
@@ -180,6 +194,7 @@ class LogFile(BaseInputs):
     def files_gen(filenames):
         """a generator that each time gens a line for multi files
         """
+
         def _gens(filename_list):
             # return a generator that gens generator(file_gen)
             for filename in filename_list:
@@ -189,6 +204,18 @@ class LogFile(BaseInputs):
         for g in gs:
             for line in g:
                 yield line
+
+    @staticmethod
+    def file_lines(filename, hint=-1):
+        with open(filename) as f:
+            return f.readlines(hint)
+
+    @staticmethod
+    def files_lines(filenames, hint=-1):
+        filelines = []
+        for filename in filenames:
+            filelines.extend(LogFile.file_lines(filename, hint))
+        return filelines
 
 
 class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
@@ -206,7 +233,7 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
         self._vars = self.default_vars
         self._vars = self.command_args
         self._vars = self.read_conf(self.vars_dict['CONFIG'])
-        self._vars = self.read_log_file(self.vars_dict['FILE'],
+        self._vars = self.read_log_file(self.vars_dict['FILE_PATH'],
                                         self.vars_dict['YESTERDAY'],
                                         self.vars_dict['TIME_PERIOD'])
 
@@ -215,9 +242,3 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
 
 if __name__ == '__main__':
     inputs = Inputs()
-    print inputs.process()
-    log_file = inputs.vars_dict['FILE']
-    print log_file
-    f_gen = inputs.vars_dict['FILE_GEN']
-    print f_gen.next()
-

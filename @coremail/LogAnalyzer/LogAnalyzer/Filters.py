@@ -4,8 +4,9 @@ deal with file stream;
 """
 from Inputs import Inputs
 from Utils import MyConfigParser
-import ast
+from ast import literal_eval
 import re
+import time
 
 
 class BaseFilter(object):
@@ -44,11 +45,14 @@ class IniFilter(BaseFilter):
     def __init__(self):
         super(IniFilter, self).__init__()
         self.res = {}
+        self.res_lines = {}
+        self.res_counts = {}
+        self.omit_lines = {}
 
     def trans_config(self, ini_config):
         """
         trans ini_config to iterable datastructs like:
-            (
+            [
                 (section_name,
                     (
                         (key, value),
@@ -56,21 +60,23 @@ class IniFilter(BaseFilter):
                     )
                 ),
                 ...
-            )
+            ]
         """
         assert isinstance(ini_config, MyConfigParser)
         self.sections = sorted(ini_config.sections())
-        self.section_items = ((section, ini_config.items(section)) for section in self.sections)
+        self.section_items = [(section, ini_config.items(section)) for section in self.sections]
         return self.section_items
 
     @staticmethod
     def match_pattern(pattern, line, do_eval=True, use_regex=False):
-        """Core method
+        """
+        Core method(Deprecated)
+        But this method calls function too much, cause the times of function call depends on filelines number
         """
         if use_regex and re.match(r'r".*"', pattern):
             return re.match(pattern, line)
         if do_eval:
-            pattern = ast.literal_eval(pattern)
+            pattern = literal_eval(pattern)
         if isinstance(pattern, str) or isinstance(pattern, unicode):
             return pattern in line
         if isinstance(pattern, list):
@@ -79,45 +85,103 @@ class IniFilter(BaseFilter):
             return any([p in line for p in pattern])
 
     @staticmethod
-    def gen_lines(gen):
-        return [line for line in gen]
+    def grep_lines(pattern, file_lines, do_eval=True, use_regex=False):
+        """
+        Core method
+        This old method is faster, times of function call depends on config options' number
+        """
+        if use_regex and re.match(r'r".*"', pattern):
+            lines = [line.rstrip('\n') for line in file_lines if re.match(pattern, line)]
+        # pattern = eval(pattern)        # out of security concern
+        if do_eval:
+            pattern = literal_eval(pattern)
+        if isinstance(pattern, str) or isinstance(pattern, unicode):
+            lines = [line.rstrip('\n') for line in file_lines if pattern in line]
+        elif isinstance(pattern, list):
+            lines = [line.rstrip('\n') for line in file_lines if all([p in line for p in pattern])]
+        elif isinstance(pattern, tuple):
+            lines = [line.rstrip('\n') for line in file_lines if any([p in line for p in pattern])]
+        else:
+            exit('Error: wrong format in config file, some values are neither list nor string?')
+        return lines
 
-    @staticmethod
-    def gen_len(gen):
-        return len(self.gen_lines(gen))
-
-    def traverse_file(self, file_gen, config_data, use_gen=True):
+    def traverse_file(self, config_data, file_lines, file_gen, use_gen=False):
         """Core method
         """
-        if use_gen:
-            self.iter_file_gen(file_gen, config_data)
+        if not use_gen:
+            self.iter_file_lines(file_lines, config_data)
         else:
-            self.iter_file_lines(file_gen, config_data)
+            self.iter_file_gen(file_gen, config_data)
+        if self.vars_dict.get('SAVE_OMIT'):
+            self.save_omit(config_data, self.res_lines, self.res_counts)
+        else:
+            self.save_omit(config_data, self.res_lines, self.res_counts)
+            # self.count_omit(config_data, self.res_lines, self.res_counts)
 
+    # has bugs: cause generator could be iter only one time
     def iter_file_gen(self, file_gen, config_data):
-        for section in config_data:
-            section_name, items = section
-            if self.res.has_key(section_name):
-                file_gen = self.res.get(section_name).get('gen')
+        # for section_name,items in config_data:
+        #     if self.res.has_key(section_name):
+        #         file_gen = self.res.get(section_name).get('gen')
+        #     for k, v in items:
+        #         print k
+        #         print list(file_gen)
+        #         match_lines = (line.rstrip('\n') for line in file_gen if
+        #                        self.match_pattern(v, line, True, self.vars_dict['USE_REGEX']))
+        #         lines = list(match_lines)
+        #         counts = len(lines)
+        #         key = '/'.join([section_name, k])
+        #         self.res[key] = {'gen': match_lines, 'lines': lines, 'counts': counts}
+        #         self.res_counts[key] = counts
+        file_lines = list(file_gen)
+        self.iter_file_lines(file_lines, config_data)
+
+    def iter_file_lines(self, file_lines, config_data):
+        section_root = self.vars_dict.get('ROOT_NAME','All')
+        # print time.clock()
+        # print "strip file lines '\\n'"
+        self.res_lines[section_root] = map(lambda x:x.rstrip('\n'), file_lines)
+        # print time.clock()
+        self.res_counts[section_root] = len(file_lines)
+
+        for section_name,items in config_data:
+            if self.res_lines.has_key(section_name):
+                file_lines = self.res_lines.get(section_name)
             for k, v in items:
-                match_lines = (line.rstrip('\n') for line in file_gen if
-                               self.match_pattern(v, line, True, self.vars_dict['USE_REGEX']))
-                # lines = list(match_lines)
-                # counts = len(lines)
-                self.res['/'.join([section_name, k])] = {'gen': match_lines,
-                                                         # 'lines': lines,
-                                                         # 'counts': counts
-                                                         }
+                match_lines = self.grep_lines(v, file_lines)
+                full_name = '/'.join([section_name, k])
+                self.res_lines[full_name] = match_lines
+                self.res_counts[full_name] = len(match_lines)
 
-    def iter_file_lines(self, file_gen, config_data):
-        pass
+    def count_omit(self, config_data, res_lines, res_counts):
+        omit_name = self.vars_dict.get('OMIT_NAME', '(OMIT)')
+        for section_name,items in config_data:
+            child_lines_counts = sum(map(lambda x: res_counts['/'.join([section_name, x[0]])], items))
+            if res_counts[section_name] > child_lines_counts:
+                res_counts['/'.join([section_name, omit_name])] = res_counts[section_name] - child_lines_counts
 
-    def find_omit(self):
-        pass
+    def save_omit(self, config_data, res_lines, res_counts):
+        omit_name = self.vars_dict.get('OMIT_NAME', '(OMIT)')
+        for section_name, items in config_data:
+            parent_lines = res_lines.get(section_name)
+            child_lines = []
+            for k,v in items:
+                child_lines.extend(res_lines.get('/'.join([section_name, k])))
+            # set operation would remove duplicates
+            omit_lines = set(parent_lines) - set(child_lines)
+            if len(omit_lines) != 0:
+                key = '/'.join([section_name, omit_name])
+                res_lines[key] = list(omit_lines)
+                res_counts[key] = len(omit_lines)
 
     @property
     def result(self):
-        return {'RESULT': self.res}
+        return {'RESULT':
+                    {'RESULT_LINES': self.res_lines,
+                     'RESULT_COUNTS': self.res_counts,
+                     'OMIT_LINES': self.omit_lines,
+                     }
+                }
 
 
 class DomainInfo(BaseFilter):
@@ -138,7 +202,7 @@ class Filters(IniFilter, DomainInfo):
 
     def process(self):
         config_data = self.trans_config(self.vars_dict['INI'])
-        self.traverse_file(self.vars_dict['FILE_GEN'], config_data)
+        self.traverse_file(config_data, self.vars_dict['FILE_LINE'], self.vars_dict['FILE_GEN'])
         self._vars = self.result
         self._vars = self.domain_conn_info
         return self.vars_dict
@@ -147,4 +211,3 @@ class Filters(IniFilter, DomainInfo):
 if __name__ == '__main__':
     filters = Filters(Inputs().process())
     all_vars = filters.process()
-    print all_vars

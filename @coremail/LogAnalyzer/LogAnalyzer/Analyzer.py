@@ -55,4 +55,4 @@ if __name__ == '__main__':
     filter_res = analyzer.do_filter(in_res)
     print filter_res
 
-    # analyzer.do_output(filter_res)
+    analyzer.do_output(filter_res)
