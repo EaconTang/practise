@@ -1,12 +1,9 @@
 """
 default settings for programs;
-all custom vars should be capital;
+all custom vars should be uppercase;
 all could be cover by command line args and configure files;
 """
-
 import os
-
-import datetime
 
 
 # log file path
@@ -17,7 +14,7 @@ FILE_PATH = RMI_LOG
 
 
 # config files folder
-CONFIG_FOLDER = os.path.join(os.path.curdir,'config')
+CONFIG_FOLDER = os.path.join(os.path.curdir,'conf')
 
 
 # config file names
@@ -32,17 +29,19 @@ ROOT_NAME = 'All'
 OMIT_NAME = '(OMIT)'
 
 # results file folder
-RESULT_FOLDER = os.path.join(os.getcwd(), 'results')
+RESULT_FOLDER = os.path.join(os.getcwd(), 'result')
 
 
 # omit file
 SAVE_OMIT = True
-OMIT_FILE = os.path.join(RESULT_FOLDER, 'exceptions.omit')
+OMIT_FILE = os.path.join(RESULT_FOLDER, 'omit.result')
 
 
 # tabulate file
-SAVE_TABULATE = True
-TABULATE_FILE = os.path.join(RESULT_FOLDER, 'error.tabulate')
+SAVE_TABULATE = False
+TABULATE_FILE = os.path.join(RESULT_FOLDER, 'tabulate.result')
+
+# specify the section in ini config that would add to tabulate file
 TABULATE_SECTION = 'All/Exception'
 
 
@@ -65,3 +64,9 @@ TO_FILE = True
 
 # use prettytable outputs
 USE_PRETTYTABLE = True
+
+
+# single file's max size(MB)
+# if file is bigger than it, program would use python generator to avoid out-of-mem(slower but save mem)
+FILE_MAX_MB = 512
+FILE_MAX = int(FILE_MAX_MB)*1024*1024

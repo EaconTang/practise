@@ -1,58 +1,49 @@
 """
-generate a specific analyzer
-using design pattern: Template Method Pattern
+Main class, generate a specific analyzer
+Mediator Pattern
 """
 from Inputs import Inputs
 from Filters import Filters
 from Outputs import Outputs
-from Utils import *
-import settings
 
 
 class BaseAnalyzer(object):
     """
-    main process flow as logstash:
+    Main process flow:
         1. Inputs
         2. Filters
         3. Outputs
     """
-    def __init__(self):
-        pass
-
-    def do_input(self):
+    def deal_input(self):
         raise NotImplementedError
 
-    def do_filter(self):
+    def deal_filter(self):
         raise NotImplementedError
 
-    def do_output(self):
+    def deal_output(self):
         raise NotImplementedError
 
-    def assist(self):
-        pass
 
+class Analyzer(BaseAnalyzer):
+    def __init__(self, _vars_dict):
+        assert isinstance(vars_dict, dict)
+        self._vars = _vars_dict
 
-class DefaultAnalyzer(BaseAnalyzer):
-    def do_input(self):
-        inputs = Inputs()
-        return inputs.process()
+    def deal_input(self):
+        res = Inputs().process()
+        self._vars.update(res)
 
-    def do_filter(self, inputs_res):
-        filters = Filters(inputs_res)
-        return filters.process()
+    def deal_filter(self):
+        res = Filters(self._vars).process()
+        self._vars.update(res)
 
-    def do_output(self, filters_res):
-        outputs = Outputs(filters_res)
-        outputs.process()
+    def deal_output(self):
+        Outputs(self._vars).process()
 
 
 if __name__ == '__main__':
-    analyzer = DefaultAnalyzer()
-
-    in_res = analyzer.do_input()
-    print in_res
-
-    filter_res = analyzer.do_filter(in_res)
-    print filter_res
-
-    analyzer.do_output(filter_res)
+    vars_dict = {}
+    analyzer = Analyzer(vars_dict)
+    analyzer.deal_input()
+    analyzer.deal_filter()
+    analyzer.deal_output()

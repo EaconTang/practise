@@ -1,17 +1,19 @@
 """
-Input module
-including:
+Inputs module
+Including:
     1. default settings from file <settings.py>
     2. command line args
     3. configuration from conf/*.conf
-    4. log file streams
+    4. log files
+Template Method Pattern
 """
-import os
-from optparse import OptionParser
-import datetime
-from Utils import MyConfigParser, convert_time_period
-import settings
 import re
+import os
+import datetime
+import fileinput
+from optparse import OptionParser
+from Utils import MyConfigParser, convert_time_period, log_info
+import settings
 
 
 class BaseInputs(object):
@@ -33,10 +35,10 @@ class BaseInputs(object):
     def command_args(self):
         raise NotImplementedError
 
-    def read_conf(self):
+    def read_conf(self, *args, **kwargs):
         raise NotImplementedError
 
-    def read_log_file(self):
+    def read_log_file(self, *args, **kwargs):
         raise NotImplementedError
 
 
@@ -66,36 +68,33 @@ class CommandArgs(BaseInputs):
 
     @property
     def arg_parser(self):
+        """provide optional arguments from command lines
         """
-        provide optional arguments when starting the program
-        :return: an option parser
-        """
-        usage = "usage: python %prog [-h] [-f value] [-c value] [-t] [-T value] [-o] [-O value] [-y]"
-        usage += " [-D]"
-        usage += " [--datetime value]"
+        usage = "usage: python %prog [-h] [-f value] [-c value] [-T] [-t value] [-O] [-o value] [-Y]"
+        usage += " [-R]"
+        usage += " [--time value]"
         parser = OptionParser(usage)
         parser.add_option('-f', '--file', dest='FILE_PATH',
                           help='specify a log file to be scan, defaults to today\'s rmi_api.log')
         parser.add_option('-c', '--config', dest='CONFIG',
-                          help='specify a config file to be load,defaults to ~/LogMiner/conf/rmi_exceptions.cf')
+                          help='specify a config file to be load,defaults to conf/rmi_exceptions.cf')
         parser.add_option('-T', '--tabulate', dest='SAVE_TABULATE',
-                          help='use this flag to save the results to the file,defaults to under "~/LogMiner/results"',
-                          action='store_true', default=False)
+                          help='use this flag to add the results to the file',
+                          action='store_true', default=self.vars_dict['SAVE_TABULATE'])
         parser.add_option('-t', '--tabulate-file', dest='TABULATE_FILE',
-                          help='specify a file to save the tabulate table')
+                          help='specify a file to save the tabulate results')
         parser.add_option('-O', '--omit', dest='SAVE_OMIT',
-                          help='use this flag to save the omit info that were not classified.' +
-                               'It would be saved under "~/LogMiner/results"',
-                          action='store_true', default=False)
+                          help='use this flag to save the omit info that were not matched and classified',
+                          action='store_true', default=self.vars_dict['SAVE_OMIT'])
         parser.add_option('-o', '--omit-file', dest='OMIT_FILE',
-                          help='specific a filename to save the omit info,defaults to "rmi_api.omit.{LogDate}"')
+                          help='specific a file to save the omit info')
         parser.add_option('-Y', '--yesterday-log', dest='YESTERDAY',
-                          help='plus this flag to specify yesterday\'s log file, based on the file specify by \'-f\'',
-                          action='store_true', default=False)
-        parser.add_option('-D', dest='DOMAIN_CONNECT_INFO',
-                          help='use this flag to calculate domain success ratio',
-                          action='store_true', default=False)
-        parser.add_option('--datetime', dest='TIME_PERIOD',
+                          help='use this flag to add yesterday\'s datetime to file specfied',
+                          action='store_true', default=self.vars_dict['YESTERDAY'])
+        parser.add_option('-R', '--regex', dest='USE_REGEX',
+                          help='use this flag to turn regex-match on',
+                          action='store_true', default=self.vars_dict['USE_REGEX'])
+        parser.add_option('--time', dest='TIME_PERIOD',
                           help='specify a time period as format "YYYYMMDD:YYYYMMDD"')
         return parser
 
@@ -104,9 +103,9 @@ class CommandArgs(BaseInputs):
         """return a dict contains args uesd from command line
         """
         parser = self.arg_parser
-        # (options, args) = parser.parse_args()
-        (options, args) = parser.parse_args(
-            ['-f', 'files/rmi_api.log', '-c', 'conf/rmi.cf'])
+        # (options, args) = parser.parse_args(['-f','test_files/rmi_api.log'])
+        (options, args) = parser.parse_args(['-f','test_files/rmi_api.log','--time','20151230:20160101'])
+
         options_list = [('FILE_PATH', options.FILE_PATH),
                         ('CONFIG', options.CONFIG),
                         ('OMIT_FILE', options.OMIT_FILE),
@@ -114,7 +113,7 @@ class CommandArgs(BaseInputs):
                         ('TABULATE_FILE', options.TABULATE_FILE),
                         ('SAVE_TABULATE', options.SAVE_TABULATE),
                         ('YESTERDAY', options.YESTERDAY),
-                        ('DOMAIN_CONNECT_INFO', options.DOMAIN_CONNECT_INFO),
+                        ('USE_REGEX', options.USE_REGEX),
                         ('TIME_PERIOD', options.TIME_PERIOD),
                         ]
         used_options = [option for option in options_list if option[1]]
@@ -125,6 +124,7 @@ class ConfFile(BaseInputs):
     def __init__(self):
         super(ConfFile, self).__init__()
 
+    @log_info()
     def read_conf(self, conf_file):
         if conf_file.endswith('ini') or conf_file.endswith('conf') or conf_file.endswith('cf'):
             return self.read_ini(conf_file)
@@ -151,6 +151,7 @@ class LogFile(BaseInputs):
     def __init__(self):
         super(LogFile, self).__init__()
 
+    @log_info()
     def read_log_file(self, log_file, yesterday=False, time_period=None):
         # read yesterday's logfile
         if yesterday:
@@ -159,18 +160,20 @@ class LogFile(BaseInputs):
             return {
                 'FILE_DATE': str(YESTERDAY),
                 'FILE_PATH': filename,
-                'FILE_LINE': self.file_lines(filename),
+                # 'FILE_LINE': self.file_lines(filename),
                 'FILE_GEN': self.file_gen(filename),
             }
+
         # read log files specified by datetime
         if time_period:
             time_period, filenames = convert_time_period(time_period, log_file)
             return {
                 'FILE_DATE': time_period,
                 'FILE_PATH': filenames,
-                'FILE_LINE': self.files_lines(filenames),
+                # 'FILE_LINE': self.files_lines(filenames),
                 'FILE_GEN': self.files_gen(filenames),
             }
+
         m = re.match(r'.+(\d{4}-\d{2}-\d{2})', log_file)
         if m:
             file_date = m.group(1)
@@ -178,44 +181,37 @@ class LogFile(BaseInputs):
             file_date = str(datetime.date.today())
         return {
             'FILE_DATE': file_date,
-            'FILE_LINE': self.file_lines(log_file),
+            # 'FILE_LINE': self.file_lines(log_file),
             'FILE_GEN': self.file_gen(log_file),
         }
 
-    @staticmethod
-    def file_gen(filename):
-        """a generator that each time gens a line for a single file
+    def file_gen(self, filename):
         """
-        with open(filename) as f:
-            for line in f:
-                yield line
-
-    @staticmethod
-    def files_gen(filenames):
-        """a generator that each time gens a line for multi files
+        a generator that each time gens lines from single file
         """
+        if os.path.getsize(filename) > self.vars_dict.get('FILE_MAX'):
+            with open(filename) as f:
+                while 1:
+                    lines = f.readlines(self.vars_dict.get('FILE_MAX'))
+                    if not lines:
+                        break
+                    yield lines
+        else:
+            with open(filename) as f:
+                yield f.readlines()
 
+    def files_gen(self, filenames):
+        """a generator that each time gens lines from multi files
+        """
         def _gens(filename_list):
             # return a generator that gens generator(file_gen)
             for filename in filename_list:
-                yield LogFile.file_gen(filename)
+                yield self.file_gen(filename)
 
         gs = _gens(filenames)
         for g in gs:
-            for line in g:
-                yield line
-
-    @staticmethod
-    def file_lines(filename, hint=-1):
-        with open(filename) as f:
-            return f.readlines(hint)
-
-    @staticmethod
-    def files_lines(filenames, hint=-1):
-        filelines = []
-        for filename in filenames:
-            filelines.extend(LogFile.file_lines(filename, hint))
-        return filelines
+            for lines in g:
+                yield lines
 
 
 class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
@@ -225,10 +221,9 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
     def process(self):
         """
         1. load default vars to vars dict
-        2. updates command args to vars dict
+        2. update command args to vars dict
         3. load config instance to vars dict
-        4. load file(s) generator to vars dict
-        :return: vars dict
+        4. load file(s) to vars dict
         """
         self._vars = self.default_vars
         self._vars = self.command_args
@@ -236,9 +231,9 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
         self._vars = self.read_log_file(self.vars_dict['FILE_PATH'],
                                         self.vars_dict['YESTERDAY'],
                                         self.vars_dict['TIME_PERIOD'])
-
         return self._vars
 
 
 if __name__ == '__main__':
     inputs = Inputs()
+    print inputs.process()
