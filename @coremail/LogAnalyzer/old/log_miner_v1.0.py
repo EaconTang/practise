@@ -4,13 +4,13 @@ for
 CM-23630[系统支持--rmi错误分类统计]
 日志分析工具
 '''
-import os
 import datetime
+import json
+import os
+
+import prettytable
 from functions import MyConfigParser
 from functions import grep_lines,option_parser
-import json
-import prettytable
-
 
 #dfault setting
 CONFIG_DEFAULT = os.path.join(os.getcwd(),'rmi_exceptions.cf')
@@ -80,7 +80,7 @@ res_count = dict(omit_lines_count,**res_count)
 
 
 # step 4: save exception lines and count into file
-ptable = prettytable.PrettyTable(['Type','Count'])
+ptable = prettytable.PrettyTable(['Type', 'Count'])
 ptable.align['Type'] = "l"
 for each_res in res_count.iteritems():
     ptable.add_row([each_res[0],each_res[1]])

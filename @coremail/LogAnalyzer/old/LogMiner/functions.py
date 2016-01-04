@@ -4,9 +4,10 @@ all the functions needed by log_miner.py
 """
 
 import ConfigParser
-from optparse import OptionParser
 import ast
 import sys
+from optparse import OptionParser
+
 import prettytable
 
 

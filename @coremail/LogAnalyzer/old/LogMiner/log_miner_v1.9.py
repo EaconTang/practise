@@ -4,11 +4,12 @@ for
 CM-23630[系统支持--rmi错误分类统计]
 日志分析工具
 """
-import os
 import datetime
-from functions import *
 import json
+import os
+
 import prettytable
+from functions import *
 
 ############################################
 # step 1: load option args parser and config
@@ -93,7 +94,7 @@ res_count = dict(omit_lines_count,**res_count)
 
 ################################
 # step 3: print and save results
-ptable = prettytable.PrettyTable(['Type','Count'])
+ptable = prettytable.PrettyTable(['Type', 'Count'])
 ptable.align['Type'] = "l"
 for each_res in res_count.iteritems():
     ptable.add_row([each_res[0],each_res[1]])

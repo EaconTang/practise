@@ -4,14 +4,12 @@ for
 CM-23630[系统支持--rmi错误分类统计]
 日志分析工具
 """
-import os
 import datetime
-from functions import *
 import json
-import prettytable
-import settings
-import LogTime
+import os
 
+import LogTime
+from functions import *
 
 ############################################
 # step 1: load option args parser and config
@@ -57,7 +55,7 @@ if not datetime_period:
         file_lines_all = f_obj.readlines()
 else:
     # allow to read multiple log files
-    logfile_list = LogTime.convert_to_logfiles(datetime_period,log)
+    logfile_list = LogTime.convert_to_logfiles(datetime_period, log)
     for each in logfile_list:
         with open(each) as f_obj:
             file_lines_all += f_obj.readlines()
