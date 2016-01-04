@@ -1,2 +1,3 @@
+prettytable
 paho-mqtt==1.1
 mysql-connector-python==2.0.4
