@@ -7,6 +7,7 @@ Template Method Pattern
 import datetime
 import Utils
 from Filters import IniFilter
+from Utils import log_info
 
 
 class BaseOutputs(object):
@@ -72,6 +73,7 @@ class FileOutputs(PrettyTableOutputs):
         if self.vars_dict.get('SAVE_TABULATE'):
             self.save_tabulate(res, self.vars_dict.get('TABULATE_FILE'))
 
+    @log_info()
     def save_omit(self, res, filename):
         to_write = ''
 
@@ -88,6 +90,7 @@ class FileOutputs(PrettyTableOutputs):
         with open(filename, 'w') as f:
             f.write(to_write)
 
+    @log_info()
     def save_tabulate(self, res, filename):
         section_name = self.vars_dict.get('TABULATE_SECTION')
         res_table = {}

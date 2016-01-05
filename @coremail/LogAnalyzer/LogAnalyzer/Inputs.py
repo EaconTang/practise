@@ -103,8 +103,8 @@ class CommandArgs(BaseInputs):
         """return a dict contains args uesd from command line
         """
         parser = self.arg_parser
-        # (options, args) = parser.parse_args(['-f','test_files/rmi_api.log'])
-        (options, args) = parser.parse_args(['-f','test_files/rmi_api.log','--time','20151230:20160101'])
+        (options, args) = parser.parse_args(['-f','test_files/rmi_api.log'])
+        # (options, args) = parser.parse_args(['-f','test_files/rmi_api.log','--time','20151230:20160101'])
 
         options_list = [('FILE_PATH', options.FILE_PATH),
                         ('CONFIG', options.CONFIG),

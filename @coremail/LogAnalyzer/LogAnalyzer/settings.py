@@ -66,7 +66,7 @@ TO_FILE = True
 USE_PRETTYTABLE = True
 
 
-# single file's max size(MB)
+# single file's max size(MB); suggest less than 1/4 RAM size
 # if file is bigger than it, program would use python generator to avoid out-of-mem(slower but save mem)
-FILE_MAX_MB = 512
+FILE_MAX_MB = 256
 FILE_MAX = int(FILE_MAX_MB)*1024*1024

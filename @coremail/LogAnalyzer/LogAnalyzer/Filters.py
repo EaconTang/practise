@@ -5,8 +5,7 @@ Template Method Pattern
 from Utils import MyConfigParser, log_info
 from ast import literal_eval
 import re
-import os
-import time
+
 
 class BaseFilter(object):
     def __init__(self):

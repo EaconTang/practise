@@ -59,17 +59,21 @@ def log_info():
     a decorator for printing program info
     as a log util
     """
-    def _log_info(f):
-        def __log_info(*args, **kwargs):
+    def _printinfo(f):
+        def __printinfo(*args, **kwargs):
+            res = None
+            print color_wrap('['+time.clock()+']', 'yellow')
+            print color_wrap('Start to {0}()...'.format(f.func_name), 'blue')
             try:
                 res = f(*args, **kwargs)
-                print color_wrap('OK...{0}() finished!'.format(f.func_name),'green')
+                print color_wrap('OK! {0}() finish!'.format(f.func_name), 'green')
             except Exception, e:
-                print color_wrap('Error...{0}() failed:\n\t'.format(f.func_name),'red'),
-                exit(e.message)
-            return res
-        return __log_info
-    return _log_info
+                print e.message
+                print color_wrap('Fail to {0}()!'.format(f.func_name), 'red')
+            finally:
+                return res
+        return __printinfo
+    return _printinfo
 
 
 def dict_to_json(res, indent=4, sort_by_key=True):
@@ -131,10 +135,5 @@ class MyTable(prettytable.PrettyTable):
         return '\n'.join([table_string_list[0], table_string_list[1], table_string_list[2]])
 
 
-@log_info()
-def foo():
-    return 'haha'
-
-
 if __name__ == '__main__':
-    print foo()
+    pass
