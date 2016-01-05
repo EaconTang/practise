@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a3ce5fc-c363-4f0d-8bb1-406b124510f5" name="Default" comment="" />
+    <list id="e5af25b4-8f8c-4fc9-91bd-7631a421bdd0" name="New changelist" comment="" />
+    <ignored path="practise.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/practise$OCM_1364_v0_2.coverage" NAME="OCM-1364_v0.2 Coverage Results" MODIFIED="1446520455182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$CM_23630_rmi_log_analyse__1_.coverage" NAME="CM-23630_rmi_log_analyse (1) Coverage Results" MODIFIED="1447378282536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$logger_decorator.coverage" NAME="logger_decorator Coverage Results" MODIFIED="1449712912649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest/decorator" />
+    <SUITE FILE_PATH="coverage/practise$SendSMTP__1_.coverage" NAME="SendSMTP (1) Coverage Results" MODIFIED="1447924410848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/SendMail" />
+    <SUITE FILE_PATH="coverage/practise$test_datetime.coverage" NAME="test_datetime Coverage Results" MODIFIED="1449214076283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$Unittest_TestEncodeDecode_test_b64decode.coverage" NAME="Unittest TestEncodeDecode.test_b64decode Coverage Results" MODIFIED="1448357637859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$Unittests_in_practise.coverage" NAME="Unittests in practise Coverage Results" MODIFIED="1448358765553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/practise$discriptor.coverage" NAME="discriptor Coverage Results" MODIFIED="1449805739842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$context_switch.coverage" NAME="context_switch Coverage Results" MODIFIED="1448507178517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gevent" />
+    <SUITE FILE_PATH="coverage/practise$LogTime.coverage" NAME="LogTime Coverage Results" MODIFIED="1450161516474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$urlencode_decode.coverage" NAME="urlencode_decode Coverage Results" MODIFIED="1448269709542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$encode_decode.coverage" NAME="encode_decode Coverage Results" MODIFIED="1448356075285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$activity.coverage" NAME="activity Coverage Results" MODIFIED="1448627727749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner_v0_5.coverage" NAME="LogMiner_v0.5 Coverage Results" MODIFIED="1447719984206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$Unittest_TestEncodeDecode_test_urlencode.coverage" NAME="Unittest TestEncodeDecode.test_urlencode Coverage Results" MODIFIED="1448357104789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$Filters.coverage" NAME="Filters Coverage Results" MODIFIED="1451899345999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner_v0_2.coverage" NAME="LogMiner_v0.2 Coverage Results" MODIFIED="1447662876365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$Config.coverage" NAME="Config Coverage Results" MODIFIED="1451379639073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$functions.coverage" NAME="functions Coverage Results" MODIFIED="1448426419746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$customerbehaviour_0_1.coverage" NAME="customerbehaviour_0.1 Coverage Results" MODIFIED="1448872314192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$_test.coverage" NAME="_test Coverage Results" MODIFIED="1451914281997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$memo_decorator.coverage" NAME="memo_decorator Coverage Results" MODIFIED="1449712675326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest/decorator" />
+    <SUITE FILE_PATH="coverage/practise$optparse.coverage" NAME="optparse Coverage Results" MODIFIED="1447312112233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$testShellColor.coverage" NAME="testShellColor Coverage Results" MODIFIED="1447382792881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$Analyzer.coverage" NAME="Analyzer Coverage Results" MODIFIED="1451915048369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$_testYaml.coverage" NAME="_testYaml Coverage Results" MODIFIED="1447397564341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$setting.coverage" NAME="setting Coverage Results" MODIFIED="1451379631387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$testConfigParser.coverage" NAME="testConfigParser Coverage Results" MODIFIED="1447384966625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$Unittest_TestPrint_test_print.coverage" NAME="Unittest TestPrint.test_print Coverage Results" MODIFIED="1448355373975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$Unittest_TestEncodeDecode_test_urldecode.coverage" NAME="Unittest TestEncodeDecode.test_urldecode Coverage Results" MODIFIED="1448452632397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$CM_23630_rmi_log_analyse.coverage" NAME="CM-23630_rmi_log_analyse Coverage Results" MODIFIED="1447322823723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner_v0_6.coverage" NAME="LogMiner_v0.6 Coverage Results" MODIFIED="1447730857878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$test.coverage" NAME="test Coverage Results" MODIFIED="1448017354274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/InterfaceTest" />
+    <SUITE FILE_PATH="coverage/practise$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1448408101613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$Utils.coverage" NAME="Utils Coverage Results" MODIFIED="1451914285794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$optparse_test.coverage" NAME="optparse_test Coverage Results" MODIFIED="1447314830281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$decorator_test.coverage" NAME="decorator_test Coverage Results" MODIFIED="1447809810131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$pprint.coverage" NAME="pprint Coverage Results" MODIFIED="1447804935326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scripts4Test/SeniorPrograming" />
+    <SUITE FILE_PATH="coverage/practise$Outputs.coverage" NAME="Outputs Coverage Results" MODIFIED="1451913583305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$asynchronous_synchronous.coverage" NAME="asynchronous&amp;synchronous Coverage Results" MODIFIED="1448506972518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gevent" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner.coverage" NAME="LogMiner Coverage Results" MODIFIED="1447639384406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$factory_method.coverage" NAME="factory_method Coverage Results" MODIFIED="1450143806961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DesignPattern/Creational Patterns" />
+    <SUITE FILE_PATH="coverage/practise$tutorial_WxPython.coverage" NAME="tutorial_WxPython Coverage Results" MODIFIED="1447378416410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/practise$Unittests_in_discriptor.coverage" NAME="Unittests in discriptor Coverage Results" MODIFIED="1449712133091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$sendMail.coverage" NAME="sendMail Coverage Results" MODIFIED="1450062594181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/Mail" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner_v0_4.coverage" NAME="LogMiner_v0.4 Coverage Results" MODIFIED="1447719685985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$with_statement_ContextManager.coverage" NAME="with_statement_ContextManager Coverage Results" MODIFIED="1447980467376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$_testConfigParser.coverage" NAME="_testConfigParser Coverage Results" MODIFIED="1447657424772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$_test2.coverage" NAME="_test2 Coverage Results" MODIFIED="1448523980972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$Unittest_TestEncodeDecode_test_b64encode.coverage" NAME="Unittest TestEncodeDecode.test_b64encode Coverage Results" MODIFIED="1450143031992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$Unittests_in_TestDiscri.coverage" NAME="Unittests in TestDiscri Coverage Results" MODIFIED="1449712033412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SeniorTest" />
+    <SUITE FILE_PATH="coverage/practise$log_miner.coverage" NAME="log_miner Coverage Results" MODIFIED="1447855960318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$SendSMTP.coverage" NAME="SendSMTP Coverage Results" MODIFIED="1447060668593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+    <SUITE FILE_PATH="coverage/practise$Inputs.coverage" NAME="Inputs Coverage Results" MODIFIED="1451892009476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer" />
+    <SUITE FILE_PATH="coverage/practise$Unittests_in_TestEncodeDecode.coverage" NAME="Unittests in TestEncodeDecode Coverage Results" MODIFIED="1448408308614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/tools" />
+    <SUITE FILE_PATH="coverage/practise$LogMiner_v0_3.coverage" NAME="LogMiner_v0.3 Coverage Results" MODIFIED="1447667845611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail/LogMiner" />
+    <SUITE FILE_PATH="coverage/practise$customerbehaviour.coverage" NAME="customerbehaviour Coverage Results" MODIFIED="1448870596085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/@coremail" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="practise" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="log_miner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/log_miner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log_miner_v1.0.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/log_miner_v1.0.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.392857">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogMiner_v0.5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner_v0.5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Inputs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Inputs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20250522">
+              <caret line="166" column="46" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Filters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Outputs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Outputs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Gherkin feature file" />
+        <option value="CoffeeScript File" />
+        <option value="Setup Script" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="73d345659dd5bac5610d67b79c3809eb75466016" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Datastructure&amp;Algorithm/hanuota.py" />
+        <option value="$PROJECT_DIR$/Datastructure&amp;Algorithm/Prims_Algorithm.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogMiner/LogMiner/conf/rmi_exceptions_domain.cf" />
+        <option value="$PROJECT_DIR$/@coremail/LogMiner/LogMiner/settings.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/test_datetime.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogMiner/LogMiner/functions.py" />
+        <option value="$PROJECT_DIR$/gevent/test_cm_cmd.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/discriptor.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/decorator/decorator_test.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/decorator/memo_decorator.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/discriptor/discriptor.py" />
+        <option value="$PROJECT_DIR$/@coremail/Mail/sendMail.py" />
+        <option value="$PROJECT_DIR$/DesignPattern/Singleton.py" />
+        <option value="$PROJECT_DIR$/DesignPattern/Creational Patterns/factory_method.py" />
+        <option value="$PROJECT_DIR$/@coremail/temp" />
+        <option value="$PROJECT_DIR$/@coremail/LogMiner/LogMiner/LogTime.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogMiner/LogMiner/log_miner.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/log_analyzer.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/start.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/setttings.py" />
+        <option value="$PROJECT_DIR$/@coremail/priority.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/settting.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogMiner/LogTime.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Config.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Filter.py" />
+        <option value="$PROJECT_DIR$/SeniorTest/decorator/logger_decorator.py" />
+        <option value="$PROJECT_DIR$/OOP/MutilInherit.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Input.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Util.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/setting.py" />
+        <option value="$PROJECT_DIR$/@coremail/tools/test_encode_decode.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Outputs.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Analyzer.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/conf/rmi_exceptions.cf" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/settings.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Utils.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/conf/rmi.cf" />
+        <option value="$PROJECT_DIR$/@coremail/UserActivity/activity.py" />
+        <option value="$PROJECT_DIR$/@coremail/UserActivity/customerbehaviour.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/MqttClient.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/MqttClient_Sample.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/OCM-1364_multiuser.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/OCM-1364_v0.2.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/scanFile.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/testShellColor.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/testThread.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/watchdog.py" />
+        <option value="$PROJECT_DIR$/@coremail/Others/optparse_test.py" />
+        <option value="$PROJECT_DIR$/@coremail/_test.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Filters.py" />
+        <option value="$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Inputs.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="56" />
+    <option name="y" value="-8" />
+    <option name="width" value="1872" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyPep8Inspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="practise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/@coremail" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="yaml&#9;null&#9;null" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="55" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="70" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="69" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="720" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="64" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="69" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="69" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="712" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last.edited.regexp" value="2015121120154487" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="practise" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="practise" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\_P\Python\practise\@coremail\LogAnalyzer\old" />
+      <recent name="D:\_P\Python\practise\DesignPattern\Creational Patterns" />
+      <recent name="D:\_P\Python\practise\SeniorTest\discriptor" />
+      <recent name="D:\_P\Python\practise\SeniorTest\decorator" />
+      <recent name="D:\_P\Python\practise\Datastructure&amp;Algorithm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\_P\Python\practise\@coremail\LogAnalyzer\LogAnalyzer\test_files" />
+      <recent name="D:\_P\Python\practise\@coremail" />
+      <recent name="D:\_P\Python\practise\@coremail\LogAnalyzer\LogAnalyzer" />
+      <recent name="D:\_P\Python\practise\SeniorTest\decorator" />
+      <recent name="D:\_P\Python\practise\@coremail\LogMiner\LogMiner\conf" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://tyk01.rd.mt" />
+          <option name="urlPath" value="http://tyk01.rd.mt/coremail/s" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="appkey" />
+                <option name="value" value="pKGorKs" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key" />
+                <option name="value" value="163" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="func" />
+                <option name="value" value="domain:getDomains" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://tyk01.rd.mt" />
+          <option name="urlPath" value="/coremail/s" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="appkey" />
+                <option name="value" value="pKGorKs" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key" />
+                <option name="value" value="163" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="func" />
+                <option name="value" value="domain:getDomains" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="func" />
+                <option name="value" value="domain:getDomains" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://tyk01.rd.mt" />
+          <option name="urlPath" value="/coremail/s" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="appkey" />
+                <option name="value" value="pKGorKs" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key" />
+                <option name="value" value="163" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="func" />
+                <option name="value" value="domain:getDomains" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="practise" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\coremail\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a3ce5fc-c363-4f0d-8bb1-406b124510f5" name="Default" comment="" />
+      <changelist id="e5af25b4-8f8c-4fc9-91bd-7631a421bdd0" name="New changelist" comment="" />
+      <created>1429761218110</created>
+      <option name="number" value="Default" />
+      <updated>1429761218110</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adt">
+      <created>1429787144892</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1429787144892</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tree">
+      <created>1429943961488</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1429943961488</updated>
+    </task>
+    <task id="LOCAL-00007" summary="senior">
+      <created>1430197592240</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1430197592240</updated>
+    </task>
+    <task id="LOCAL-00008" summary="any">
+      <created>1430215933281</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1430215933281</updated>
+    </task>
+    <task id="LOCAL-00009" summary="crt script">
+      <created>1431428113746</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1431428113746</updated>
+    </task>
+    <task id="LOCAL-00010" summary="doc">
+      <created>1431936131828</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1431936131828</updated>
+    </task>
+    <task id="LOCAL-00011" summary="__iter__">
+      <created>1431943754981</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1431943754981</updated>
+    </task>
+    <task id="LOCAL-00012" summary="doc">
+      <created>1431944103952</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1431944103952</updated>
+    </task>
+    <task id="LOCAL-00013" summary="doc">
+      <created>1432030620848</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1432030620848</updated>
+    </task>
+    <task id="LOCAL-00014" summary="json GUI tool to do">
+      <created>1432116652563</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1432116652563</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wxpython">
+      <created>1432204552245</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1432204552245</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change dir structure">
+      <created>1432286439938</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1432286439938</updated>
+    </task>
+    <task id="LOCAL-00017" summary="gevent">
+      <created>1432625530284</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1432625530284</updated>
+    </task>
+    <task id="LOCAL-00018" summary="gevent">
+      <created>1432633423164</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1432633423164</updated>
+    </task>
+    <task id="LOCAL-00019" summary="nested function...">
+      <created>1432719843463</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1432719843464</updated>
+    </task>
+    <task id="LOCAL-00020" summary="doc">
+      <created>1432895508815</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1432895508815</updated>
+    </task>
+    <task id="LOCAL-00021" summary="doc">
+      <created>1434088315205</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1434088315205</updated>
+    </task>
+    <task id="LOCAL-00022" summary="doc">
+      <created>1437620838151</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1437620838151</updated>
+    </task>
+    <task id="LOCAL-00023" summary="watchdog">
+      <created>1438318565758</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1438318565758</updated>
+    </task>
+    <task id="LOCAL-00024" summary="watchdog">
+      <created>1438318595550</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1438318595550</updated>
+    </task>
+    <task id="LOCAL-00025" summary="watchdog">
+      <created>1438650448396</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1438650448396</updated>
+    </task>
+    <task id="LOCAL-00026" summary="long time no push">
+      <created>1442564953768</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1442564953768</updated>
+    </task>
+    <task id="LOCAL-00027" summary="singleton pattern">
+      <created>1442570699244</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1442570699244</updated>
+    </task>
+    <task id="LOCAL-00028" summary="mqtt">
+      <created>1445596045705</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1445596045705</updated>
+    </task>
+    <task id="LOCAL-00029" summary="mqtt">
+      <created>1445854374641</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1445854374641</updated>
+    </task>
+    <task id="LOCAL-00030" summary="cm test">
+      <created>1446618140140</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1446618140140</updated>
+    </task>
+    <task id="LOCAL-00031" summary="logminer">
+      <created>1447378376913</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1447378376913</updated>
+    </task>
+    <task id="LOCAL-00032" summary="logminer">
+      <created>1447421111020</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1447421111020</updated>
+    </task>
+    <task id="LOCAL-00033" summary="logminer v0.4">
+      <created>1447670327946</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1447670327946</updated>
+    </task>
+    <task id="LOCAL-00034" summary="logminer">
+      <created>1447754686258</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1447754686258</updated>
+    </task>
+    <task id="LOCAL-00035" summary="logminer">
+      <created>1447754871550</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1447754871550</updated>
+    </task>
+    <task id="LOCAL-00036" summary="logminer">
+      <created>1447940500325</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1447940500325</updated>
+    </task>
+    <task id="LOCAL-00037" summary="tools">
+      <created>1448409000582</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1448409000583</updated>
+    </task>
+    <task id="LOCAL-00038" summary="activity">
+      <created>1448621926317</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1448621926317</updated>
+    </task>
+    <task id="LOCAL-00039" summary="activity">
+      <created>1448628042949</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1448628042949</updated>
+    </task>
+    <task id="LOCAL-00040" summary="activity">
+      <created>1448628087888</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1448628087888</updated>
+    </task>
+    <task id="LOCAL-00041" summary="book">
+      <created>1448628683410</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1448628683410</updated>
+    </task>
+    <task id="LOCAL-00042" summary="book">
+      <created>1448977720963</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1448977720963</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update">
+      <created>1449042565558</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1449042565558</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update">
+      <created>1449228471198</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1449228471198</updated>
+    </task>
+    <task id="LOCAL-00045" summary="update">
+      <created>1449828442989</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1449828442989</updated>
+    </task>
+    <task id="LOCAL-00046" summary="python standard library">
+      <created>1450082483294</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1450082483294</updated>
+    </task>
+    <task id="LOCAL-00047" summary="log analyzer">
+      <created>1450175480364</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1450175480364</updated>
+    </task>
+    <task id="LOCAL-00048" summary="log analyzer">
+      <created>1451471910278</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1451471910278</updated>
+    </task>
+    <task id="LOCAL-00049" summary="log analyzer">
+      <created>1451556759648</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1451556759648</updated>
+    </task>
+    <task id="LOCAL-00050" summary="log analyzer">
+      <created>1451556779831</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1451556779915</updated>
+    </task>
+    <task id="LOCAL-00051" summary="log analyzer">
+      <created>1451915191320</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1451915191321</updated>
+    </task>
+    <task id="LOCAL-00052" summary="tmp">
+      <created>1451989252164</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1451989252164</updated>
+    </task>
+    <task id="LOCAL-00053" summary="tmp">
+      <created>1451989606999</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1451989606999</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittest_TestEncodeDecode_test_b64encode - 2015.12.14 at 16h 05m 48s.xml">
+      <configuration name="Unittest TestEncodeDecode.test_b64encode" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_TestEncodeDecode_test_b64encode - 2015.12.15 at 09h 30m 33s.xml">
+      <configuration name="Unittest TestEncodeDecode.test_b64encode" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestDiscri - 2015.12.10 at 09h 47m 14s.xml">
+      <configuration name="Unittests in TestDiscri" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestEncodeDecode - 2015.11.25 at 07h 37m 36s.xml">
+      <configuration name="Unittests in TestEncodeDecode" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestEncodeDecode - 2015.11.25 at 07h 37m 45s.xml">
+      <configuration name="Unittests in TestEncodeDecode" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestEncodeDecode - 2015.11.25 at 07h 38m 28s.xml">
+      <configuration name="Unittests in TestEncodeDecode" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_discriptor - 2015.12.10 at 09h 48m 53s.xml">
+      <configuration name="Unittests in discriptor" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_practise - 2015.11.24 at 17h 52m 46s.xml">
+      <configuration name="Unittests in practise" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test - 2015.11.25 at 07h 34m 47s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test - 2015.11.25 at 07h 35m 01s.xml">
+      <configuration name="Unittests in test" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="56" y="-8" width="1872" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3069909" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26950353" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17780173" sideWeight="0.49473685" order="0" side_tool="false" content_ui="combo" x="577" y="46" width="829" height="987" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2661638" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29555085" sideWeight="0.50526315" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37284702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979446" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6372045" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tree" />
+    <MESSAGE value="senior" />
+    <MESSAGE value="any" />
+    <MESSAGE value="crt script" />
+    <MESSAGE value="__iter__" />
+    <MESSAGE value="json GUI tool to do" />
+    <MESSAGE value="wxpython" />
+    <MESSAGE value="change dir structure" />
+    <MESSAGE value="gevent" />
+    <MESSAGE value="nested function..." />
+    <MESSAGE value="doc" />
+    <MESSAGE value="watchdog" />
+    <MESSAGE value="long time no push" />
+    <MESSAGE value="singleton pattern" />
+    <MESSAGE value="mqtt" />
+    <MESSAGE value="cm test" />
+    <MESSAGE value="logminer v0.4" />
+    <MESSAGE value="logminer" />
+    <MESSAGE value="tools" />
+    <MESSAGE value="activity" />
+    <MESSAGE value="book" />
+    <MESSAGE value="update" />
+    <MESSAGE value="python standard library" />
+    <MESSAGE value="log analyzer" />
+    <MESSAGE value="tmp" />
+    <option name="LAST_COMMIT_MESSAGE" value="tmp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Datastructure&amp;Algorithm/Collections/heapq.py</url>
+          <line>16</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/GUI/tutorial_WxPython.py</url>
+          <line>210</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/GUI/tutorial_WxPython.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/gevent/asynchronous&amp;synchronous.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/@coremail/Others/MqttServer.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/functions.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Outputs.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="14" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/tools/encode_decode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/tools/test_encode_decode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/tmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="90" selection-start-line="1" selection-start-column="90" selection-end-line="1" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/conf/rmi_exceptions.cf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/COPYING">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/PKG-INFO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/CHANGELOG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/setup.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/prettytable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/prettytable_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner/lib/prettytable-0.7.2/prettytable.egg-info/PKG-INFO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#83#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/UserActivity/activity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/UserActivity/customerbehaviour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/_testConfigParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/_testYaml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/add_org.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/MqttClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/MqttClient_Sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/MqttClient_v0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/OCM-1364_multiuser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/OCM-1364_v0.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/OCM-1364_v0.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/scanFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/testThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/String2Date.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/testShellColor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/watchdog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#55#65#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/Others/optparse_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding>
+            <element signature="e#34#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/InterfaceTest/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner_v0.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Outputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/LogMiner_v0.5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/priority.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/log_miner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/old/log_miner_v1.0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/@coremail/LogAnalyzer/LogAnalyzer/Inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20250522">
+          <caret line="166" column="46" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
