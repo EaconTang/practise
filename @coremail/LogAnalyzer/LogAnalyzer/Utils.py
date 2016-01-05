@@ -8,7 +8,7 @@ from ConfigParser import ConfigParser
 from math import fabs
 from re import match
 from sys import exit
-
+import time
 import prettytable
 
 
@@ -62,7 +62,7 @@ def log_info():
     def _printinfo(f):
         def __printinfo(*args, **kwargs):
             res = None
-            print color_wrap('['+time.clock()+']', 'yellow')
+            print color_wrap('['+str(time.clock())+']', 'yellow')
             print color_wrap('Start to {0}()...'.format(f.func_name), 'blue')
             try:
                 res = f(*args, **kwargs)

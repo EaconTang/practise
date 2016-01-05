@@ -6,7 +6,7 @@ Template Method Pattern
 """
 import datetime
 import Utils
-from Filters import IniFilter
+from Filters import CoreFilter
 from Utils import log_info
 
 
@@ -110,7 +110,7 @@ class FileOutputs(PrettyTableOutputs):
         except IOError:
             tabulate_file_lines = []
 
-        tabulate_file_titles = IniFilter.grep_lines('LogDate', tabulate_file_lines, False)
+        tabulate_file_titles = CoreFilter.grep_lines('LogDate', tabulate_file_lines, False)
 
         if not tabulate_file_lines:
             # means a new file

@@ -5,6 +5,7 @@ Template Method Pattern
 from Utils import MyConfigParser, log_info
 from ast import literal_eval
 import re
+import json
 
 
 class BaseFilter(object):
@@ -39,24 +40,58 @@ class BaseFilter(object):
         raise NotImplementedError
 
 
-class IniFilter(BaseFilter):
+class ConfigFilter(BaseFilter):
+    """
+    trans config_data to iterable datastruct like:
+        [(parent_name,((key, value),...)),...]
+    """
     def __init__(self):
-        super(IniFilter, self).__init__()
+        super(ConfigFilter, self).__init__()
+
+    @log_info()
+    def trans_config(self, config_file):
+        if self.vars_dict.get('INI'):
+            return self.trans_ini(config_file)
+        if self.vars_dict.get('JSON'):
+            return self.trans_json(config_file)
+        if self.vars_dict.get('YAML'):
+            return self.trans_yaml(config_file)
+
+    def trans_ini(self, ini_file):
+        ini_config = MyConfigParser()
+        ini_config.read(ini_file)
+        sections = sorted(ini_config.sections())
+        section_items = [(section, ini_config.items(section)) for section in sections]
+        return section_items
+
+    def trans_json(self, json_file):
+        with open(json_file) as f:
+            json_data = json.load(f)
+        assert isinstance(json_data, dict)
+        parent_kvs = []
+        for parent, items in sorted(json_data.iteritems()):
+            kv_list = []
+            for k, v in items.iteritems():
+                kv_list.append((k, v))
+            parent_kvs.append((parent, kv_list))
+        return parent_kvs
+
+    def trans_yaml(self, yaml_file):
+        raise NotImplementedError
+
+
+class LogFilter(BaseFilter):
+    def __init__(self):
+        super(LogFilter, self).__init__()
+
+
+class CoreFilter(BaseFilter):
+    def __init__(self):
+        super(CoreFilter, self).__init__()
         self.res = {}
         self.res_lines = {}
         self.res_counts = {}
         self.omit_lines = {}
-
-    @log_info()
-    def trans_config(self, ini_config):
-        """
-        trans ini_config to iterable datastruct like:
-            [(section_name,((key, value),...)),...]
-        """
-        assert isinstance(ini_config, MyConfigParser)
-        self.sections = sorted(ini_config.sections())
-        self.section_items = [(section, ini_config.items(section)) for section in self.sections]
-        return self.section_items
 
     @staticmethod
     def match_pattern(pattern, line, do_eval=True, use_regex=False):
@@ -85,7 +120,7 @@ class IniFilter(BaseFilter):
             lines = [line.rstrip('\n') for line in file_lines if re.match(pattern, line)]
         # pattern = eval(pattern)        # out of security concern
         if do_eval:
-            pattern = literal_eval(pattern)
+            pattern = literal_eval(pattern, )
         if isinstance(pattern, str) or isinstance(pattern, unicode):
             lines = [line.rstrip('\n') for line in file_lines if pattern in line]
         elif isinstance(pattern, list):
@@ -120,7 +155,6 @@ class IniFilter(BaseFilter):
                 self.res_lines[full_name] = self.res_lines.get(full_name, []) + match_lines
                 self.res_counts[full_name] = self.res_counts.get(full_name, 0) + len(match_lines)
 
-    @log_info()
     def save_omit(self, config_data, res_lines, res_counts):
         """Core method
         """
@@ -158,13 +192,13 @@ class DomainInfo(BaseFilter):
         return {'DOMAIN_CONNECT': None}
 
 
-class Filters(IniFilter, DomainInfo):
+class Filters(ConfigFilter, LogFilter, CoreFilter, DomainInfo):
     def __init__(self, inputs_res):
         super(Filters, self).__init__()
         self._vars = inputs_res
 
     def process(self):
-        config_data = self.trans_config(self.vars_dict['INI'])
+        config_data = self.trans_config(self.vars_dict['CONFIG'])
         self.traverse_file(config_data, self.vars_dict['FILE_PATH'], self.vars_dict['FILE_GEN'])
         self._vars = self.result
         self._vars = self.domain_conn_info

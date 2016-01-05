@@ -14,6 +14,7 @@ import fileinput
 from optparse import OptionParser
 from Utils import MyConfigParser, convert_time_period, log_info
 import settings
+import json
 
 
 class BaseInputs(object):
@@ -103,8 +104,9 @@ class CommandArgs(BaseInputs):
         """return a dict contains args uesd from command line
         """
         parser = self.arg_parser
-        (options, args) = parser.parse_args(['-f','test_files/rmi_api.log'])
-        # (options, args) = parser.parse_args(['-f','test_files/rmi_api.log','--time','20151230:20160101'])
+        # (options, args) = parser.parse_args()
+        (options, args) = parser.parse_args(
+            ['-c', 'conf/rmi_exceptions.json', '-f', 'test_files/rmi_api.log.2016-01-01'])
 
         options_list = [('FILE_PATH', options.FILE_PATH),
                         ('CONFIG', options.CONFIG),
@@ -136,12 +138,14 @@ class ConfFile(BaseInputs):
             exit('[Error]Unsupported config file format?')
 
     def read_ini(self, conf_file):
-        config = MyConfigParser()
-        config.read(conf_file)
-        return {'INI': config}
+        ini_config = MyConfigParser()
+        ini_config.read(conf_file)
+        return {'INI': ini_config}
 
     def read_json(self, conf_file):
-        raise NotImplementedError
+        with open(conf_file) as f:
+            json_config = json.loads(f.read(),encoding='utf-8')
+        return {'JSON': json_config}
 
     def read_yaml(self, cong_file):
         raise NotImplementedError
@@ -203,6 +207,7 @@ class LogFile(BaseInputs):
     def files_gen(self, filenames):
         """a generator that each time gens lines from multi files
         """
+
         def _gens(filename_list):
             # return a generator that gens generator(file_gen)
             for filename in filename_list:
@@ -236,4 +241,5 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
 
 if __name__ == '__main__':
     inputs = Inputs()
-    print inputs.process()
+    res = inputs.process()
+    print res.get('JSON')
