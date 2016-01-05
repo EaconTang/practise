@@ -41,12 +41,18 @@ def gs(filenames):
         for i in g:
             yield i
 
-a = {'a':1, 'b':2}
-A = (i for i in xrange(10))
-print id(A)
-print id(list(A))
-print id(len(list(A)))
+def file_lines(filename, hint=-1):
+    """if file_size > FILE_MAX(MB), use file generator
+    """
+    hint = 10*1024*1024
+    with open(filename) as f:
+        while 1:
+            lines = f.readlines(hint)
+            if not lines:
+                break
+            yield lines
 
-la = list(A)
-print id(la)
 
+l1 = [1,2]
+l2 = [3,4]
+print l1 + l2
