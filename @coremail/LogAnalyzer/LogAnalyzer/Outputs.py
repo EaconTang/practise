@@ -1,11 +1,11 @@
 """
-Outputs:
-    1.
+Outputs modulr:
+    1. outputs to console
+    2. save outputs to file
+Template Method Pattern
 """
 import datetime
-
 import Utils
-import json
 from Filters import IniFilter
 
 
@@ -100,7 +100,6 @@ class FileOutputs(PrettyTableOutputs):
                 short_key = k[len(section_name) + 1:]
                 res_table[short_key] = v
 
-        print res_table
         table = self.dict_to_table_horizontal(res_table)
 
         try:
