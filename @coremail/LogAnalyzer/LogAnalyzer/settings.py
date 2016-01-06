@@ -14,7 +14,7 @@ FILE_PATH = RMI_LOG
 
 
 # config files folder
-CONFIG_FOLDER = os.path.join(os.path.curdir,'conf')
+CONFIG_FOLDER = os.path.join(os.path.dirname(os.path._getfullpathname(__file__)), 'conf')
 
 
 # config file names
@@ -29,7 +29,7 @@ ROOT_NAME = 'All'
 OMIT_NAME = '(OMIT)'
 
 # results file folder
-RESULT_FOLDER = os.path.join(os.getcwd(), 'result')
+RESULT_FOLDER = os.path.join(os.path.dirname(os.path._getfullpathname(__file__)), 'result')
 
 
 # omit file
