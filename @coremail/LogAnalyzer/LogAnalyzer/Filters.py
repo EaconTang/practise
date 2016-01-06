@@ -2,10 +2,11 @@
 Filter part: deal with file stream, return analysis result
 Template Method Pattern
 """
-from Utils import MyConfigParser, log_info
-from ast import literal_eval
-import re
 import json
+import re
+from ast import literal_eval
+
+from Utils import MyConfigParser, log_info
 
 
 class BaseFilter(object):
@@ -45,6 +46,7 @@ class ConfigFilter(BaseFilter):
     trans config_data to iterable datastruct like:
         [(parent_name,((key, value),...)),...]
     """
+
     def __init__(self):
         super(ConfigFilter, self).__init__()
 
@@ -72,7 +74,7 @@ class ConfigFilter(BaseFilter):
         for parent, items in sorted(json_data.iteritems()):
             kv_list = []
             for k, v in items.iteritems():
-                kv_list.append((k, v))
+                kv_list.append((k, v.join(['"', '"'])))
             parent_kvs.append((parent, kv_list))
         return parent_kvs
 
@@ -93,7 +95,6 @@ class CoreFilter(BaseFilter):
         self.res_counts = {}
         self.omit_lines = {}
 
-    @staticmethod
     def match_pattern(pattern, line, do_eval=True, use_regex=False):
         """
         Core method(Deprecated)
@@ -120,7 +121,7 @@ class CoreFilter(BaseFilter):
             lines = [line.rstrip('\n') for line in file_lines if re.match(pattern, line)]
         # pattern = eval(pattern)        # out of security concern
         if do_eval:
-            pattern = literal_eval(pattern, )
+            pattern = literal_eval(pattern)
         if isinstance(pattern, str) or isinstance(pattern, unicode):
             lines = [line.rstrip('\n') for line in file_lines if pattern in line]
         elif isinstance(pattern, list):
@@ -146,11 +147,17 @@ class CoreFilter(BaseFilter):
         section_root = self.vars_dict.get('ROOT_NAME', 'All')
         self.res_lines[section_root] = self.res_lines.get(section_root, []) + map(lambda x: x.rstrip('\n'), file_lines)
         self.res_counts[section_root] = self.res_counts.get(section_root, 0) + len(file_lines)
+
+        # do_eval = use_regex = False
+        # if self.vars_dict.get('INI'):
+        #     do_eval = True
+        use_regex = self.vars_dict.get('USE_REGEX', False)
+
         for section_name, items in config_data:
             if self.res_lines.has_key(section_name):
                 file_lines = self.res_lines.get(section_name)
             for k, v in items:
-                match_lines = self.grep_lines(v, file_lines)
+                match_lines = self.grep_lines(v, file_lines, True, use_regex)
                 full_name = '/'.join([section_name, k])
                 self.res_lines[full_name] = self.res_lines.get(full_name, []) + match_lines
                 self.res_counts[full_name] = self.res_counts.get(full_name, 0) + len(match_lines)
@@ -207,6 +214,6 @@ class Filters(ConfigFilter, LogFilter, CoreFilter, DomainInfo):
 
 if __name__ == '__main__':
     import Inputs
+
     filters = Filters(Inputs.Inputs().process())
     all_vars = filters.process()
-
