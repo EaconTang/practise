@@ -11,10 +11,6 @@ netease_126 = 'mtqatest@126.com'
 sina_MAIL = 'mtqatest@sina.com'
 _21_MAIL = 'ioswpstest123@21cn.com'
 
-
-
-s1 = SendQuick(cm_MAIL,'forqa2015')
-s1.sendSpecific(qq_MAIL,'add mail','body',52,0)
-
-
-
+if __name__ == '__main__':
+    s1 = SendQuick(cm_MAIL, 'Forqa2015')
+    s1.sendSpecific(cm_MAIL, 'checkmail', 'body', 2, 0)

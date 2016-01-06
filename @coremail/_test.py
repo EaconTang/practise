@@ -53,6 +53,6 @@ def file_lines(filename, hint=-1):
             yield lines
 
 
-l1 = [1,2]
-l2 = [3,4]
-print l1 + l2
+import sys
+
+print sys.argv[0]
