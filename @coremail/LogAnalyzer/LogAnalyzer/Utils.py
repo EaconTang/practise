@@ -5,6 +5,7 @@ Some custom functions and classes
 import datetime
 import json
 from ConfigParser import ConfigParser
+from functools import wraps
 from math import fabs
 from re import match
 from sys import exit
@@ -54,13 +55,13 @@ def color_wrap(mes, color):
         exit('Error: unsupport color?')
 
 
-def log_info():
+def log_info(f):
     """
     a decorator for printing program info
     as a log util
     """
-    def _printinfo(f):
-        def __printinfo(*args, **kwargs):
+    @wraps(f)
+    def _printinfo(*args, **kwargs):
             res = None
             print color_wrap('['+str(time.clock())+']', 'yellow')
             print color_wrap('Start to {0}()...'.format(f.func_name), 'blue')
@@ -72,8 +73,13 @@ def log_info():
                 print color_wrap('Fail to {0}()!'.format(f.func_name), 'red')
             finally:
                 return res
-        return __printinfo
+
     return _printinfo
+
+
+@log_info
+def foo():
+    print 'foo'
 
 
 def dict_to_json(res, indent=4, sort_by_key=True):
@@ -136,4 +142,4 @@ class MyTable(prettytable.PrettyTable):
 
 
 if __name__ == '__main__':
-    pass
+    foo()
