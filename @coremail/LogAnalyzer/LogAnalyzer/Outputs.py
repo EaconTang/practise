@@ -5,6 +5,7 @@ Outputs modulr:
 Template Method Pattern
 """
 import datetime
+import os
 import Utils
 from Filters import CoreFilter
 from Utils import log_info
@@ -27,6 +28,9 @@ class BaseOutputs(object):
         raise NotImplementedError
 
     def to_console(self):
+        raise NotImplementedError
+
+    def to_html(self):
         raise NotImplementedError
 
 
@@ -140,7 +144,43 @@ class ConsoleOutputs(PrettyTableOutputs):
             print self.dict_to_table(res.get('RESULT_COUNTS'))
 
 
-class Outputs(ConsoleOutputs, FileOutputs):
+class VisualizationOutputs(PrettyTableOutputs):
+    def __init__(self):
+        super(VisualizationOutputs, self).__init__()
+
+    @property
+    def res_counts(self):
+        result = self.vars_dict.get('RESULT')
+        result_counts = result['RESULT_COUNTS']
+        del result_counts['All']    # remove 'ALL'
+        del result_counts['All/Exception']
+        type_counts = []
+        assert isinstance(result_counts, dict)
+        for type, count in sorted(result_counts.iteritems()):
+            type_counts.append([type, count])
+        return type_counts
+
+    def google_api_htmls(self, res):
+        chart_type = 'both'
+        rows = self.res_counts
+        title = self.vars_dict.get('FILE_PATH')
+        width = 2000
+        height = len(rows)*50
+        html_text = Utils.googlt_api_html_template(chart_type, rows, title, width, height)
+        return html_text
+
+    def d3js_htmls(self, res):
+        raise NotImplementedError
+
+    @log_info()
+    def to_visual_htmls(self, res):
+        html_text = self.google_api_htmls(res)
+        file_path = os.path.join(self.vars_dict.get('RESULT_FOLDER'), 'visualization.html')
+        with open(file_path, 'w') as f:
+            f.write(html_text)
+
+
+class Outputs(ConsoleOutputs, FileOutputs, VisualizationOutputs):
     def __init__(self, filters_res):
         super(Outputs, self).__init__()
         self._vars = filters_res
@@ -151,6 +191,8 @@ class Outputs(ConsoleOutputs, FileOutputs):
             self.to_console(self.res)
         if self.vars_dict.get('TO_FILE'):
             self.to_file(self.res)
+        if self.vars_dict.get('DATA_VISUALIZATION'):
+            self.to_visual_htmls(self.res)
 
 
 if __name__ == '__main__':
@@ -159,3 +201,6 @@ if __name__ == '__main__':
 
     filter_res = Filters(Inputs().process()).process()
     Outputs(filter_res).process()
+
+
+

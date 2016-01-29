@@ -4,11 +4,12 @@ Some custom functions and classes
 """
 import datetime
 import json
+import time
 from ConfigParser import ConfigParser
 from math import fabs
 from re import match
 from sys import exit
-import time
+
 import prettytable
 
 
@@ -59,10 +60,11 @@ def log_info():
     a decorator for printing program info
     as a log util
     """
+
     def _printinfo(f):
         def __printinfo(*args, **kwargs):
             res = None
-            print color_wrap('['+str(time.clock())+']', 'yellow')
+            print color_wrap('[' + str(time.clock()) + ']', 'yellow')
             print color_wrap('Start to {0}()...'.format(f.func_name), 'blue')
             try:
                 res = f(*args, **kwargs)
@@ -72,16 +74,19 @@ def log_info():
                 print color_wrap('Fail to {0}()!'.format(f.func_name), 'red')
             finally:
                 return res
+
         return __printinfo
+
     return _printinfo
 
 
 def dict_to_json(res, indent=4, sort_by_key=True):
     assert isinstance(res, dict)
     try:
-        return json.dumps(res, indent=indent,sort_keys=sort_by_key)
+        return json.dumps(res, indent=indent, sort_keys=sort_by_key)
     except:
         exit('[Error]')
+
 
 def list_to_json(res, indent=2):
     assert isinstance(res, list)
@@ -90,6 +95,95 @@ def list_to_json(res, indent=2):
     except:
         exit('[Error]')
 
+
+def googlt_api_html_template(chart_type, rows, title='Log Stats', width=1000, height=2000):
+    if chart_type == 'bar_chart':
+        return """
+            <html>
+              <head>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+                  google.setOnLoadCallback(drawChart);
+                  function drawChart() {
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Counts');
+                    data.addRows(""" + str(rows) + """);
+                    var options = {'title':'""" + str(title) + """',
+                                   'width':""" + str(width) + """,
+                                   'height':""" + str(height) + """,
+                                   'is3D': true,
+                                   'legend': 'middle'};
+                    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+                    chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="chart_div"></div>
+              </body>
+            </html>
+    """
+    if chart_type == 'pie_chart':
+        return """
+            <html>
+              <head>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+                  google.setOnLoadCallback(drawChart);
+                  function drawChart() {
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Counts');
+                    data.addRows(""" + str(rows) + """);
+                    var options = {'title':'""" + str(title) + """',
+                                   'width':""" + str(width) + """,
+                                   'height':""" + str(height) + """,
+                                   'is3D': true,
+                                   'legend': 'middle'};
+                    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                    chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="chart_div"></div>
+              </body>
+            </html>
+    """
+    if chart_type == 'both':
+        return """
+            <html>
+              <head>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+                  google.setOnLoadCallback(drawChart);
+                  function drawChart() {
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Counts');
+                    data.addRows(""" + str(rows) + """);
+                    var options = {'title':'""" + str(title) + """',
+                                   'width':""" + str(width) + """,
+                                   'height':""" + str(height) + """,
+                                   'is3D': true,
+                                   'legend': 'middle'};
+                    var pie_chart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
+                    pie_chart.draw(data, options);
+                    var bar_chart = new google.visualization.BarChart(document.getElementById('bar_chart_div'));
+                    bar_chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="pie_chart_div"></div>
+                <div id="bar_chart_div"></div>
+              </body>
+            </html>
+    """
 
 
 class MyConfigParser(ConfigParser):

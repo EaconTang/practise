@@ -106,7 +106,7 @@ class CommandArgs(BaseInputs):
         parser = self.arg_parser
         # (options, args) = parser.parse_args()
         (options, args) = parser.parse_args(
-            ['-c', 'conf/rmi_exceptions.json', '-f', 'test_files/rmi_api.log.2016-01-01'])
+            ['-c', 'conf/rmi_exceptions.cf', '-f', 'test_files/rmi_api.log.2016-01-01'])
 
         options_list = [('FILE_PATH', options.FILE_PATH),
                         ('CONFIG', options.CONFIG),
@@ -191,7 +191,9 @@ class LogFile(BaseInputs):
 
     def file_gen(self, filename):
         """
-        a generator that each time gens lines from single file
+        a generator that each
+
+        time gens lines from single file
         """
         if os.path.getsize(filename) > self.vars_dict.get('FILE_MAX'):
             with open(filename) as f:
@@ -242,4 +244,3 @@ class Inputs(DefaultSetting, CommandArgs, ConfFile, LogFile):
 if __name__ == '__main__':
     inputs = Inputs()
     res = inputs.process()
-    print res.get('JSON')

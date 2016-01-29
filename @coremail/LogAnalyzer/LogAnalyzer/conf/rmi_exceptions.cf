@@ -21,31 +21,6 @@ event listener fail = "FAILED on listener"
 connect exception = ("NET_ERR_CONNECT","java.net.ConnectException")
 deleteMessage fail = "deleteMessages FAILED"
 
-[All/Exception/fail on]
-getMessagesByUID = "Fail on getMessagesByUID"
-getReceivedDate = "Fail on getReceivedDate"
-list folder = "Fail on list folder"
-open folder = "Fail on open folder"
-create folder = "Fail on local folder creation for"
-search = "Fail on search"
-
-[All/Exception/msg exception]
-FolderClosedException = "javax.mail.FolderClosedException"
-MessagingException = "javax.mail.MessagingException"
-StoredClosedException = "javax.mail.StoreClosedException"
-Reconnect fail = "Reconnect fail on folder"
-
-[All/Exception/skip msg]
-FolderClosedException = "javax.mail.FolderClosedException"
-IndexOutOfBoundsException = "java.lang.IndexOutOfBoundsException"
-NullPointerException = "java.lang.NullPointerException"
-MessageRemovedException = "javax.mail.MessageRemovedException"
-Cannot load header = "javax.mail.MessagingException: Cannot load header"
-No content = "javax.mail.MessagingException: No content"
-Message delivery fail = "Message delivery failed"
-Connect fail = ("java.net.ConnectException","NET_ERR_CONNECT")
-filesystem error = "FILESYSTEM_ERR"
-
 [All/Exception/server fail]
 qq = ("imap.qq.com","pop.qq.com")
 163 = ("imap.163.com","pop.163.com")
@@ -68,7 +43,6 @@ yahoo = ("imap.mail.yahoo.com","pop.mail.yahoo.com")
 139 = ("imap.139.com","pop.139.com")
 kingdee = "kdmail.kingdee.com"
 
-
 [All/Exception/sync fail]
 hotmail = "@hotmail.com"
 qq = "@qq.com"
@@ -82,12 +56,3 @@ yahoo = "@yahoo.com"
 139 = "@139.com"
 wpsmail = "@wpsmail.com"
 kingdee = "@kingdee.com"
-
-[All/Exception/api fail]
-listObjs = "listObjs"
-getUserAttrs = "getUserAttrs"
-syncMail = "syncMail"
-
-[All/Exception/event listener fail]
-mailSaved = "Event for 'mailSaved'"
-accountProcessed = "Event for 'accountProcessed'"

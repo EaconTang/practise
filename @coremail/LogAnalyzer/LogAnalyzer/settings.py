@@ -33,7 +33,7 @@ RESULT_FOLDER = os.path.join(os.path.dirname(os.path._getfullpathname(__file__))
 
 
 # omit file
-SAVE_OMIT = True
+SAVE_OMIT = False
 OMIT_FILE = os.path.join(RESULT_FOLDER, 'omit.result')
 
 
@@ -70,3 +70,7 @@ USE_PRETTYTABLE = True
 # if file is bigger than it, program would use python generator to avoid out-of-mem(slower but save mem)
 FILE_MAX_MB = 256
 FILE_MAX = int(FILE_MAX_MB)*1024*1024
+
+
+# do data-visualization
+DATA_VISUALIZATION = True
