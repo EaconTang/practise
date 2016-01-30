@@ -42,11 +42,15 @@ class BaseFilter(object):
 
 
 class ConfigFilter(BaseFilter):
+    """ trans config_data to iterable datastruct like:
+        [
+            (parent_name,(
+                (key, value),
+                ...)
+            ),
+            ...
+        ]
     """
-    trans config_data to iterable datastruct like:
-        [(parent_name,((key, value),...)),...]
-    """
-
     def __init__(self):
         super(ConfigFilter, self).__init__()
 
@@ -96,9 +100,8 @@ class CoreFilter(BaseFilter):
         self.omit_lines = {}
 
     def match_pattern(pattern, line, do_eval=True, use_regex=False):
-        """
-        Core method(Deprecated)
-        But this method calls function too much, cause the times of function call depends on filelines number
+        """ Core method(Deprecated)
+            But this method calls function too much, cause the times of function call depends on filelines number
         """
         if use_regex and re.match(r'r".*"', pattern):
             return re.match(pattern, line)
@@ -113,9 +116,8 @@ class CoreFilter(BaseFilter):
 
     @staticmethod
     def grep_lines(pattern, file_lines, do_eval=True, use_regex=False):
-        """
-        Core method
-        This old method is faster, times of function call depends on config options' number
+        """ Core method
+            This old method is faster, times of function call depends on config options' number
         """
         if use_regex and re.match(r'r".*"', pattern):
             lines = [line.rstrip('\n') for line in file_lines if re.match(pattern, line)]
@@ -134,7 +136,7 @@ class CoreFilter(BaseFilter):
 
     @log_info()
     def traverse_file(self, config_data, filename, file_gen):
-        """Core method
+        """ Core method
         """
         for lines in file_gen:
             self.iter_file_lines(lines, config_data)
@@ -142,17 +144,12 @@ class CoreFilter(BaseFilter):
             self.save_omit(config_data, self.res_lines, self.res_counts)
 
     def iter_file_lines(self, file_lines, config_data):
-        """Core method
+        """ Core method
         """
         section_root = self.vars_dict.get('ROOT_NAME', 'All')
         self.res_lines[section_root] = self.res_lines.get(section_root, []) + map(lambda x: x.rstrip('\n'), file_lines)
         self.res_counts[section_root] = self.res_counts.get(section_root, 0) + len(file_lines)
-
-        # do_eval = use_regex = False
-        # if self.vars_dict.get('INI'):
-        #     do_eval = True
         use_regex = self.vars_dict.get('USE_REGEX', False)
-
         for section_name, items in config_data:
             if self.res_lines.has_key(section_name):
                 file_lines = self.res_lines.get(section_name)

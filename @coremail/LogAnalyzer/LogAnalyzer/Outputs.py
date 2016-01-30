@@ -1,13 +1,16 @@
 """
-Outputs modulr:
+Outputs module:
     1. outputs to console
     2. save outputs to file
-Template Method Pattern
+    3. data visualization
+        1) each result's pie-chart and bar-chart
+        2) trends in line-chart in past days(defaults to 7)
 """
 import datetime
 import os
-import Utils
+
 from Filters import CoreFilter
+from Utils import list_to_json, MyTable, dict_to_json, google_charts_html
 from Utils import log_info
 
 
@@ -30,7 +33,7 @@ class BaseOutputs(object):
     def to_console(self):
         raise NotImplementedError
 
-    def to_html(self):
+    def to_visual_html(self):
         raise NotImplementedError
 
 
@@ -40,8 +43,10 @@ class PrettyTableOutputs(BaseOutputs):
 
     @staticmethod
     def dict_to_table(res, sortby_count=False):
+        """ trans a dict to table; key->'Type', value->'Count'
+        """
         assert isinstance(res, dict)
-        table = Utils.MyTable(['Type', 'Count'])
+        table = MyTable(['Type', 'Count'])
         table.align['Type'] = "l"
         for k, v in res.iteritems():
             table.add_row([k, v])
@@ -51,13 +56,15 @@ class PrettyTableOutputs(BaseOutputs):
             return table.get_string(sortby='Count', reversesort=True)
 
     def dict_to_table_horizontal(self, res):
+        """ trans a dict to table horizontal
+        """
         assert isinstance(res, dict)
         keys, values = zip(*[(k, v) for k, v in sorted(res.iteritems())])
 
         table_title = ['LogDate']
         table_title.extend(keys)
         table_title.append('WriteTime')
-        table = Utils.MyTable(table_title)
+        table = MyTable(table_title)
 
         table_row = [self.vars_dict.get('FILE_DATE')]
         table_row.extend(values)
@@ -79,23 +86,27 @@ class FileOutputs(PrettyTableOutputs):
 
     @log_info()
     def save_omit(self, res, filename):
+        """ save omit info(errors not configured or not counted) to file
+        """
         to_write = ''
 
         if not self.vars_dict.get('USE_PRETTYTABLE'):
-            to_write += Utils.dict_to_json(res.get('RESULT_COUNTS')) + '\n'
+            to_write += dict_to_json(res.get('RESULT_COUNTS')) + '\n'
         else:
             to_write += self.dict_to_table(res.get('RESULT_COUNTS')) + '\n'
             to_write += self.dict_to_table(res.get('RESULT_COUNTS'), True) + '\n'
 
         omit_key = '/'.join([self.vars_dict['ROOT_NAME'], 'Exception', self.vars_dict['OMIT_NAME']])
         to_write += '\nOmit exceptions lines info:\n\n'
-        to_write += Utils.list_to_json(res.get('RESULT_LINES').get(omit_key))
+        to_write += list_to_json(res.get('RESULT_LINES').get(omit_key))
 
         with open(filename, 'w') as f:
             f.write(to_write)
 
     @log_info()
     def save_tabulate(self, res, filename):
+        """ add each time's result to tabulate file
+        """
         section_name = self.vars_dict.get('TABULATE_SECTION')
         res_table = {}
         for k, v in res.get('RESULT_COUNTS').iteritems():
@@ -130,7 +141,7 @@ class FileOutputs(PrettyTableOutputs):
             to_write = table.get_row_data(1) + '\n'
 
         with open(filename, 'a+') as f:
-                f.write(to_write)
+            f.write(to_write)
 
 
 class ConsoleOutputs(PrettyTableOutputs):
@@ -139,7 +150,7 @@ class ConsoleOutputs(PrettyTableOutputs):
 
     def to_console(self, res):
         if not self.vars_dict.get('USE_PRETTYTABLE'):
-            print Utils.dict_to_json(res.get('RESULT_COUNTS'))
+            print dict_to_json(res.get('RESULT_COUNTS'))
         else:
             print self.dict_to_table(res.get('RESULT_COUNTS'))
 
@@ -150,9 +161,17 @@ class VisualizationOutputs(PrettyTableOutputs):
 
     @property
     def res_counts(self):
+        """ type-counts to be visualized('All' and 'All/Exception' are removed)
+            trans to datastructs like:
+                [
+                    ['All/Exception/api fail', 0],
+                    ['All/Exception/msg exception', 3900],
+                    ...
+                ]
+        """
         result = self.vars_dict.get('RESULT')
         result_counts = result['RESULT_COUNTS']
-        del result_counts['All']    # remove 'ALL'
+        del result_counts['All']  # remove 'ALL'
         del result_counts['All/Exception']
         type_counts = []
         assert isinstance(result_counts, dict)
@@ -161,6 +180,13 @@ class VisualizationOutputs(PrettyTableOutputs):
         return type_counts
 
     def get_tabulate_data(self, lastdays=-1):
+        """ read a tabulate file, trans to datastructs like:
+            [
+                ['LogDate','Exception','api fail',...],
+                ['2016-01-01',41669,0,...],
+                ...
+            ]
+        """
         try:
             with open(self.vars_dict.get('TABULATE_FILE')) as f:
                 data_lines = f.readlines()
@@ -174,7 +200,8 @@ class VisualizationOutputs(PrettyTableOutputs):
                     del data_line[-1]
                     tmp_list = []
                     for i, data in enumerate(data_line):
-                        if i != 0: data = int(data)
+                        if i != 0:
+                            data = int(data)
                         tmp_list.append(data)
                     data_lines_new.append(tmp_list)
             if 0 < lastdays <= len(data_lines_new) - 1:
@@ -186,27 +213,34 @@ class VisualizationOutputs(PrettyTableOutputs):
             print e.message
             return None
 
-    def google_api_htmls(self, res):
+    def google_api_htmls(self):
+        """ visualize data using google-charts API;
+            just replace some vars in html template in Utils.py
+        """
         if self.vars_dict.get('LINE_DATA'):
             chart_type = 'line_chart'
             curve_datas = self.get_tabulate_data(self.vars_dict.get('LAST_DAYS'))
             title = self.vars_dict.get('TABULATE_FILE')
-            html_text = Utils.google_charts_html(chart_type, curve_datas, title, 2000, 1000)
+            html_text = google_charts_html(chart_type, curve_datas, title, 2000, 1000)
             return html_text
         chart_type = 'both'
         rows = self.res_counts
         title = self.vars_dict.get('FILE_PATH')
         width = 2000
-        height = len(rows)*50
-        html_text = Utils.google_charts_html(chart_type, rows, title, width, height)
+        height = len(rows) * 50
+        html_text = google_charts_html(chart_type, rows, title, width, height)
         return html_text
 
     def d3js_htmls(self, res):
         raise NotImplementedError
 
     @log_info()
-    def to_visual_htmls(self, res):
-        html_text = self.google_api_htmls(res)
+    def to_visual_html(self):
+        global html_text
+        if self.vars_dict.get('USE_GOOGLE_CHART'):
+            html_text = self.google_api_htmls()
+        if self.vars_dict.get('USE_D3JS'):
+            html_text = self.d3js_htmls()
         file_path = os.path.join(self.vars_dict.get('RESULT_FOLDER'), 'visualization.html')
         with open(file_path, 'w') as f:
             f.write(html_text)
@@ -224,7 +258,7 @@ class Outputs(ConsoleOutputs, FileOutputs, VisualizationOutputs):
         if self.vars_dict.get('TO_FILE'):
             self.to_file(self.res)
         if self.vars_dict.get('DATA_VISUALIZATION'):
-            self.to_visual_htmls(self.res)
+            self.to_visual_html()
 
 
 if __name__ == '__main__':
@@ -233,6 +267,3 @@ if __name__ == '__main__':
 
     filter_res = Filters(Inputs().process()).process()
     Outputs(filter_res).process()
-
-
-

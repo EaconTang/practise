@@ -7,14 +7,14 @@ Including:
     4. log files
 Template Method Pattern
 """
-import re
-import os
 import datetime
-import fileinput
-from optparse import OptionParser
-from Utils import MyConfigParser, convert_time_period, log_info
-import settings
 import json
+import os
+import re
+from optparse import OptionParser
+
+import settings
+from Utils import MyConfigParser, convert_time_period, log_info
 
 
 class BaseInputs(object):
@@ -144,7 +144,7 @@ class ConfFile(BaseInputs):
 
     def read_json(self, conf_file):
         with open(conf_file) as f:
-            json_config = json.loads(f.read(),encoding='utf-8')
+            json_config = json.loads(f.read(), encoding='utf-8')
         return {'JSON': json_config}
 
     def read_yaml(self, cong_file):
@@ -164,17 +164,14 @@ class LogFile(BaseInputs):
             return {
                 'FILE_DATE': str(YESTERDAY),
                 'FILE_PATH': filename,
-                # 'FILE_LINE': self.file_lines(filename),
                 'FILE_GEN': self.file_gen(filename),
             }
-
         # read log files specified by datetime
         if time_period:
             time_period, filenames = convert_time_period(time_period, log_file)
             return {
                 'FILE_DATE': time_period,
                 'FILE_PATH': filenames,
-                # 'FILE_LINE': self.files_lines(filenames),
                 'FILE_GEN': self.files_gen(filenames),
             }
 
@@ -185,15 +182,11 @@ class LogFile(BaseInputs):
             file_date = str(datetime.date.today())
         return {
             'FILE_DATE': file_date,
-            # 'FILE_LINE': self.file_lines(log_file),
             'FILE_GEN': self.file_gen(log_file),
         }
 
     def file_gen(self, filename):
-        """
-        a generator that each
-
-        time gens lines from single file
+        """ a generator that each time gens lines from single file
         """
         if os.path.getsize(filename) > self.vars_dict.get('FILE_MAX'):
             with open(filename) as f:
@@ -209,7 +202,6 @@ class LogFile(BaseInputs):
     def files_gen(self, filenames):
         """a generator that each time gens lines from multi files
         """
-
         def _gens(filename_list):
             # return a generator that gens generator(file_gen)
             for filename in filename_list:
