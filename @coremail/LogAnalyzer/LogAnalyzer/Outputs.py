@@ -160,13 +160,45 @@ class VisualizationOutputs(PrettyTableOutputs):
             type_counts.append([type, count])
         return type_counts
 
+    def get_tabulate_data(self, lastdays=-1):
+        try:
+            with open(self.vars_dict.get('TABULATE_FILE')) as f:
+                data_lines = f.readlines()
+            data_lines = filter(lambda x: '|' in x, data_lines)
+            data_lines = map(lambda x: x.strip().lstrip('|').rstrip('|').split('|'), data_lines)
+            data_lines_new = []
+            for n, data_line in enumerate(data_lines):
+                if n == 0:
+                    data_lines_new.append(data_line[:-1])
+                else:
+                    del data_line[-1]
+                    tmp_list = []
+                    for i, data in enumerate(data_line):
+                        if i != 0: data = int(data)
+                        tmp_list.append(data)
+                    data_lines_new.append(tmp_list)
+            if 0 < lastdays <= len(data_lines_new) - 1:
+                data_lines_lastdays = data_lines_new[-lastdays:]
+                data_lines_lastdays.insert(0, data_lines_new[0])
+                return data_lines_lastdays
+            return data_lines_new
+        except IOError, e:
+            print e.message
+            return None
+
     def google_api_htmls(self, res):
+        if self.vars_dict.get('LINE_DATA'):
+            chart_type = 'line_chart'
+            curve_datas = self.get_tabulate_data(self.vars_dict.get('LAST_DAYS'))
+            title = self.vars_dict.get('TABULATE_FILE')
+            html_text = Utils.google_charts_html(chart_type, curve_datas, title, 2000, 1000)
+            return html_text
         chart_type = 'both'
         rows = self.res_counts
         title = self.vars_dict.get('FILE_PATH')
         width = 2000
         height = len(rows)*50
-        html_text = Utils.googlt_api_html_template(chart_type, rows, title, width, height)
+        html_text = Utils.google_charts_html(chart_type, rows, title, width, height)
         return html_text
 
     def d3js_htmls(self, res):

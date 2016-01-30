@@ -96,7 +96,8 @@ def list_to_json(res, indent=2):
         exit('[Error]')
 
 
-def googlt_api_html_template(chart_type, rows, title='Log Stats', width=1000, height=2000):
+def google_charts_html(chart_type, data, title='Log Stats', width=1000, height=2000):
+    curve_datas = rows = data
     if chart_type == 'bar_chart':
         return """
             <html>
@@ -150,6 +151,34 @@ def googlt_api_html_template(chart_type, rows, title='Log Stats', width=1000, he
               </head>
               <body>
                 <div id="chart_div"></div>
+              </body>
+            </html>
+    """
+    if chart_type == 'line_chart':
+        return """
+            <html>
+              <head>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+                  google.setOnLoadCallback(drawChart);
+                  function drawChart() {
+                    var data = google.visualization.arrayToDataTable("""+ str(curve_datas) +""");
+                    var options = {'title':'""" + str(title) + """',
+                                   'width':""" + str(width) + """,
+                                   'height':""" + str(height) + """,
+                                   'is3D': true,
+                                   'legend': { position: 'bottom' },
+                                   'curveType': 'function'};
+
+                    var chart = new google.visualization.LineChart(document.getElementById('line_chart_div'));
+
+                    chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="line_chart_div"></div>
               </body>
             </html>
     """

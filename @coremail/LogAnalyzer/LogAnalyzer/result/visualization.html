@@ -1,30 +1,27 @@
 
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load('visualization', '1.0', {'packages':['corechart']});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Counts');
-        data.addRows([['All/Exception/api fail', 0], ['All/Exception/arrayIndexOutOfBounds', 0], ['All/Exception/connect exception', 0], ['All/Exception/deleteMessage fail', 0], ['All/Exception/event listener fail', 0], ['All/Exception/fail on', 109], ['All/Exception/folderclose exception', 0], ['All/Exception/invalid attr', 0], ['All/Exception/msg exception', 3900], ['All/Exception/server disabled', 2153], ['All/Exception/server disabled/126', 0], ['All/Exception/server disabled/139', 0], ['All/Exception/server disabled/163', 0], ['All/Exception/server disabled/kingdee', 0], ['All/Exception/server disabled/outlook', 512], ['All/Exception/server disabled/qq', 387], ['All/Exception/server disabled/sina', 0], ['All/Exception/server disabled/yahoo', 1254], ['All/Exception/server disabled/yeah.net', 0], ['All/Exception/server fail', 5204], ['All/Exception/server fail/126', 0], ['All/Exception/server fail/139', 0], ['All/Exception/server fail/163', 0], ['All/Exception/server fail/kingdee', 0], ['All/Exception/server fail/outlook', 782], ['All/Exception/server fail/qq', 649], ['All/Exception/server fail/sina', 0], ['All/Exception/server fail/yahoo', 3773], ['All/Exception/server fail/yeah.net', 0], ['All/Exception/skip msg', 0], ['All/Exception/sync fail', 1], ['All/Exception/sync fail/126', 0], ['All/Exception/sync fail/139', 0], ['All/Exception/sync fail/163', 0], ['All/Exception/sync fail/hotmail', 0], ['All/Exception/sync fail/kingdee', 0], ['All/Exception/sync fail/outlook', 0], ['All/Exception/sync fail/qq', 0], ['All/Exception/sync fail/sina', 0], ['All/Exception/sync fail/wpsmail', 1], ['All/Exception/sync fail/yahoo', 0], ['All/Exception/sync fail/yeah.net', 0]]);
-        var options = {'title':'test_files/rmi_api.log.2016-01-01',
-                       'width':2000,
-                       'height':2100,
-                       'is3D': true,
-                       'legend': 'middle'};
-        var pie_chart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
-        pie_chart.draw(data, options);
-        var bar_chart = new google.visualization.BarChart(document.getElementById('bar_chart_div'));
-        bar_chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="pie_chart_div"></div>
-    <div id="bar_chart_div"></div>
-  </body>
-</html>
+            <html>
+              <head>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+                  google.setOnLoadCallback(drawChart);
+                  function drawChart() {
+                    var data = google.visualization.arrayToDataTable([['  LogDate   ', ' Exception ', ' api fail ', ' connect exception ', ' event listener fail ', ' fail on ', ' folderclose exception ', ' msg exception ', ' reconnect fail ', ' server fail ', ' skip msg ', ' sync fail '], [' 2016-01-22 ', 41669, 0, 0, 0, 1534, 81, 38731, 533, 106, 38851, 0], [' 2016-01-23 ', 21224, 0, 0, 170, 1347, 68, 18110, 506, 111, 18493, 0], [' 2016-01-24 ', 14612, 0, 4, 0, 1568, 47, 11865, 507, 99, 11974, 0], [' 2016-01-25 ', 77367, 0, 4, 0, 1620, 154, 73529, 515, 78, 74271, 0], [' 2016-01-26 ', 29736, 0, 0, 0, 1434, 137, 26733, 536, 137, 26845, 0], [' 2016-01-27 ', 48438, 0, 0, 0, 1587, 165, 44872, 567, 91, 45389, 0], [' 2016-01-28 ', 38697, 0, 0, 0, 1470, 65, 31884, 530, 86, 36026, 0]]);
+                    var options = {'title':'D:\_P\Python\practise\@coremail\LogAnalyzer\LogAnalyzer\result\tabulate.result',
+                                   'width':2000,
+                                   'height':1000,
+                                   'is3D': true,
+                                   'legend': { position: 'bottom' },
+                                   'curveType': 'function'};
+
+                    var chart = new google.visualization.LineChart(document.getElementById('line_chart_div'));
+
+                    chart.draw(data, options);
+                  }
+                </script>
+              </head>
+              <body>
+                <div id="line_chart_div"></div>
+              </body>
+            </html>
     

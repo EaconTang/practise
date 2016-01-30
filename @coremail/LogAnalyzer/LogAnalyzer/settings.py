@@ -74,3 +74,5 @@ FILE_MAX = int(FILE_MAX_MB)*1024*1024
 
 # do data-visualization
 DATA_VISUALIZATION = True
+LINE_DATA = True
+LAST_DAYS = 7
