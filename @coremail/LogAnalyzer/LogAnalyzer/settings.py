@@ -12,7 +12,7 @@ WMS_LOG = '/home/coremail/logs/wmsvr.log'
 FILE_PATH = RMI_LOG
 
 # config files folder
-CONFIG_FOLDER = os.path.join(os.path.dirname(os.path._getfullpathname(__file__)), 'conf')
+CONFIG_FOLDER = os.path.join(os.path.abspath(os.path.curdir), 'conf')
 
 # config file names
 RMI_EXCEPT = 'rmi_exceptions.cf'
@@ -26,7 +26,7 @@ ROOT_NAME = 'All'
 OMIT_NAME = '(OMIT)'
 
 # results file folder
-RESULT_FOLDER = os.path.join(os.path.dirname(os.path._getfullpathname(__file__)), 'result')
+RESULT_FOLDER = os.path.join(os.path.abspath(os.path.curdir), 'result')
 
 # omit file
 SAVE_OMIT = False
@@ -62,8 +62,9 @@ FILE_MAX_MB = 256
 FILE_MAX = int(FILE_MAX_MB) * 1024 * 1024
 
 # do data-visualization
-USE_GOOGLE_CHART = True
-USE_D3JS = False
 DATA_VISUALIZATION = True
-LINE_DATA = True
+USE_GOOGLE_CHART = False
+USE_D3JS = True
+PIE_CHART = True
+LINE_CHART = True
 LAST_DAYS = 30

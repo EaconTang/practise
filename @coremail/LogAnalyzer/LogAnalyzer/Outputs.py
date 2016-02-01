@@ -6,9 +6,10 @@ Outputs module:
         1) each result's pie-chart and bar-chart
         2) trends in line-chart in past days(defaults to 7)
 """
-import datetime
+from datetime import datetime
+from time import mktime
 import os
-
+from nvd3 import pieChart, lineChart
 from Filters import CoreFilter
 from Utils import list_to_json, MyTable, dict_to_json, google_charts_html
 from Utils import log_info
@@ -68,7 +69,7 @@ class PrettyTableOutputs(BaseOutputs):
 
         table_row = [self.vars_dict.get('FILE_DATE')]
         table_row.extend(values)
-        table_row.append(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+        table_row.append(str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
         table.add_row(table_row)
 
         return table
@@ -217,33 +218,84 @@ class VisualizationOutputs(PrettyTableOutputs):
         """ visualize data using google-charts API;
             just replace some vars in html template in Utils.py
         """
-        if self.vars_dict.get('LINE_DATA'):
+        global html_lineChart, html_pieChart
+        if self.vars_dict.get('LINE_CHART'):
             chart_type = 'line_chart'
             curve_datas = self.get_tabulate_data(self.vars_dict.get('LAST_DAYS'))
             title = self.vars_dict.get('TABULATE_FILE')
-            html_text = google_charts_html(chart_type, curve_datas, title, 2000, 1000)
-            return html_text
-        chart_type = 'both'
-        rows = self.res_counts
-        title = self.vars_dict.get('FILE_PATH')
-        width = 2000
-        height = len(rows) * 50
-        html_text = google_charts_html(chart_type, rows, title, width, height)
-        return html_text
+            height = 768
+            width = 1366
+            html_lineChart = google_charts_html(chart_type, curve_datas, title, width, height)
+        if self.vars_dict.get('PIE_CHART'):
+            chart_type = 'pie_chart'
+            rows = self.res_counts
+            title = self.vars_dict.get('FILE_PATH')
+            height = 768
+            width = 1366
+            html_pieChart = google_charts_html(chart_type, rows, title, width, height)
+        return html_lineChart, html_pieChart
 
-    def d3js_htmls(self, res):
-        raise NotImplementedError
+    def d3js_htmls(self):
+        """ visualize data using D3.js(wrapped by python-nvd3)
+        """
+        global html_lineChart, html_pieChart
+        if self.vars_dict.get('LINE_CHART'):
+            chart_name = self.vars_dict.get('TABULATE_FILE')
+            height = 768
+            width = 1366
+            line_chart = lineChart(name='[line]'+chart_name,
+                                   height=height,
+                                   width=width)
+            line_data = self.get_tabulate_data(self.vars_dict.get('LAST_DAYS'))
+            # x_data = [each[0].strip() for each in line_data][1:]
+            # x_data = map(lambda x: mktime(datetime.strptime(x, '%Y-%m-%d').timetuple()), x_data)
+            x_data = list(range(-30, 0))
+            name_list = line_data[0][1:]
+            y_data_list = []
+            for i in range(1, len(line_data[0])):
+                y_data_list.append([each[i] for each in line_data[1:]])
+            extra_serie = {
+                'tooltip': {
+                    'y_start': '',
+                    'y_end': 'counts'
+                }
+            }
+            for name, y_data in zip(name_list, y_data_list):
+                line_chart.add_serie(y=y_data, x=x_data, name=name, extra=extra_serie)
+            line_chart.buildhtml()
+            html_lineChart = line_chart.htmlcontent
+        if self.vars_dict.get('PIE_CHART'):
+            rows = self.res_counts
+            xdata, ydata = zip(*rows)
+            extra_serie = {
+                'tooltip': {
+                    'y_start': '',
+                    'y_end': 'counts'
+                }
+            }
+            chart_name = self.vars_dict.get('FILE_PATH')
+            height = 768
+            width = 1366
+            pie_chart = pieChart(name='[pie]'+chart_name, color_category='category20c', height=height, width=width)
+            pie_chart.set_containerheader("\n\n<h2>" + chart_name + "</h2>\n\n")
+            pie_chart.add_serie(y=ydata, x=xdata, extra=extra_serie)
+            pie_chart.buildhtml()
+            html_pieChart = pie_chart.htmlcontent
+        return html_lineChart, html_pieChart
 
     @log_info()
     def to_visual_html(self):
-        global html_text
+        global html_pieChart, html_lineChart
         if self.vars_dict.get('USE_GOOGLE_CHART'):
-            html_text = self.google_api_htmls()
-        if self.vars_dict.get('USE_D3JS'):
-            html_text = self.d3js_htmls()
-        file_path = os.path.join(self.vars_dict.get('RESULT_FOLDER'), 'visualization.html')
-        with open(file_path, 'w') as f:
-            f.write(html_text)
+            html_lineChart, html_pieChart = self.google_api_htmls()
+        elif self.vars_dict.get('USE_D3JS'):
+            html_lineChart, html_pieChart = self.d3js_htmls()
+        html_lineChart_path = os.path.join(self.vars_dict.get('RESULT_FOLDER'), 'lineChart.html')
+        html_pieChart_path = os.path.join(self.vars_dict.get('RESULT_FOLDER'), 'pieChart.html')
+        with open(html_lineChart_path, 'w') as f:
+            f.write(html_lineChart)
+        with open(html_pieChart_path, 'w') as f:
+            f.write(html_pieChart)
 
 
 class Outputs(ConsoleOutputs, FileOutputs, VisualizationOutputs):
@@ -259,6 +311,9 @@ class Outputs(ConsoleOutputs, FileOutputs, VisualizationOutputs):
             self.to_file(self.res)
         if self.vars_dict.get('DATA_VISUALIZATION'):
             self.to_visual_html()
+
+    def process_line_chart(self):
+        self.to_visual_html()
 
 
 if __name__ == '__main__':

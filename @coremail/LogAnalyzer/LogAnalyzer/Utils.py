@@ -70,7 +70,7 @@ def log_info():
                 res = f(*args, **kwargs)
                 print color_wrap('OK! {0}() finish!'.format(f.func_name), 'green')
             except Exception, e:
-                print e.message
+                print e
                 print color_wrap('Fail to {0}()!'.format(f.func_name), 'red')
             finally:
                 return res
