@@ -89,9 +89,9 @@ class CommandArgs(BaseInputs):
                           action='store_true', default=self.vars_dict['SAVE_OMIT'])
         parser.add_option('-o', '--omit-file', dest='OMIT_FILE',
                           help='specific a file to save the omit info')
-        parser.add_option('-Y', '--yesterday-log', dest='YESTERDAY',
-                          help='use this flag to add yesterday\'s datetime to file specfied',
-                          action='store_true', default=self.vars_dict['YESTERDAY'])
+        # parser.add_option('-Y', '--yesterday-log', dest='YESTERDAY',
+        #                   help='use this flag to add yesterday\'s datetime to file specfied',
+        #                   action='store_true', default=self.vars_dict['YESTERDAY'])
         parser.add_option('-R', '--regex', dest='USE_REGEX',
                           help='use this flag to turn regex-match on',
                           action='store_true', default=self.vars_dict['USE_REGEX'])
@@ -114,7 +114,7 @@ class CommandArgs(BaseInputs):
                         ('SAVE_OMIT', options.SAVE_OMIT),
                         ('TABULATE_FILE', options.TABULATE_FILE),
                         ('SAVE_TABULATE', options.SAVE_TABULATE),
-                        ('YESTERDAY', options.YESTERDAY),
+                        # ('YESTERDAY', options.YESTERDAY),
                         ('USE_REGEX', options.USE_REGEX),
                         ('TIME_PERIOD', options.TIME_PERIOD),
                         ]
@@ -156,7 +156,7 @@ class LogFile(BaseInputs):
         super(LogFile, self).__init__()
 
     @log_info()
-    def read_log_file(self, log_file, yesterday=False, time_period=None):
+    def read_log_file(self, log_file, yesterday=True, time_period=None):
         # read yesterday's logfile
         if yesterday:
             YESTERDAY = (datetime.datetime.now() - datetime.timedelta(days=1)).date()

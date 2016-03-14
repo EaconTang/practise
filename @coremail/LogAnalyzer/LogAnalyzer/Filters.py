@@ -121,6 +121,7 @@ class CoreFilter(BaseFilter):
         """
         if use_regex and re.match(r'r".*"', pattern):
             lines = [line.rstrip('\n') for line in file_lines if re.match(pattern, line)]
+            return lines
         # pattern = eval(pattern)        # out of security concern
         if do_eval:
             pattern = literal_eval(pattern)

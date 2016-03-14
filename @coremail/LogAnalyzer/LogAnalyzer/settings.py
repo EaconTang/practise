@@ -46,7 +46,7 @@ DOMAIN_CONNECT_INFO = False
 USE_REGEX = False
 
 # log time
-YESTERDAY = False
+YESTERDAY = True
 TIME_PERIOD = None
 
 # output result to ...

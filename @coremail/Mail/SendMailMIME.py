@@ -1,14 +1,12 @@
 # coding=utf-8
 import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 import time
-from email.Utils import formatdate
-import sys
+from email.mime.text import MIMEText
 
 
 class SendQuick:
     '''快速发送邮件'''
+
     def __init__(self, user, psw, host='localhost', port=25):
         self.user = user
         self.psw = psw
@@ -38,27 +36,28 @@ class SendQuick:
 
 class MailParser:
     '''统一处理各个邮件域名的smtp服务器地址等信息'''
+
     def __init__(self, username):
         self.username = username
 
     def getServer(self):
         splited = str(self.username).split('@')
         suffix = splited[1]
-        common_list = ['qq.com','163.com','126.com','sina.com','139.com','coremail.cn']
-        outlook_list = ['outlook.com','hotmail.com','live.com','live.cn']
+        common_list = ['qq.com', '163.com', '126.com', 'sina.com', '139.com', 'coremail.cn']
+        outlook_list = ['outlook.com', 'hotmail.com', 'live.com', 'live.cn']
         if suffix in common_list:
-            return ('smtp.'+suffix, 25)
+            return ('smtp.' + suffix, 25)
         elif suffix in outlook_list:
             return ('smtp-mail.outlook.com', 25)
         elif suffix == 'yahoo.com':
             return ('smtp.mail.yahoo.com', 25)
         else:
-            return ('localhost',25)
-
+            return ('localhost', 25)
 
 
 class Mail:
     '''封装邮件发送常用操作的自定义API'''
+
     def __init__(self, host, port, username, password):
         self.setServer(host, port)
         self.username = username
@@ -129,17 +128,16 @@ class Mail:
                 s.connect(self.host, self.port)
                 s.login(self.username, self.password)
                 s.sendmail(self.sender, self.receiver, self.msg.as_string())
-            except Exception,e:
+            except Exception, e:
                 print "Send failed!",
                 print e
             finally:
                 s.quit()
 
             print '**********Mail ' + str(i) + ' Finish!**********'
-            if i != count-1:
+            if i != count - 1:
                 print 'sleeping...'
                 time.sleep(self.interval)
-
 
     def sendMultipart(self):
         # todo
