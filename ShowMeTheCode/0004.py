@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 
 '''
 任一个英文的纯文本文件，统计其中的单词出现的个数。
@@ -9,12 +9,10 @@
 import re
 from collections import Counter
 
-
 with open("Scripts4Test.txt") as f:
     text = f.read()
-    text_list = re.findall(r'\w+',text)
+    text_list = re.findall(r'\w+', text)
     print Counter(text_list)
-
 
 '''
 adict = {}

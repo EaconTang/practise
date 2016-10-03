@@ -1,2 +1,1 @@
-# practise python
-# doc
+# python notes
