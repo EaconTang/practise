@@ -23,6 +23,22 @@ class A(object):
         self.ctx.pop().close()
         pass
 
+    def __get__(self, instance, owner):
+        pass
+
+    def __getattr__(self, item):
+        pass
+
+    def __getattribute__(self, item):
+        pass
+
+    # classmethod as a construct
+    @classmethod
+    def now(cls):
+        import time
+        t = time.localtime()
+        return cls(t.tm_month, t.tm_day)
+
 
 if __name__ == '__main__':
     s = A('a', 'b')
